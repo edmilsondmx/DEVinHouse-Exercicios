@@ -17,6 +17,7 @@ header > h1{
 }
 section{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     margin: auto;
@@ -33,6 +34,9 @@ section{
     width: 140px;
     height: 100px;
     animation: bate 1.2s ease-in-out infinite;
+}
+#res{
+    margin-top: 20px;
 }
 footer{
     background-color: #15011f;
