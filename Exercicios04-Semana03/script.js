@@ -1,4 +1,4 @@
-//window.alert("Olá DEV, Bem vindo ao meu site, fique a vontade!")
-//window.confirm("Tem certeza que deseja abrir esse site?")
-//var user = window.prompt("Qual o seu nome?")
-//window.alert("Olá "+ user + "!")
+var nome = String(window.prompt("Qual seu nome?"));
+var idade = Number(window.prompt("Qual sua idade?"));
+var esporte = Boolean(window.confirm("Gosta de praticar algum esporte?"));
+console.log("Nome: " + nome + ", Idade: " + idade + ",Esporte: " + esporte);
