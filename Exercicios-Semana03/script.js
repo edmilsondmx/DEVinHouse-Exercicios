@@ -1,0 +1,1 @@
+window.alert("Olá DEV, Bem vindo ao meu site, fique a vontade!")
