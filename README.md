@@ -1,2 +1,2 @@
 # DEVinHouse-Exercicios
- Repositório para postagem dos Exercícios do curso DEVinHouse - Turma NDD
+Exercícios do curso DEVinHouse - Turma NDD - Semana 03 - JavaScript
