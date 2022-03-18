@@ -9,20 +9,22 @@ switch (operacao) {
         res = num1 + num2
         break;
     case "-":
-        res = num1 + num2
+        res = num1 - num2
         break;
     case "*":
-        res = num1 + num2
+        res = num1 * num2
         break;
     case "/":
-        res = num1 + num2
+        res = num1 / num2
         break;
     default:
         window.alert("Operador inválido!")
         break;
 }
 
-/* if (operacao == "+"){
+
+
+/*if (operacao == "+"){
     res = num1 + num2;
 } else if (operacao == "-"){
     res = num1 - num2;
@@ -34,4 +36,7 @@ switch (operacao) {
     res = "Operador inválido!"
 };
  */
+
+
 window.alert("O resultado do seu cálculo é: "+ res +"!");
+
