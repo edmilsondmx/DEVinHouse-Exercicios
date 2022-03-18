@@ -4,7 +4,25 @@ var num2 = Number(prompt("Qual o segundo valor que deseja calcular?"));
 
 var res;
 
-if (operacao == "+"){
+switch (operacao) {
+    case "+":
+        res = num1 + num2
+        break;
+    case "-":
+        res = num1 + num2
+        break;
+    case "*":
+        res = num1 + num2
+        break;
+    case "/":
+        res = num1 + num2
+        break;
+    default:
+        window.alert("Operador inválido!")
+        break;
+}
+
+/*if (operacao == "+"){
     res = num1 + num2;
 } else if (operacao == "-"){
     res = num1 - num2;
@@ -15,5 +33,6 @@ if (operacao == "+"){
 } else{
     res = "Operador inválido!"
 };
+*/
 
 window.alert("O resultado do seu cálculo é: "+ res +"!");
