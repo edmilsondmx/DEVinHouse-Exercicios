@@ -1,4 +1,4 @@
-# DEVinHouse- Módulo 01 - Exercicios
+# DEVinHouse- Módulo 01 - Exercícios
  ##
  <ul>
     <li><a href="https://github.com/edmilsondmx/Exercicios-Semena01" target="_blank">Exercícios Semana 01 - HTML5 / CSS3</a></li>
