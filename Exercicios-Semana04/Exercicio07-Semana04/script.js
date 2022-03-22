@@ -1,16 +1,5 @@
-// Jovens - Indivíduos de até 15 anos;
-// Adultos - Indivíduos com idade entre 16 até 64 anos;
-// Idosos - Indivíduos de 65 anos em diante.
+const tempFahrenheit = [ 0, 32, 45, 50, 75, 80, 99, 120 ];
 
-var idade = prompt("Qual a sua idade?");
-
-if(idade <= 15){
-    alert("Você tem " + idade + " anos, então é uma pessoa Jovem!");
-    console.log("Você tem " + idade + " anos, então é uma pessoa Jovem!");
-} else if(idade < 65){
-    alert("Você tem " + idade + " anos, então é uma pessoa Adulta!");
-    console.log("Você tem " + idade + " anos, então é uma pessoa Adulta!");
-} else{
-    alert("Você tem " + idade + " anos, então é uma pessoa Idosa!");
-    console.log("Você tem " + idade + " anos, então é uma pessoa Idosa!");
-};
+const tempCelsius = tempFahrenheit.map(item => Math.round((item -32)* 5 / 9));
+console.log(tempFahrenheit)
+console.log(tempCelsius)
