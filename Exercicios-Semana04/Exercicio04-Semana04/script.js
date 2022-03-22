@@ -1,16 +1,9 @@
-// Jovens - Indivíduos de até 15 anos;
-// Adultos - Indivíduos com idade entre 16 até 64 anos;
-// Idosos - Indivíduos de 65 anos em diante.
+var num = prompt("Qual número que deseja a tabuada?");
+var tabuada = [];
 
-var idade = prompt("Qual a sua idade?");
+for(i = 0; i <= 10; i++){
+    console.log(`${num} x ${i} = ${num * i}`)
+    tabuada.push(`${num} x ${i} = ${num * i}`)
+}
 
-if(idade <= 15){
-    alert("Você tem " + idade + " anos, então é uma pessoa Jovem!");
-    console.log("Você tem " + idade + " anos, então é uma pessoa Jovem!");
-} else if(idade < 65){
-    alert("Você tem " + idade + " anos, então é uma pessoa Adulta!");
-    console.log("Você tem " + idade + " anos, então é uma pessoa Adulta!");
-} else{
-    alert("Você tem " + idade + " anos, então é uma pessoa Idosa!");
-    console.log("Você tem " + idade + " anos, então é uma pessoa Idosa!");
-};
+alert(tabuada.join("\n"))
