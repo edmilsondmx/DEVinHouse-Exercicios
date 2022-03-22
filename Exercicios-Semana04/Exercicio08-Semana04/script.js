@@ -1,16 +1,15 @@
-// Jovens - Indivíduos de até 15 anos;
-// Adultos - Indivíduos com idade entre 16 até 64 anos;
-// Idosos - Indivíduos de 65 anos em diante.
+const cidades = [
+    { nome: 'Patos de Minas', populacao: 153585 },
+    { nome: 'Lages', populacao: 157349 },
+    { nome: 'Ibiúna', populacao: 79479 },
+    { nome: 'Maringá', populacao: 403063 },
+    { nome: 'Curitiba', populacao: 1963726 },
+    { nome: 'Florianópolis', populacao: 508826 },
+    { nome: 'Pato Branco', populacao: 84779 },
+];
 
-var idade = prompt("Qual a sua idade?");
-
-if(idade <= 15){
-    alert("Você tem " + idade + " anos, então é uma pessoa Jovem!");
-    console.log("Você tem " + idade + " anos, então é uma pessoa Jovem!");
-} else if(idade < 65){
-    alert("Você tem " + idade + " anos, então é uma pessoa Adulta!");
-    console.log("Você tem " + idade + " anos, então é uma pessoa Adulta!");
-} else{
-    alert("Você tem " + idade + " anos, então é uma pessoa Idosa!");
-    console.log("Você tem " + idade + " anos, então é uma pessoa Idosa!");
-};
+const mais200milHabitantes = cidades.filter(item => item.populacao > 200000);
+const emOrdem = mais200milHabitantes.sort(function(a, b){
+    return a.populacao < b.populacao? -1: a.populacao > b.populacao? 1 : 0;
+});
+console.log(emOrdem);
