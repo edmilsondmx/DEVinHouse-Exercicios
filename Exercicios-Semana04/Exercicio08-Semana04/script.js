@@ -10,6 +10,6 @@ const cidades = [
 
 const mais200milHabitantes = cidades.filter(item => item.populacao > 200000);
 const emOrdem = mais200milHabitantes.sort(function(a, b){
-    return a.populacao < b.populacao? -1: a.populacao > b.populacao? 1 : 0;
+    return a.populacao < b.populacao? 1: a.populacao > b.populacao? -1 : 0;
 });
 console.log(emOrdem);
