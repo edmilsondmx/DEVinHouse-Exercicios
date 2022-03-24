@@ -1,16 +1,46 @@
-// Jovens - Indivíduos de até 15 anos;
-// Adultos - Indivíduos com idade entre 16 até 64 anos;
-// Idosos - Indivíduos de 65 anos em diante.
+const contasClientes = [
+    {
+      id: 1,
+      saldo: 500,
+    },
+    {
+      id: 2,
+      saldo: 30000,
+    },
+    {
+      id: 3,
+      saldo: 50,
+    },
+];
 
-var idade = prompt("Qual a sua idade?");
 
-if(idade <= 15){
-    alert("Você tem " + idade + " anos, então é uma pessoa Jovem!");
-    console.log("Você tem " + idade + " anos, então é uma pessoa Jovem!");
-} else if(idade < 65){
-    alert("Você tem " + idade + " anos, então é uma pessoa Adulta!");
-    console.log("Você tem " + idade + " anos, então é uma pessoa Adulta!");
-} else{
-    alert("Você tem " + idade + " anos, então é uma pessoa Idosa!");
-    console.log("Você tem " + idade + " anos, então é uma pessoa Idosa!");
+function saque(valor, id){
+    const iden = id - 1;
+    if(valor <= 0){
+        console.log("Valor inválido!");
+    } else if(valor > contasClientes[iden].saldo){
+        console.log(`Saldo insuficiente. \nSaldo atual R$ ${contasClientes[iden].saldo},00`);
+    } else{
+        const saldoAtual = contasClientes[iden].saldo - valor;
+        console.log(`Saque de R$${valor},00 realizado com sucesso! \nSaldo atual R$ ${saldoAtual},00!`);
+        contasClientes[iden]["saldo"] = saldoAtual
+    };
+
+
 };
+
+
+function deposito(valor, id){
+    const iden = id - 1;
+    if(valor <= 0){
+        console.log("Valor inválido!");
+    } else{
+        const saldoAtual = contasClientes[iden].saldo + valor;
+        console.log(`Depósito de R$${valor},00 realizado com sucesso!\nSaldo atual R$${saldoAtual},00!`);
+        contasClientes[iden]["saldo"] = saldoAtual
+    };
+};
+
+saque(200,1);
+deposito(200,3);
+console.log(contasClientes);
