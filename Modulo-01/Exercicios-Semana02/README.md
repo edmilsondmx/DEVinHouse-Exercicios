@@ -1,2 +1,2 @@
-# Exercicios-Semana02
- Exercicios Semana 2 do curso DEVinHouse
+# DEVinHouse-Exercicios
+ Exercícios do curso DEVinHouse - Turma NDD - Semana 02 - SASS
