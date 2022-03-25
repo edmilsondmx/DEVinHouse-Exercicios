@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>DEVinHouse</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-image: url(DEVinWallpaper_3.png);
+            background-repeat: no-repeat;
+            background-size: 100%;
+        }
+        main{
+            margin: auto;
+            width: 90%;
+            margin-top: 40px;
+            background-color: rgba(233, 233, 233, 0.507);
+            backdrop-filter: blur(10px);
+            border-radius: 10px;
+            box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.486);
+            
+        }
+        h1{
+            text-align: center;
+            margin-bottom: 20px;
+            padding: 10px;
+            font-family: 'Courier New', Courier, monospace;
+            text-shadow: 0 0 7px white;
+            border-bottom: 1px solid black;
+        }
+        .container{
+            display: flex;
+            justify-content: center;
+           
+        }
+        div{
+            margin: 5px;
+            margin-bottom: 50px;
+        }
+        div > img{
+            width: 350px;
+            height: 300px;
+            
+        }
+        .voltar{
+            transform: rotateY(180deg);
+            margin: 10px;
+            border: 2px solid black;
+            border-radius: 10px;
+            padding: 5px;
+            box-sizing: content-box;
+        }
+        footer{
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            margin-top: 50px;
+            background-color: rgba(233, 233, 233, 0.507);
+            backdrop-filter: blur(10px);
+            text-align: center;
+            font-weight: bold;
+            font-family: 'Courier New', Courier, monospace;
+            
+        }
+
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Imagens - Semana 1</h1>
+        <div class="container">
+            <div><img src="prog.jpg" alt="noite em sp"></div>
+            <div><img src="./assets/gamer.jpg"  alt="game"></div>
+            <div><img src="https://images.pexels.com/photos/1036936/pexels-photo-1036936.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="ideia" ></div>
+        </div>
+        <a href="index.html"><img class="voltar" width="60px" height="30px" src="avançar.png" alt="avançar"></a>
+    </main>
+
+    <footer><p>Desenvolvido por | Edmilson Gomes - DEVinHouse</p></footer>
+</body>
+</html>

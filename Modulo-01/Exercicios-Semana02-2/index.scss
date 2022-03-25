@@ -1,0 +1,119 @@
+@use 'variaveis.scss';
+
+@import url('https://fonts.googleapis.com/css2?family=Finger+Paint&display=swap');
+
+body{
+    background-color: variaveis.$corFundo;
+}
+
+.title{
+    font-family: variaveis.$fontTitle;
+    font-size: 2.5em;
+    border-bottom: 2px dashed white;
+}
+
+.nav-link{
+    color: #d8d5d5!important;
+    transition: .5s;
+    &:hover{
+        color: variaveis.$corBranco!important;
+        font-weight: bold;
+    }
+}
+
+.principal{
+    width: 100%;
+    background-image: url(imagens/paisagem.jpg);
+    background-position-y: 330px;
+    .col{
+        margin: 20px;
+    }
+    .carousel-indicators [data-bs-target]{
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        margin-right: 20px;
+    }
+    
+}
+
+.card{
+    margin-bottom: 20px;
+    box-shadow: 5px 5px 5px #00000049;
+    border-radius: 10px;
+    .card-img-top{
+        border-radius: 10px 10px 0 0;
+    }
+    .risc{
+        text-decoration: line-through;
+    }
+    .list-itens{
+        list-style-type:'\2705\0020\0020';
+        
+    }
+    .link{
+        text-decoration: none;
+    }
+    
+    
+}
+.list-itens-modal{
+    list-style-type: none;
+    padding-left: 0!important;
+    .fas{
+        margin-right: 10px;
+        color: green;
+    }
+}
+.media{
+    font-size: 30px!important;
+}
+
+
+@media screen and (max-width: 1199px){
+    .text-end{
+        margin-top: 10px;
+
+    }
+}
+
+@media screen and (max-width: 768px){
+    .princip{
+        display: flex;
+        flex-direction: column-reverse;
+        text-align: center;
+        
+    }
+}
+
+@media screen and (max-width:576px) {
+   /*  .container{
+        h2{
+            font-size: 20px;
+        }
+        h3{
+            font-size: 15px;
+        }
+        
+    } */
+    .principal .col{
+        margin: 4px!important;
+    }
+    .princip{
+        display: flex;
+        flex-direction: column-reverse;
+        text-align: center;
+        
+    }
+    .list-viagens{
+        display: flex;
+        flex-direction: column;
+    }
+    .rodape{
+        display: flex!important;
+        justify-content: center!important;
+    }
+    .col .text-primary{
+        font-size: 29px;       
+    }
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <title>DEVinHouse</title>
+    <style>
+        .text span{
+            display: inline-block;
+            text-transform: uppercase;
+            animation: onda 1.2s ease-in-out infinite;
+            animation-delay: var(--delay);
+        }
+
+        @keyframes onda{
+            0%{
+                transform: translateY(0);
+            }
+            50%{
+                transform: translateY(-10px);
+                font-size: 23px;
+            }
+            100%{
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="geral">
+        <header>
+            <img src="devinNDD.jpg" height="50px" alt="logo" >
+            <nav>
+        
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="imagens.html">Imagens</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <h1 class="text">
+                <span style="--delay: 0.1s">S</span>
+                <span style="--delay: 0.2s">e</span>
+                <span style="--delay: 0.3s">m</span>
+                <span style="--delay: 0.4s">a</span>
+                <span style="--delay: 0.5s">n</span>
+                <span style="--delay: 0.6s">a</span> 
+                <span style="--delay: 0.7s">-</span>
+                <span style="--delay: 0.8s">0</span>
+                <span style="--delay: 0.9s">1</span>
+            </h1>
+            <hr>
+            <p>Este é o resultado do primeiro exercício <br> da primeira semana <br> do curso DEVinHouse. &#x1F4BB</p>
+            <a href="imagens.html"><img width="60px" height="30px" src="avançar.png" alt="avançar"></a>
+            <h2>CABO SUBMARINO - BRASIL CONECTADO</h2>
+            <p>Neste vídeo veremos sobre o cabo submarino de fibra ótica que liga o Brasil á Portugal e outros paises da Europa, o cabo também dará suporte à chegada do 5g no Brasil.</p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/KKgypT2Yko8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </main>
+        
+        <footer>
+            <p>Desenvolvido por | Edmilson Gomes - DEVinHouse</p>
+        </footer>
+        
+    </div>
+    
+</body>
+</html>

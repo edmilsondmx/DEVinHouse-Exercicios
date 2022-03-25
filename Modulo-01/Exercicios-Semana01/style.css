@@ -1,0 +1,111 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html, body{
+    height: 100%;
+}
+
+body{
+    background-image: url(DEVinWallpaper_3.png);
+    background-repeat: no-repeat;
+    background-size: 110%;
+    
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    background-color: #03374783;
+    
+
+}
+nav{
+    display: flex;
+}
+nav img{
+    
+    border: 2px solid #033747;
+}
+ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+ul li a{
+    margin-left: 20px;
+    padding: 5px 10px;
+    text-decoration: none;
+    color: #033747;
+    font-weight: bold;
+    background-color: #ffffff;
+    border-radius: 5px;
+    border: 1px solid #033747;
+    transition:  0.3s;
+}
+ul li a:hover{
+    color: whitesmoke;
+    background-color: #033747;
+    border: 1px solid whitesmoke;
+}
+.geral{
+    min-height: 100%;
+    width: 100%;
+    position: relative;
+}
+main{
+    background-color: #fffffff8;
+    width: 800px;
+    margin: auto;
+    text-align: center;
+    margin-top: 60px;
+    border-radius: 5px;
+    padding: 15px;
+    box-shadow: 5px 5px 5px #00000085;
+   
+}
+
+h1{
+    
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    color: #033747;
+    padding: 10px;
+    text-align: center;
+    background-image: url(./ceu.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+}
+h2{
+    font-size: 1em;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #033747;
+}
+main p{
+    font-size: 14px;
+    margin: 10px;
+    
+}
+
+a img{
+    border-radius: 15px;
+    padding: 10px;
+    border: 2px solid black;
+    margin: 20px 0 ;
+}
+
+footer{
+
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: #033747;
+    color: whitesmoke;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 12px;
+}
