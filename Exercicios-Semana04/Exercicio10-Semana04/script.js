@@ -1,46 +1,38 @@
-const contasClientes = [
-    {
-      id: 1,
-      saldo: 500,
-    },
-    {
-      id: 2,
-      saldo: 30000,
-    },
-    {
-      id: 3,
-      saldo: 50,
-    },
+const contas = [
+    {id: 1, saldo: 500},
+    {id: 2, saldo: 30000},
+    {id: 3, saldo: 50},
 ];
 
-
-function saque(valor, id){
-    const iden = id - 1;
+const saque = ((valor, id) => {
+    let idClient = contas.find(idClient => idClient.id === id);
     if(valor <= 0){
-        console.log("Valor inválido!");
-    } else if(valor > contasClientes[iden].saldo){
-        console.log(`Saldo insuficiente. \nSaldo atual R$ ${contasClientes[iden].saldo},00`);
+        console.log("Valor inválido para saque!")
+    } else if(valor > idClient.saldo){
+        console.log(`Saldo insuficiente.
+Saldo da conta R$${idClient.saldo},00`)
     } else{
-        const saldoAtual = contasClientes[iden].saldo - valor;
-        console.log(`Saque de R$${valor},00 realizado com sucesso! \nSaldo atual R$ ${saldoAtual},00!`);
-        contasClientes[iden]["saldo"] = saldoAtual
-    };
+        vAtual = idClient.saldo -= valor;
+        console.log(`Saque de R$${valor},00 realizado com sucesso.
+Saldo Restante R$${vAtual},00`)
+            
+    }
+    return contas
+});
 
-
-};
-
-
-function deposito(valor, id){
-    const iden = id - 1;
+const deposito = ((valor, id) => {
+    let idClient = contas.find(idClient => idClient.id === id);
     if(valor <= 0){
-        console.log("Valor inválido!");
+        console.log("Valor inválido para depósito!")
     } else{
-        const saldoAtual = contasClientes[iden].saldo + valor;
-        console.log(`Depósito de R$${valor},00 realizado com sucesso!\nSaldo atual R$${saldoAtual},00!`);
-        contasClientes[iden]["saldo"] = saldoAtual
-    };
-};
+        vAtual = idClient.saldo += valor;
+        console.log(`Depósito de R$${valor},00 realizado com sucesso.
+Saldo Atual R$${vAtual},00`)
+            
+    }
+    return contas
+});
 
-saque(200,1);
-deposito(200,3);
-console.log(contasClientes);
+saque(200, 1)
+deposito(200, 3)
+console.log(contas)
