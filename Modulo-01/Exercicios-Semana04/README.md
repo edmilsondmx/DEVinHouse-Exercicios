@@ -86,13 +86,13 @@ const cidades = [
 <ol>
     <li>Declare como variável em seu código o array de contas de clientes abaixo;</li>
     <li>Crie uma função para sacar dinheiro que deve receber como parâmetro o valor a ser sacado e o id da conta;</li>
-    <ol>
+    <ol type="1">
         <li>Se o valor for menor ou igual zero deve exibir a mensagem de valor inválido e não realizar nenhuma operação;</li>
         <li>Se o valor for maior que o saldo em conta deve exibir a mensagem de saldo insuficiente e exibir o saldo atual;</li>
         <li>Se o valor for maior que zero e menor que o saldo em conta deve exibir a mensagem informado que o saque ocorreu com sucesso e o saldo atual da conta após o saque, além de atualizar o array com esse novo valor;</li>
     </ol>
     <li>Criar função para depositar dinheiro que deve receber como parâmetro o valor a ser depositado e o id da conta;</li>
-    <ol>
+    <ol type="1">
         <li>Se o valor for menor ou igual zero deve exibir a mensagem de valor inválido e não realizar nenhuma operação;</li>
         <li>Se o valor for maior que zero deve exibir a mensagem informado que o deposito ocorreu com sucesso e o saldo atual da conta após o deposito, além de atualizar o array com esse novo valor;</li>
     </ol>
