@@ -1,6 +1,6 @@
 # DEVinHouse-Exercicios
  Exercícios do curso DEVinHouse - Turma NDD - Semana 02 - SASS
- <h2>[M1S02] - Ex 1 - Primeiros passos</h2>
+<h2>[M1S02] - Ex 1 - Primeiros passos</h2>
 <p>Nesta tarefa você deve criar um projeto adicionando os arquivos necessários para desenvolver os próximos exercícios.</p>
 <p>Pré-requisitos: </p>
 <ul>
