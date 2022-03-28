@@ -30,15 +30,19 @@
 
 <h2>[M1S04] - Ex 5 - Percorra um array exiba seus valores</h2>
 <p>Dado o array abaixo percorra ele e exiba o animal e sua raça utilizando console.log.</p>
-var animais = [
-  { animal: 'Cachorro', raca: 'Akita' },
-  { animal: 'Cachorro', raca: 'Boxer' },
-  { animal: 'Cachorro', raca: 'Dálmata' },
-  { animal: 'Cachorro', raca: 'Pastor alemão' },
-  { animal: 'Gato', raca: 'Persa' },
-  { animal: 'Gato', raca: 'Sphynx' },
-  { animal: 'Gato', raca: 'Siamês' },
-]
+<pre>
+    <code>
+        const animais = [
+        { animal: 'Cachorro', raca: 'Akita' },
+        { animal: 'Cachorro', raca: 'Boxer' },
+        { animal: 'Cachorro', raca: 'Dálmata' },
+        { animal: 'Cachorro', raca: 'Pastor alemão' },
+        { animal: 'Gato', raca: 'Persa' },
+        { animal: 'Gato', raca: 'Sphynx' },
+        { animal: 'Gato', raca: 'Siamês' },
+        ];
+    </code>
+</pre>
 
 <h2>[M1S04] - Ex 6 - Execute o código enquanto o valor seja verdadeiro</h2>
 <ul>
@@ -53,34 +57,42 @@ var animais = [
 <h2>[M1S04] - Ex 7 - Converter temperatura de Fahrenheit para Celsius</h2>
 <p>Dado o array abaixo realize a conversão da temperatura de  Fahrenheit para Celsius.</p>
 <p>Utilizando console.log exiba o valor do array original e do novo array convertido.</p>
-<p>**array:** [ 0, 32, 45, 50, 75, 80, 99, 120 ];</p>
+<code>**array:** [ 0, 32, 45, 50, 75, 80, 99, 120 ];</code>
 <p>**formula:** Math.round( ( elem - 32 ) * 5 / 9 );</p>
 
 <h2>[M1S04] - Ex 8 - Manipulando arrays</h2>
 <p>Dado o array de cidades abaixo, filtre apenas as cidades com mais de 200000 habitantes</p>
 <p>Após o filtro ordene por ordem decrescente de acordo com a população (primeiro cidades mais populosas)</p>
-**cidades:** [
-  { nome: 'Patos de Minas', populacao: 153585 },
-  { nome: 'Lages', populacao: 157349 },
-  { nome: 'Ibiúna', populacao: 79479 },
-  { nome: 'Maringá', populacao: 403063 },
-  { nome: 'Curitiba', populacao: 1963726 },
-  { nome: 'Florianópolis', populacao: 508826 },
-  { nome: 'Pato Branco', populacao: 84779 },
-];
+<pre>
+    <code>
+        const cidades = [
+        { nome: 'Patos de Minas', populacao: 153585 },
+        { nome: 'Lages', populacao: 157349 },
+        { nome: 'Ibiúna', populacao: 79479 },
+        { nome: 'Maringá', populacao: 403063 },
+        { nome: 'Curitiba', populacao: 1963726 },
+        { nome: 'Florianópolis', populacao: 508826 },
+        { nome: 'Pato Branco', populacao: 84779 },
+        ];
+    </code>
+</pre>
 
 <h2>[M1S04] - Ex 9 - Verificar se array contem item</h2>
 <p>Dado o array de cidades abaixo verificar se o array contém pelo menos uma cidade com o nome Florianópolis.</p>
 <p>Deve ser retornado true filtrando por 'Florianópolis' ou 'florianópolis'.</p>
-const cidades = [
-  { nome: 'Patos de Minas', populacao: 153585 },
-  { nome: 'Lages', populacao: 157349 },
-  { nome: 'Ibiúna', populacao: 79479 },
-  { nome: 'Maringá', populacao: 403063 },
-  { nome: 'Curitiba', populacao: 1963726 },
-  { nome: 'Florianópolis', populacao: 508826 },
-  { nome: 'Pato Branco', populacao: 84779 },
-];
+<pre>
+    <code>
+        const cidades = [
+        { nome: 'Patos de Minas', populacao: 153585 },
+        { nome: 'Lages', populacao: 157349 },
+        { nome: 'Ibiúna', populacao: 79479 },
+        { nome: 'Maringá', populacao: 403063 },
+        { nome: 'Curitiba', populacao: 1963726 },
+        { nome: 'Florianópolis', populacao: 508826 },
+        { nome: 'Pato Branco', populacao: 84779 },
+        ];
+    </code>
+</pre>
 
 <h2>[M1S04] - Ex 10 - Conta bancaria</h2>
 <ol>
@@ -100,7 +112,7 @@ const cidades = [
 </ol>
 <pre>
     <code>
-        **contasClientes :** [
+        const contasClientes = [
         {
             id: 1,
             saldo: 500,
