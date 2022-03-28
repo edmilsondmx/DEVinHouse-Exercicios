@@ -98,18 +98,21 @@ const cidades = [
     </ol>
     <li>Chamar as duas funções criadas para validar os cenários;</li>
 </ol>
-
-**contasClientes :** [
-  {
-    id: 1,
-    saldo: 500,
-  },
-  {
-    id: 2,
-    saldo: 30000,
-  },
-  {
-    id: 3,
-    saldo: 50,
-  },
-];
+<pre>
+    <code>
+        **contasClientes :** [
+        {
+            id: 1,
+            saldo: 500,
+        },
+        {
+            id: 2,
+            saldo: 30000,
+        },
+        {
+            id: 3,
+            saldo: 50,
+        },
+        ];
+    </code>
+</pre>
