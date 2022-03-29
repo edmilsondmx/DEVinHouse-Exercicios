@@ -1,6 +1,6 @@
 # DEVinHouse-Exercicios
 Exercícios do curso DEVinHouse - Turma NDD - Semana 02 - Bootstrap
-<br><a href="https://edmilsondmx.github.io/Exercicios2-Semana02/">Acesse aqui!</a>
+<br><a href="https://edmilsondmx.github.io/projeto-pagina-viagens/">Acesse aqui!</a>
 <h2>[M1S02] - Ex 7 - Primeiros passos</h2>
 <p>Nesta tarefa você deve criar um projeto adicionando os arquivos necessários para desenvolver os próximos exercícios.</p>
 
