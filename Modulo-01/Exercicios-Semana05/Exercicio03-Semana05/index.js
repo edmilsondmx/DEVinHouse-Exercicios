@@ -1,8 +1,4 @@
 class Produto{
-    nome;
-    preco;
-    emEstoque;
-    quantidade;
     constructor(nome, preco, estoque, quantidade){
         this.nome = nome;
         this.preco = `R$ ${preco}`;
