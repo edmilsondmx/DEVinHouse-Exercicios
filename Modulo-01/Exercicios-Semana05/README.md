@@ -19,4 +19,8 @@
 <p>Crie uma classe Pedidos, com as propriedades numeroPedido, dataPedido, estaPago, listaProdutos e nomeCliente.</p>
 <p>Utilize o método construtor para que, a cada instancia dessa classe, um número do pedido e o nome do cliente seja informado, a <strong>dataPedido</strong> seja a data atual <code>( new Date( ).toLocaleDateString( ))</code>, o <strong>estaPago</strong> seja falso e a <strong>listaProdutos</strong> seja um array vazio.</p>
 
+<h2>[M1S05] - Ex 5 - Criando métodos</h2>
+<p>Dentro da classe Pedido, adicione um método <strong>adicionarProduto</strong>, que recebe como argumento um objeto do tipo Produto ( <em>caso deseje</em>, você pode realizar uma validação utilizando o operador <em>instanceof</em>).</p>
+<p>Este método deve adicionar (<strong>push</strong>) à propriedade listaProdutos o produto passado como argumento.</p>
+
 
