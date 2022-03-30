@@ -11,4 +11,8 @@
 <p>No módulo index.js, importe a função do módulo saudacao-especial.js, nomeando a importação como "saudacaoEspecial", e exiba o resultado da chamada da função saudacaoEspecial( ... ) em um console.log. Passe como argumento o seu nome.</p>
 <p>A saudação deve ser exibida corretamente no console do navegador quando o projeto é aberto.</p>
 
+<h2>[M1S05] - Ex 3 - Criando classes</h2>
+<p>Crie uma classe para um Produto, com as seguintes propriedades: <strong>nome</strong>, <strong>preco</strong>, <strong>emEstoque</strong>, <strong>quantidade</strong>.</p>
+<p>Todas essas propriedades precisam ser recebidas no construtor da classe.</p>
+
 
