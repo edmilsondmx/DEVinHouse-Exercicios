@@ -15,4 +15,8 @@
 <p>Crie uma classe para um Produto, com as seguintes propriedades: <strong>nome</strong>, <strong>preco</strong>, <strong>emEstoque</strong>, <strong>quantidade</strong>.</p>
 <p>Todas essas propriedades precisam ser recebidas no construtor da classe.</p>
 
+<h2>[M1S05] - Ex 4 - Criando classes</h2>
+<p>Crie uma classe Pedidos, com as propriedades numeroPedido, dataPedido, estaPago, listaProdutos e nomeCliente.</p>
+<p>Utilize o método construtor para que, a cada instancia dessa classe, um número do pedido e o nome do cliente seja informado, a <strong>dataPedido</strong> seja a data atual <code>( new Date( ).toLocaleDateString( ))</code>, o <strong>estaPago</strong> seja falso e a <strong>listaProdutos</strong> seja um array vazio.</p>
+
 
