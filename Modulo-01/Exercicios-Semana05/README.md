@@ -23,4 +23,8 @@
 <p>Dentro da classe Pedido, adicione um método <strong>adicionarProduto</strong>, que recebe como argumento um objeto do tipo Produto ( <em>caso deseje</em>, você pode realizar uma validação utilizando o operador <em>instanceof</em>).</p>
 <p>Este método deve adicionar (<strong>push</strong>) à propriedade listaProdutos o produto passado como argumento.</p>
 
+<h2>[M1S05] - Ex 6 - Criando métodos</h2>
+<p>Dentro da classe Pedido, crie outro método, chamado **calcularTotal**, que deve iterar sobre a **listaProdutos** e retornar o valor total do pedido. Lembre-se de multiplicar a quantidade de cada produto pelo seu valor quando realizar a soma (quantidade e valor são propriedades da classe Produto!).</p>
+
+
 
