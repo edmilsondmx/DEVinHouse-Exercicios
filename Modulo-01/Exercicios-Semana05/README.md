@@ -26,5 +26,10 @@
 <h2>[M1S05] - Ex 6 - Criando métodos</h2>
 <p>Dentro da classe Pedido, crie outro método, chamado **calcularTotal**, que deve iterar sobre a **listaProdutos** e retornar o valor total do pedido. Lembre-se de multiplicar a quantidade de cada produto pelo seu valor quando realizar a soma (quantidade e valor são propriedades da classe Produto!).</p>
 
+<h2>[M1S05] - Ex 7 - Instanciando classes</h2>
+<p>Crie 5 instâncias de produtos, com as características que desejar.</p>
+<p>Crie 2 instâncias de pedidos. O primeiro pedido deve ter o número '20220001' e o nome do cliente à sua escolha. O segundo pedido deve ser o '20220002'.</p>
+<p>Utilizando o método **adicionarProduto**, adicione 3 dos 5 produtos ao pedido '20220001' e, o restante, ao pedido '20220002'.</p>
+
 
 
