@@ -31,5 +31,15 @@
 <p>Crie 2 instâncias de pedidos. O primeiro pedido deve ter o número '20220001' e o nome do cliente à sua escolha. O segundo pedido deve ser o '20220002'.</p>
 <p>Utilizando o método **adicionarProduto**, adicione 3 dos 5 produtos ao pedido '20220001' e, o restante, ao pedido '20220002'.</p>
 
+<h2>[M1S05] - Ex 8 - Chamando métodos de classe</h2>
+<p>Estas classes criadas durante os exercícios estão prontas para serem utilizadas em uma aplicação real. Por exemplo: podemos criar um sistema de pedidos, e, através da propriedade **listaProdutos**, podemos realizar uma iteração nos produtos de determinado pedido e imprimir cada um deles em tela.</p>
+<p>Podemos chamar o método **calcularTotal** para exibir em tela o valor total de um determinado pedido.</p>
+<p>A princípio, vamos apenas exibir essas informações no console. Usando o método de array **forEach**, faça um console.log em cada um dos produtos de cada um dos pedidos. O texto de saída pode ser qualquer um, à seu critério. Por exemplo:
+</p>
+<p><code>` Produto: ${produto.nome} | Valor un: ${produto.preco} | Total: ${produto.preco * produto.quantidade} ` </code></p>
+<p>Faça também um console.log para exibir o valor total de cada pedido. Exemplo:</p>
+<p><code>`Preço total do pedido: R$ ${pedido.calcularTotal( )}`</code></p>
+
+
 
 
