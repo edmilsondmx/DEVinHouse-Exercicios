@@ -40,6 +40,10 @@
 <p>Faça também um console.log para exibir o valor total de cada pedido. Exemplo:</p>
 <p><code>`Preço total do pedido: R$ ${pedido.calcularTotal( )}`</code></p>
 
+<h2>[M1S05] - Ex 9 - Funções assíncronas</h2>
+<p>Utilizando o setInterval, crie uma função que mostre o horário atual e atualize automaticamente a cada 2 segundos.</p>
+<p>O horário deve ser mostrado no console, no formato HH:MM:SS.</p>
+
 
 
 
