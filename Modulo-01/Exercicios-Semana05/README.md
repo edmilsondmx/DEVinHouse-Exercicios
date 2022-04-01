@@ -44,6 +44,10 @@
 <p>Utilizando o setInterval, crie uma função que mostre o horário atual e atualize automaticamente a cada 2 segundos.</p>
 <p>O horário deve ser mostrado no console, no formato HH:MM:SS.</p>
 
+<h2>[M1S05] - Ex 10 - Promises</h2>
+<p>Crie uma função chamada **sleep**, que recebe como argumento um  valor qualquer.</p>
+<p>Quando chamada, essa função precisa retornar, após 3 segundos (setTimeout), uma Promise resolvida com o valor que foi passado como argumento.</p>
+
 
 
 
