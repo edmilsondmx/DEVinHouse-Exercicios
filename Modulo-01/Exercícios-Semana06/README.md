@@ -36,7 +36,21 @@
 </ul>
 <p>Adicione no button o evento de click para chamar a função criada.</p>
 
+<h2>[M1S06] - Ex 4 - Busca Endereço Parte 2</h2>
+<p>Após implementar o Ex 3, vamos adicionar tratativas na função criada;</p>
+<ul>
+    <li> Quando o usuário clicar no botão de buscar sem ter informado um valor no input exibir modal de alerta (alert) informando que o campo precisa ser preenchido</li>
+    <li> Quando o usuário preencher o campo com menos ou mais de 8 caracteres deve ser exibido modal de alerta (alert) informando que o campo foi preenchido com um cep inválido</li>
+    <li>Em ambos os casos à cima não deve ser realizada a consulta na api de cep</li>
+</ul>
 
+<h2>[M1S06] - Ex 5 - Busca Endereço Parte 3</h2>
+<p>Após implementar o Ex 4, vamos adicionar tratativas na função criada;</p>
+<ul>
+    <li> Caso a api retorne erro deve ser exibido um alerta para o usuário informando que não foi possível consultar o cep</li>
+    <li>Caso a api retorne sucesso deve ser adicionado um elemento <p> com o endereço formatado ex: logradouro, complemento - bairro - localidade/uf</li>
+    
+</ul>
 
 
 
