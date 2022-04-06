@@ -7,7 +7,9 @@ const paragrafo = document.createElement('p');
 
 botao.addEventListener('click', calcular);
 async function calcular(){
-    if(numCep.value.length !== 8){
+    if(numCep.value.length === 0){
+        alert('ERRO: O campo de busca deve ser preenchido!')
+    } else if(numCep.value.length !== 8){
         alert('ERRO: Digite um CEP válido!');
     } else{
         try{
