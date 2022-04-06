@@ -52,5 +52,41 @@
     
 </ul>
 
+<h2>[M1S06] - Ex 6 - Busca CEP Parte 1</h2>
+<p>Crie uma página html para buscar os CEP através do endereço contendo:</p>
+<ul>
+    <li>1 input para UF</li>
+    <li>1 input para cidade</li>
+    <li>1 input para  logradouro/rua</li>
+    <li>1 button para consultar</li>  
+</ul>
+<p>Crie uma função assíncrona para realizar a busca na api</p>
+<ul>
+    <li>Utilize o endereço da api https://viacep.com.br/ws/UF/CIDADE/RUA/json/ substituindo os UF, CIDADE e RUA pelos campos que o usuário informou nos inputs</li>
+    <li>Exiba o resultado no console</li> 
+</ul>
+<p>Adicione o evento de clique no botão de consulta para a função criada</p>
 
+<h2>[M1S06] - Ex 7 - Busca CEP Parte 2</h2>
+<p>Após implementar o Ex 6, vamos adicionar tratativas na função criada;</p>
+<ul>
+    <li>Valide se todos os campos estão preenchidos, caso não estejam exiba alerta informando os campos que ainda precisam ser preenchidos</li>
+    <li>Caso o uf tenha mais ou menos de 2 caracteres exiba alerta informando que o UF é inválido</li>
+    <li>Em ambos os casos não deve ser realizada a busca na api</li>
+</ul>
+
+<h2>[M1S06] - Ex 8 - Busca CEP Parte 3</h2>
+<p>Após implementar o Ex 7, vamos adicionar tratativas na função criada;</p>
+<p>Caso o retorno da api seja um erro deve ser exibido um alerta para o usuário</p>
+<p>Caso de sucesso mas não retorne nenhum cep deve ser exibido um elemento <p> com a informação de que nenhum registro foi encontrado</p>
+<p>Caso a api retorne os resultados deve ser criada uma tabela contendo </p>
+<ul>
+    <li>cep</li>
+    <li>logradouro</li>
+    <li>complemento</li>
+    <li>bairro</li>
+    <li>localidade</li>
+    <li>uf</li>
+    <li>ddd</li>
+</ul>
 
