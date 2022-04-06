@@ -26,7 +26,7 @@ div{
     flex-direction: column;  
     margin: auto;
     width: 400px;
-    height: 400px;
+    min-height: 400px;
     background-color: #ffffff;
     border-radius: 20px;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.548);
