@@ -5,8 +5,8 @@ const res = document.getElementById('res')
 
 const address = document.createElement('address');
 
-botao.addEventListener('click', calcular);
-async function calcular(){
+botao.addEventListener('click', buscar);
+async function buscar(){
     if(numCep.value.length === 0){
         alert('ERRO: O campo de busca deve ser preenchido!')
     } else if(numCep.value.length !== 8){
