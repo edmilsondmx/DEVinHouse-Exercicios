@@ -17,7 +17,7 @@
 <ul>
     <li>Deve ser obtido os valores dos inputs</li>
     <li>Deve ser obtida a operação desejada de acordo com o valor do select</li>
-    <li>Deve ser adicionado um elemento do tipo <p> via JavaScript para exibir o resultado do cálculo</li>
+    <li>Deve ser adicionado um elemento do tipo via JavaScript para exibir o resultado do cálculo</li>
     <li>Adicione o evento de click no botão calcular</li>
 </ul>
 
