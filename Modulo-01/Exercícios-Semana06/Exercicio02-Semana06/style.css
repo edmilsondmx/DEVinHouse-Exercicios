@@ -21,10 +21,8 @@ header > h2{
     margin: 20px;
     
 }
-section{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
+div{
+    display: flex;    
     margin: auto;
     width: 400px;
     height: 400px;
@@ -33,9 +31,23 @@ section{
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.548);
     padding: 10px;
     text-align: center;
-      
+}
+input, select{
+    margin: 10px;
+    width: 150px;
+    font-size: 1em;
+    padding: 5px;
+    border-radius: 5px;
+    
+}
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
 }
 #btn{
+    margin: 10px;
     padding: 5px 10px;
     background-color: #15011f;
     color: #f5f5f5;

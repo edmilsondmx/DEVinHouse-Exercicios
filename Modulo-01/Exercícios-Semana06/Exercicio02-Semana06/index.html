@@ -14,11 +14,24 @@
         <img src="imagens/logo.png" class="logo" alt="logo DEVinNDD">
         <h2>Semana 06</h2>
     </header>
-    <section>
-        <h1 id="title">Título da Página</h1>
-
-        <div><button id="btn">Alterar Título</button></div>
-    </section>
+    <div>
+        <form id="res">
+            <label for="num1">Digite um número!</label>
+            <input type="number"  id="num1">
+            <label for="num2">Digite outro número!</label>
+            <input type="number" id="num2">
+            <label for="operador">Selecione a Operação</label>
+            <select id="operador">
+                <option value="">Selecione</option>
+                <option value="soma">Soma</option>
+                <option value="subtracao">Subtração</option>
+                <option value="multiplicacao">Multiplicação</option>
+                <option value="divisao">Divisão</option>
+            </select>
+            <button id="btn" type="button">Calcular</button>
+        </form>
+        
+    </div>
 
     <footer>
         <p> &copy; &lt; Edmilson Gomes &gt; - DEVinHouse </p>
