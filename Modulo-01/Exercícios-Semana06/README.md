@@ -21,6 +21,21 @@
     <li>Adicione o evento de click no botão calcular</li>
 </ul>
 
+<h2>[M1S06] - Ex 3 - Busca Endereço Parte 1</h2>
+<p>Crie uma página html para buscar o endereço através do cep contendo:</p>
+<ul>
+    <li>1 input para receber o CEP</li>
+    <li>1 button para buscar o endereço</li>
+</ul>
+<p>Crie uma função assíncrona que deve realizar o fetch do endereço do cep</p>
+<ul>
+    <li>Utilize este endpoint: https://viacep.com.br/ws/01001000/json/</li>
+    <li>Substitua o 01001000 pelo cep digitado no input</li>
+    <li>Faça a chamada utilizando Fetch e aguarde o resultado</li>
+    <li>Exiba o resultado no console.log</li>
+</ul>
+<p>Adicione no button o evento de click para chamar a função criada.</p>
+
 
 
 
