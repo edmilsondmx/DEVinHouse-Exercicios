@@ -3,7 +3,7 @@ const numCep = document.getElementById('numCep');
 
 const res = document.getElementById('res')
 
-const paragrafo = document.createElement('p');
+const address = document.createElement('address');
 
 botao.addEventListener('click', calcular);
 async function calcular(){
@@ -14,12 +14,21 @@ async function calcular(){
     } else{
         try{
             const response = await fetch(`https://viacep.com.br/ws/${numCep.value}/json/`);
-            const res = await response.json();
-            console.log(res);
+            const endereco = await response.json();
+            if(endereco.erro === true){
+                alert("Não foi possível consultar o CEP informado!")
+            }else{
+                address.innerHTML = `${endereco?.logradouro}
+                 - ${endereco?.complemento}
+                ${endereco?.bairro}
+                 - ${endereco?.localidade} - ${endereco?.uf}
+                 - ${endereco.cep}`
+            }
+            
         } catch(err){
-            console.log('Erro: ',err);
+            console.log(err);
         };
     };
     
-    /* res.appendChild(paragrafo); */
+    res.appendChild(address);
 };

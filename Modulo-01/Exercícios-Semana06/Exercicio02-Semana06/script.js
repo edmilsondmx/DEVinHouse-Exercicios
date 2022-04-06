@@ -13,16 +13,16 @@ function calcular(){
     } else{
         switch (operador.value) {
             case 'soma':
-                res.innerHTML += `O Resultado é: ${Number(num1.value) + Number(num2.value)}`;
+                paragrafo.innerHTML = `O Resultado é: ${Number(num1.value) + Number(num2.value)}`;
                 break;
             case 'subtracao':
-                res.innerHTML += `O Resultado é: ${Number(num1.value) - Number(num2.value)}`;
+                paragrafo.innerHTML = `O Resultado é: ${Number(num1.value) - Number(num2.value)}`;
                 break;
             case 'multiplicacao':
-                res.innerHTML += `O Resultado é: ${Number(num1.value) * Number(num2.value)}`;
+                paragrafo.innerHTML = `O Resultado é: ${Number(num1.value) * Number(num2.value)}`;
                 break;
             case 'divisao':
-                res.innerHTML += `O Resultado é: ${Number(num1.value) / Number(num2.value)}`;
+                paragrafo.innerHTML = `O Resultado é: ${Number(num1.value) / Number(num2.value)}`;
                 break;
         
             default:
