@@ -123,4 +123,43 @@
 <p>Importe o arquivo js em sua página html</p>
 <p>Vincule a função criada com o evento de onload do body da página </p>
 
+<h2>[M1S06] - Ex 10 - Manipulação de DOM</h2>
+<p>Utilize o código abaixo como base para implementar o exercício: </p>
+<pre><code>
+    <!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <style>
+      .azul {
+        color: blue;
+      }
+      .vermelho {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li class="azul">Item</li>
+      <li class="vermelho">Item</li>
+      <li class="azul">Item</li>
+      <li class="vermelho">Item</li>
+      <li class="azul">Item</li>
+      <li class="vermelho">Item</li>
+    </ul>
+    <button>Inverter</button>
+  </body>
+</html>
+</code></pre>
+<p>Implementar função para inverter as classes (itens com azul terão a classe vermelho e vermelho terão a classe azul)</p>
+<ul>
+    <li>Use o document.querySelectorAll() para obter uma lista de elementos;</li>
+    <li>Percorra os elementos utilizando um laço de repetição;</li>
+    <li> Utilizando uma estrutura de condicionais, verifique as classes;</li>
+    <li>O uso do classList.remove e classList.add será útil</li>
+</ul>
+<p>Vincule a função criada com o evento de click do botão Inverter</p>
+
 
