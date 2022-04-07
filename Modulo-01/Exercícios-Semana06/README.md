@@ -90,3 +90,37 @@
     <li>ddd</li>
 </ul>
 
+<h2>[M1S06] - Ex 9 - Manipulação de DOM</h2>
+<p>Utilize o seguinte HTML como base para o seu exercício:</p>
+<pre><code>
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Document</title>
+    </head>
+    <body>
+        <h1>Titulo</h1>
+        <p>subtítulo</p>
+        <p id="descricao">Lista de afazeres</p>
+        <ul>
+        <li class="itens">Ex 1</li>
+        <li class="itens">Ex 2</li>
+        <li class="itens">Ex 3</li>
+        <li class="itens">Ex 4</li>
+        </ul>
+    </body>
+    </html>
+</code></pre>
+<p>No arquivo js crie uma função e adicione as seguintes variáveis:</p>
+<ul>
+    <li>titulo: conterá a primeira tag h1;</li>
+    <li>descricao: conterá a tag com id = descricao;</li>
+    <li>listaItens: conterá todas as tags com classe = itens;</li>
+    <li>Atribua para as variáveis os elementos solicitados utilizando querySelector e querySelectorAll </li>
+    <li>Imprima os valores das variáveis utilizando console.log</li>
+</ul>
+<p>Importe o arquivo js em sua página html</p>
+<p>Vincule a função criada com o evento de onload do body da página </p>
+
+
