@@ -26,15 +26,15 @@ async function buscar(){
                 
             } else{
                 paragrafo.textContent = ''
-                thead.innerHTML = `
-                <tbody><td>CEP: </td><td>${numCep[0].cep}<td><tbody>
-                <tbody><td>Logradouro: </td><td>${numCep[0].logradouro}<td><tbody>
-                <tbody><td>Complemento: </td><td>${numCep[0]?.complemento}<td><tbody>
-                <tbody><td>Bairro: </td><td>${numCep[0].bairro}<td><tbody>
-                <tbody><td>Localidade: </td><td>${numCep[0].localidade}<td><tbody>
-                <tbody><td>UF: </td><td>${numCep[0].uf}<td><tbody>
-                <tbody><td>DDD: </td><td>${numCep[0].ddd}<td></tbody>`
-                thead.style.border = '1px solid black';
+                thead.innerHTML = /*HTML*/ `
+                <tr><th> CEP: </th> <td> ${numCep[0].cep} </td></tr>
+                <tr><th>Logradouro: </th><td>${numCep[0].logradouro}</td></tr>
+                <tr><th>Complemento: </th><td>${numCep[0]?.complemento}</td></tr>
+                <tr><th>Bairro: </th><td>${numCep[0].bairro}</td></tr>
+                <tr><th>Localidade: </th><td>${numCep[0].localidade}</td></tr>
+                <tr><th>UF: </th><td>${numCep[0].uf}</td></tr>
+                <tr><th>DDD: </th><td>${numCep[0].ddd}</td></tr>`;
+                
             };
         } catch(err){
             alert('ERRO: ',err);

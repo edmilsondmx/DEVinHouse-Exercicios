@@ -69,6 +69,19 @@ form{
     animation: bate 1.2s ease-in-out infinite;
     margin: 20px;
 }
+
+thead{
+    display: table;
+    margin: auto;
+    border-style: dotted;
+    border-radius: 4px;
+}
+
+td, tr, th {
+padding: 4px 8px;
+border: 0.5px solid #BEBEBE
+}
+
 footer{
     background-color: #15011f;
     position: absolute;
