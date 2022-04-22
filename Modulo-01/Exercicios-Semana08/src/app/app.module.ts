@@ -7,6 +7,10 @@ import { FooterComponent } from './components/footer/footer.component';
 import { MainComponent } from './components/main/main.component';
 import { HomeComponent } from './pages/home/home.component';
 import { ListaItemComponent } from './components/lista-item/lista-item.component';
+import { ComidasComponent } from './pages/comidas/comidas.component';
+import { BebidasComponent } from './pages/bebidas/bebidas.component';
+import { CardsComponent } from './components/cards/cards.component';
+import { CardBebidasComponent } from './components/card-bebidas/card-bebidas.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +19,11 @@ import { ListaItemComponent } from './components/lista-item/lista-item.component
     FooterComponent,
     MainComponent,
     HomeComponent,
-    ListaItemComponent
+    ListaItemComponent,
+    ComidasComponent,
+    BebidasComponent,
+    CardsComponent,
+    CardBebidasComponent
   ],
   imports: [
     BrowserModule
