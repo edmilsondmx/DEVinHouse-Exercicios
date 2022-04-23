@@ -1,0 +1,26 @@
+.card-img-top{
+    width: 100%;
+    border-radius: 30px;
+    &:hover{
+        transform: scale(.9);
+    }
+}
+
+.card{
+    text-decoration: none;
+    color: #000;
+    cursor: pointer;
+    margin: 10px;
+    background-image: url(../../../assets/imagens/papel-parede-home.jpg);
+    color: white;
+}
+.row{
+    width: 100%;
+    background-image: url(../../../assets/imagens/papel-parede-home.jpg);
+}
+
+@media screen and (max-width: 991px) {
+    .row{
+        flex-direction: column;
+    }
+}

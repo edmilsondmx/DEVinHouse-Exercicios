@@ -1,0 +1,66 @@
+{
+  "bebidas": [
+    {
+      "img": "https://images.pexels.com/photos/3407777/pexels-photo-3407777.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+      "nome": "Refrigerante lt",
+      "descricao": "Coca-cola, Pepsi, Guaraná Antartica, Fanta Laranja, Fanta Uva",
+      "preco": 6
+    },
+    {
+      "img": "https://images.pexels.com/photos/3009802/pexels-photo-3009802.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+      "nome": "Suco Natural",
+      "descricao": "Morango, Uva, Manga, Larana, Limão, Abacaxi...",
+      "preco": 10
+    },
+    {
+      "img": "https://images.pexels.com/photos/46527/beer-the-bottle-wine-shop-46527.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+      "nome": "Cerveja Long Neck",
+      "descricao": "Stela Artois, Budweiser, Spaten, heineken",
+      "preco": 10
+    },
+    {
+      "img": "https://images.pexels.com/photos/1283219/pexels-photo-1283219.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+      "nome": "Drinks",
+      "descricao": "Caipirinha, Vodka, Wisky, Gin",
+      "preco": 18
+    }
+  ],
+  "comidas": [
+    {
+      "img": "https://assets.deliveryinbox.com.br/images/products/83ecb51eb0ff83fcba398c436da62c7e.jpeg",
+      "nome": "Hambúrguer",
+      "descricao": "Pão, hambúrguer 90g, salada e batata.",
+      "preco": 18.5
+    },
+    {
+      "img": "https://assets.deliveryinbox.com.br/images/products/83ecb51eb0ff83fcba398c436da62c7e.jpeg",
+      "nome": "X-Búrguer",
+      "descricao": "Pão, hambúrguer 90g, 1 fatia de queijo, salada e batata.",
+      "preco": 20.5
+    },
+    {
+      "img": "https://assets.deliveryinbox.com.br/images/products/83ecb51eb0ff83fcba398c436da62c7e.jpeg",
+      "nome": "X-Bacon",
+      "descricao": "Pão, hambúrguer 90g, 1 fatia de queijo, 2 fatia de bacon, salada e batata.",
+      "preco": 22.5
+    },
+    {
+      "img": "https://assets.deliveryinbox.com.br/images/products/83ecb51eb0ff83fcba398c436da62c7e.jpeg",
+      "nome": "X-Tudo",
+      "descricao": "Pão, 2 hambúrgueres 90g, 2 fatias de queijo, 4 fatias de bacon, salada e batata.",
+      "preco": 25.5
+    },
+    {
+      "img": "https://assets.deliveryinbox.com.br/images/products/83ecb51eb0ff83fcba398c436da62c7e.jpeg",
+      "nome": "X-Salada",
+      "descricao": "Pão, bife de hambúrguer 90g, salada, maionese da casa",
+      "preco": 19
+    },
+    {
+      "img": "https://assets.deliveryinbox.com.br/images/products/83ecb51eb0ff83fcba398c436da62c7e.jpeg",
+      "nome": "X-Calabresa",
+      "descricao": "Pão, bife de hambúrguer 90g, salada, maionese da casa",
+      "preco": 22
+    }
+  ]
+}
