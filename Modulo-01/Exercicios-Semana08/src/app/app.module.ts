@@ -11,6 +11,27 @@ import { ComidasComponent } from './pages/comidas/comidas.component';
 import { BebidasComponent } from './pages/bebidas/bebidas.component';
 import { CardsComponent } from './components/cards/cards.component';
 import { CardBebidasComponent } from './components/card-bebidas/card-bebidas.component';
+import { RouterModule, Route } from '@angular/router';
+import { ContatoComponent } from './pages/contato/contato.component';
+
+const ROUTES: Route[] = [
+  {
+    path: '',
+    component:HomeComponent
+  },
+  {
+    path: 'comidas',
+    component:ComidasComponent
+  },
+  {
+    path: 'bebidas',
+    component:BebidasComponent
+  },
+  {
+    path: 'contato',
+    component:ContatoComponent
+  }
+]
 
 @NgModule({
   declarations: [
@@ -23,10 +44,12 @@ import { CardBebidasComponent } from './components/card-bebidas/card-bebidas.com
     ComidasComponent,
     BebidasComponent,
     CardsComponent,
-    CardBebidasComponent
+    CardBebidasComponent,
+    ContatoComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    RouterModule.forRoot(ROUTES)
   ],
   providers: [],
   bootstrap: [AppComponent]

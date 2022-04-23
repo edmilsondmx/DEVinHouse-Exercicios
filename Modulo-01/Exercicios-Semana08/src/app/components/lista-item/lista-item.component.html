@@ -1,9 +1,16 @@
-<div *ngFor="let item of listaItens" class="col-12 col-sm-6 col-md-5">
-    <a (click)="alerta(item.nome)" href="#" class="card">
-        <img src="{{item.img}}" class="card-img-top" alt="...">
+<div class="row col-12 col-sm-6 col-md-5">
+    <a class="card col" routerLink="/comidas">
+        <img src="../../assets/imagens/hamburger.jpg" class="card-img-top" alt="...">
         <div class="card-body">
-            <h5 class="card-title">{{item.nome}}</h5>
-            <p class="card-text">{{item.descricao}}</p>
+            <h5 class="card-title">Lanches Artesanais</h5>
+            <p class="card-text">Para cada tamanho de fome exste um hambúrger que acaba com ela perfeitamente!</p>
+        </div>
+    </a>
+    <a class="card col" routerLink="/bebidas">
+        <img src="../../assets/imagens/bebida.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">Bebidas Diversas</h5>
+            <p class="card-text">Bebidas na medida da sua sede! Refrigerantes, Sucos, Cervejas e muito mais...</p>
         </div>
     </a>
 </div>
