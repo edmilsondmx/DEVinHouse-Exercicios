@@ -1,1 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
+body{
+    background-image: url(../src/assets/imagens/plano-fundo.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+@media screen and (max-width: 991px) {
+    Body{
+        background-repeat: repeat;
+    }
+}

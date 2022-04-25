@@ -1,6 +1,33 @@
-# ExerciciosSemana08
+# Exercicio Semana08 - NG-FOOD
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.3.
+Este projeto foi gerado com [Angular CLI](https://github.com/angular/angular-cli) version 13.3.3.
+
+## Como rodar o projeto?
+### Você precisará:
+<ul>
+    <li>Node JS(obrigatório)</li>
+    <li>Visual Studio Code (recomendado)</li>
+    <li>Git bash </li>
+    <li>Angular CLI</li>
+</ul>
+
+*OBS: Para que a aplicação funcione como esperado, você deve deixar o frontend e o backend rodando simultaneamente (abra dois terminais):*
+
+``` bash
+
+#Com o primeiro terminal, abra a pasta backend e execute o comando:
+$ json-server --watch db.json
+
+#A aplicação (backend) será aberta na porta:3000 - acesse http://localhost:3000. 
+```
+Agora que o backend está ativo, é necessário repetir o processo para o frontend: 
+
+```bash
+#No segundo terminal, abra a pasta frontend e execute o comando:
+$ ng serve -o
+
+#A aplicação(frontend) será aberta na porta:4200 - acesse http://localhost:4200. 
+```
 
 ## Development server
 
