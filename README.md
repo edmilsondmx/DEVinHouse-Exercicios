@@ -8,4 +8,5 @@
     <li><a href="https://github.com/edmilsondmx/DEVinHouse-Exercicios/tree/main/Modulo-01/Exercicios-Semana04" target="_blank">Exercícios Semana 04 - JavaScript - ES6+</a></li>
     <li><a href="https://github.com/edmilsondmx/DEVinHouse-Exercicios/tree/main/Modulo-01/Exercicios-Semana05" target="_blank">Exercícios Semana 05 - JavaScript</a></li>
     <li><a href="https://github.com/edmilsondmx/DEVinHouse-Exercicios/tree/main/Modulo-01/Exerc%C3%ADcios-Semana06" target="_blank">Exercícios Semana 06 - JavaScript - DOM</a></li>
+    <li><a href="https://github.com/edmilsondmx/DEVinHouse-Exercicios/tree/main/Modulo-01/Exercicios-Semana08" target="_blank">Exercícios Semana 08 - Angular - NG-FOOD</a></li>
  </ul>
