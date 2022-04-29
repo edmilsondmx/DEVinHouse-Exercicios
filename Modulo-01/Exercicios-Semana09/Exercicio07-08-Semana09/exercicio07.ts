@@ -1,11 +1,4 @@
-interface Pessoa{
-    nome:string;
-    idade:number;
-    rua:string;
-
-    cadastrar();
-
-};
+import { Pessoa } from './exercicio08'
 
 
 class Aluno implements Pessoa{
