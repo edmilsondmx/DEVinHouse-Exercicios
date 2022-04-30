@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Grape+Nuts&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-image: url(imagens/DEVinWallpaper_3.png);
+    background-size: 100%;
+    font: normal 1.2em arial;
+}
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+header > h2{
+    text-align: center;
+    color: whitesmoke;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.507);
+    margin: 20px;
+    
+}
+.logo{
+    width: 100px;
+    height: 70px;
+    animation: bate 1.2s ease-in-out infinite;
+    margin: 20px;
+}
+main{
+       
+    margin: auto;
+    width: 400px;
+    height: 400px;
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.548);
+    padding: 10px;
+    text-align: center;
+}
+main > h1{
+    margin: 20px;
+}
+ul{
+    width: 70%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    margin-top: 30px;
+    background-color: rgb(253, 255, 133);
+    box-shadow: 5px 5px 5px #00000073;
+}
+li{
+    font-family: 'Grape Nuts', cursive;
+    font-size: 1.4em;
+    list-style-position: inside;
+    margin: 5px;
+}
+
+footer{
+    background-color: #15011f;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    text-align: center;
+    color: whitesmoke;
+    font-style: italic;
+    font-size: 0.8em;
+}
+
+@keyframes bate {
+    0%{
+        transform: translateY(0);
+    }
+    20%{
+        transform: translateY(-20px);
+        
+        
+    }
+    40%{
+        transform: rotate(-10deg);
+        
+    }
+    60%{
+        transform: rotate(10deg);
+    }
+    
+    100%{
+        transform: translateY(0);
+    }
+
+}
