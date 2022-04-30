@@ -12,6 +12,8 @@ export class CardBebidasComponent  {
 
   bebidas: ICardapio[] = [] /* BEBIDAS_MOCK */;
 
+  bebida:string = "";
+
   constructor(private http: HttpClient) { }
 
   ngOnInit(): void {
@@ -20,6 +22,11 @@ export class CardBebidasComponent  {
     .subscribe((resultado) => {
       this.bebidas = resultado;
     });
+  }
+
+  pesquisar(){
+    const pequisa = this.bebidas.filter((item) => item.descricao.includes(this.bebida))
+    console.log(pequisa)
   }
 
 }

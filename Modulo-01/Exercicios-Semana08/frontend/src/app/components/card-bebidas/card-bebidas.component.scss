@@ -4,3 +4,33 @@
 .card-body{
     font-weight: bold;
 }
+
+.container > h1{
+    color: white;
+    text-shadow: 0 0 5px rgb(255, 152, 67);
+}
+.title{
+    display: flex;
+    align-items: center;
+}
+
+.search{
+    background-color: white;
+    display: flex;
+    margin-left: 10px;
+    width: 300px;
+    height: 40px;
+    border-radius: 5px;
+    input{
+        width: 100%;
+        border: none;
+        &:focus{
+            outline: 0;
+            border: none;
+        }
+    }
+    i{
+        padding: 10px;
+    }
+    
+}

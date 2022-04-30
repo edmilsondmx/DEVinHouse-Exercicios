@@ -12,6 +12,8 @@ export class CardsComponent implements OnInit  {
 
   lanches: ICardapio[] = [] /* COMIDAS_MOCK */;
 
+  lanche:string = "";
+
   constructor(private http: HttpClient) { }
 
   ngOnInit(): void {
@@ -20,6 +22,12 @@ export class CardsComponent implements OnInit  {
     .subscribe((resultado) => {
       this.lanches = resultado;
     });
+  }
+
+  pesquisar(){
+    console.log('ok')
+    const pequisa = this.lanches.filter((item) => item.descricao.includes(this.lanche))
+    console.log(pequisa)
   }
 
 

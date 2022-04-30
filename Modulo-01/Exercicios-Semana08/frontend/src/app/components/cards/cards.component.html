@@ -1,6 +1,12 @@
-<div class="container">
+<div class="container title">
   <h1>#Nossos Lanches</h1>
+  <div class="search">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <input type="text" placeholder="Pesquise um item" [(ngModel)]="lanche">
+    <button (click)="pesquisar()">Pequisar</button>
+  </div>
 </div>
+
 <div class="container d-flex align-items-center flex-wrap">
     <div *ngFor="let item of lanches" class="card mb-3 me-3" style="max-width: 540px;">
         <div class="row g-0">

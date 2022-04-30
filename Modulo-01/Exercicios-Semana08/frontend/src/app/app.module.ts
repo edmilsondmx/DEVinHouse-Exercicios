@@ -15,6 +15,7 @@ import { RouterModule, Route } from '@angular/router';
 import { ContatoComponent } from './pages/contato/contato.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CardapioComponent } from './pages/cardapio/cardapio.component';
+import { FormsModule } from '@angular/forms';
 
 const ROUTES: Route[] = [
   {
@@ -57,7 +58,8 @@ const ROUTES: Route[] = [
   imports: [
     BrowserModule,
     RouterModule.forRoot(ROUTES),
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
