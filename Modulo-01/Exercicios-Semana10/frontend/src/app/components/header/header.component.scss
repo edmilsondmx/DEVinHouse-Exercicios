@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap');
+
+.title{
+    font-family: 'Bungee Shade', cursive;
+    font-size: 3em;
+    text-shadow: 0 0 7px #ff7b00;
+}
+
+.nav-link{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

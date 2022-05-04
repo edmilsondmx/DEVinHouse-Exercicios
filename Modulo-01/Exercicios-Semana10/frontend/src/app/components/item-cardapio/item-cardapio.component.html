@@ -1,0 +1,14 @@
+<div class="card mb-3 me-3" style="max-width: 540px;">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img src="{{lanches.img || bebidas.img}}" class="img-fluid rounded-start h-100" alt="...">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title text-white">{{lanches.nome || bebidas.nome}}</h5>
+          <p class="card-text text-white">{{lanches.descricao || bebidas.descricao}}</p>
+          <p class="card-text text-white preco">R$ {{ lanches.preco || bebidas.preco }} <button type="button" class="btn btn-success">Adicionar</button></p>
+        </div>
+      </div>
+    </div>
+  </div>

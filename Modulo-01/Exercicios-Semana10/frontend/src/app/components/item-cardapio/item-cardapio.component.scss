@@ -1,0 +1,14 @@
+.card{
+    // background-image: url(../../../assets/imagens/papel-parede-home.jpg);
+    background-color: #532a03;
+}
+.card-body{
+    font-weight: bold;
+}
+
+.preco{
+    font-size: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

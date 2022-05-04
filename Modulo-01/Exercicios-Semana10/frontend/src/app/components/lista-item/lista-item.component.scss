@@ -1,0 +1,27 @@
+.card-img-top{
+    width: 100%;
+    border-radius: 30px;
+    &:hover{
+        transform: scale(.9);
+    }
+}
+
+.card{
+    text-decoration: none;
+    color: #000;
+    cursor: pointer;
+    margin: 10px;
+    background-color: #532a03;
+    color: white;
+}
+.row{
+    width: 100%;
+    background-color: #532a03;
+    border-radius: 10px;
+}
+
+@media screen and (max-width: 991px) {
+    .row{
+        flex-direction: column;
+    }
+}

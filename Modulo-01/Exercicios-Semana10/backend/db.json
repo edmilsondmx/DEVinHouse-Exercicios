@@ -1,0 +1,66 @@
+{
+  "bebidas": [
+    {
+      "img": "https://cdn.valoriza.io/XK5emJTWwfo7em65r4WROIo9jc8=/695x415/https%3A%2F%2Fs3.amazonaws.com%2Fp3.bonuz.me%2Fimages%2Fprofile%2F2019%2F5%2F9%2F18%2F1557437087_refrigerante_lata.jpg",
+      "nome": "Refrigerante lt",
+      "descricao": "Coca-cola, Pepsi, Guaraná Antartica, Fanta Laranja, Fanta Uva",
+      "preco": 6
+    },
+    {
+      "img": "https://anoteareceita.com.br/wp-content/uploads/2020/03/receitas-de-sucos-naturais-e1584495624384.jpg",
+      "nome": "Suco Natural",
+      "descricao": "Morango, Uva, Manga, Larana, Limão, Abacaxi...",
+      "preco": 10
+    },
+    {
+      "img": "https://media-cdn.tripadvisor.com/media/photo-m/1280/14/32/8d/93/cervejas-long-neck.jpg",
+      "nome": "Cerveja Long Neck",
+      "descricao": "Stela Artois, Budweiser, Spaten, heineken, Estrela Galicia",
+      "preco": 10
+    },
+    {
+      "img": "https://brazilgreece.com/wp-content/uploads/2022/03/drinks-nao-alcoolicos-com-sprite-750x430-1.jpg",
+      "nome": "Drinks",
+      "descricao": "Caipirinha, Vodka, Wisky, Gin, Saquê, Campary",
+      "preco": 18
+    }
+  ],
+  "comidas": [
+    {
+      "img": "/assets/imagens/burger/hamburguer.jpeg",
+      "nome": "Hambúrguer",
+      "descricao": "Pão, hambúrguer 90g, salada e batata.",
+      "preco": 18.5
+    },
+    {
+      "img": "/assets/imagens/burger/xburguer.jpeg",
+      "nome": "X-Búrguer",
+      "descricao": "Pão, hambúrguer 90g, 1 fatia de queijo, salada e batata.",
+      "preco": 20.5
+    },
+    {
+      "img": "/assets/imagens/burger/bacon.jpg",
+      "nome": "X-Bacon",
+      "descricao": "Pão, hambúrguer 90g, 1 fatia de queijo, 2 fatia de bacon, salada e batata.",
+      "preco": 22.5
+    },
+    {
+      "img": "/assets/imagens/burger/xtudo.jpg",
+      "nome": "X-Tudo",
+      "descricao": "Pão, 2 hambúrgueres 90g, 2 fatias de queijo, 4 fatias de bacon, salada e batata.",
+      "preco": 25.5
+    },
+    {
+      "img": "/assets/imagens/burger/xsalada.jpg",
+      "nome": "X-Salada",
+      "descricao": "Pão, bife de hambúrguer 90g, salada, maionese da casa",
+      "preco": 19
+    },
+    {
+      "img": "/assets/imagens/burger/xcalabresa.jpg",
+      "nome": "X-Calabresa",
+      "descricao": "Pão, bife de hambúrguer 90g, salada, maionese da casa",
+      "preco": 22
+    }
+  ]
+}
