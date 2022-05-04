@@ -25,9 +25,16 @@ export class CardsComponent implements OnInit  {
   }
 
   pesquisar(){
-    console.log('ok')
-    const pequisa = this.lanches.filter((item) => item.descricao.includes(this.lanche))
-    console.log(pequisa)
+    if(this.lanche.trim() !== ""){
+      let pequisa = this.lanches.filter((item) => item.descricao.toLowerCase().includes(this.lanche) || item.nome.toLowerCase().includes(this.lanche))
+      this.lanches = pequisa;
+    } else {
+      this.http
+    .get<ICardapio[]>('http://localhost:3000/comidas')
+    .subscribe((resultado) => {
+      this.lanches = resultado;
+    });
+    }
   }
 
 

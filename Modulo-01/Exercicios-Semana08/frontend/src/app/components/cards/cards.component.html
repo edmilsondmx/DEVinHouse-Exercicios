@@ -2,8 +2,7 @@
   <h1>#Nossos Lanches</h1>
   <div class="search">
     <i class="fa-solid fa-magnifying-glass"></i>
-    <input type="text" placeholder="Pesquise um item" [(ngModel)]="lanche">
-    <button (click)="pesquisar()">Pequisar</button>
+    <input type="text" placeholder="Pesquise um item" [(ngModel)]="lanche" (change)="pesquisar()" (keyup)="pesquisar()">
   </div>
 </div>
 

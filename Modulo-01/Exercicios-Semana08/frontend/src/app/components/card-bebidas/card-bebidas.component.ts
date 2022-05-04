@@ -11,7 +11,6 @@ import { ICardapio } from 'src/app/models/interface';
 export class CardBebidasComponent  {
 
   bebidas: ICardapio[] = [] /* BEBIDAS_MOCK */;
-
   bebida:string = "";
 
   constructor(private http: HttpClient) { }
@@ -23,10 +22,18 @@ export class CardBebidasComponent  {
       this.bebidas = resultado;
     });
   }
-
+  
   pesquisar(){
-    const pequisa = this.bebidas.filter((item) => item.descricao.includes(this.bebida))
-    console.log(pequisa)
+    if(this.bebida.trim() !== ""){
+      let pequisa = this.bebidas.filter((item) => item.descricao.toLowerCase().includes(this.bebida) || item.nome.toLowerCase().includes(this.bebida))
+      this.bebidas = pequisa;
+    } else {
+      this.http
+    .get<ICardapio[]>('http://localhost:3000/bebidas')
+    .subscribe((resultado) => {
+      this.bebidas = resultado;
+    });
+    }
   }
 
 }
