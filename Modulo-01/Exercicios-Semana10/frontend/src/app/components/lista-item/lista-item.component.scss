@@ -1,18 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
 .card-img-top{
     width: 100%;
     border-radius: 30px;
-    &:hover{
-        transform: scale(.9);
-    }
+    padding: 10px;
+    transition: 0.5s;
+    
 }
 
 .card{
     text-decoration: none;
+    border: 2px solid black;
     color: #000;
     cursor: pointer;
     margin: 10px;
     background-color: #532a03;
     color: white;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    &:hover{
+        .card-img-top{
+            transform: scale(.9);
+        }
+        .card-body{
+            transition: 0.5s;
+            transform: scale(1.1);
+        }
+        
+    }
+}
+.card-title{
+    font-family: 'Lobster', cursive;
+    font-size: 2rem;
 }
 .row{
     width: 100%;

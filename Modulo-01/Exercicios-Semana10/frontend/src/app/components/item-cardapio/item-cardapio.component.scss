@@ -1,6 +1,7 @@
 .card{
     // background-image: url(../../../assets/imagens/papel-parede-home.jpg);
-    background-color: #532a03;
+    //background-color: #532a03;
+    background: linear-gradient(to right, #da5103, #6b3c10);
 }
 .card-body{
     font-weight: bold;
@@ -11,4 +12,9 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+.qtd{
+    width: 100px;
+    border-radius: 10px;
+    padding: 5px;
 }

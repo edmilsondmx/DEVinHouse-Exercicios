@@ -17,16 +17,12 @@ export class CardsComponent implements OnInit  {
   constructor(private http: HttpClient) { }
 
   ngOnInit(): void {
-    this.http
-    .get<ICardapio[]>('http://localhost:3000/comidas')
-    .subscribe((resultado) => {
-      this.lanches = resultado;
-    });
+    this.pesquisar();
   }
 
   pesquisar(){
     if(this.lanche.trim() !== ""){
-      let pequisa = this.lanches.filter((item) => item.descricao.toLowerCase().includes(this.lanche) || item.nome.toLowerCase().includes(this.lanche))
+      let pequisa = this.lanches.filter((item) => item.descricao.toLowerCase().includes(this.lanche) || item.titulo.toLowerCase().includes(this.lanche))
       this.lanches = pequisa;
     } else {
       this.http

@@ -10,16 +10,18 @@ export class ItemCardapioComponent implements OnInit {
 
   @Input()
   lanches: ICardapio = {
-    img:'',
-    nome:'',
+    id:0,
+    enderecoImg:'',
+    titulo:'',
     descricao:'',
     preco:0,
   }
 
   @Input()
   bebidas: ICardapio = {
-    img:'',
-    nome:'',
+    id: 0,
+    enderecoImg:'',
+    titulo:'',
     descricao:'',
     preco:0,
   }

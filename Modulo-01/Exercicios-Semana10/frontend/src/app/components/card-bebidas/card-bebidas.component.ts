@@ -16,16 +16,12 @@ export class CardBebidasComponent  {
   constructor(private http: HttpClient) { }
 
   ngOnInit(): void {
-    this.http
-    .get<ICardapio[]>('http://localhost:3000/bebidas')
-    .subscribe((resultado) => {
-      this.bebidas = resultado;
-    });
+    this.pesquisar();
   }
-  
+
   pesquisar(){
     if(this.bebida.trim() !== ""){
-      let pequisa = this.bebidas.filter((item) => item.descricao.toLowerCase().includes(this.bebida) || item.nome.toLowerCase().includes(this.bebida))
+      let pequisa = this.bebidas.filter((item) => item.descricao.toLowerCase().includes(this.bebida) || item.titulo.toLowerCase().includes(this.bebida))
       this.bebidas = pequisa;
     } else {
       this.http
@@ -35,5 +31,7 @@ export class CardBebidasComponent  {
     });
     }
   }
+  
+  
 
 }
