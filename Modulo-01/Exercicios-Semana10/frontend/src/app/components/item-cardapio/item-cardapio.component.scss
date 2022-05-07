@@ -12,9 +12,21 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    color: #ffcaca;
 }
-.qtd{
-    width: 100px;
-    border-radius: 10px;
-    padding: 5px;
+
+.quantidade{
+    display: flex;
+    align-items: center;
+    span{
+        background-color: #6b3c10;
+        padding: 5px 10px;
+        margin: 4px;
+        border-radius: 7px;
+    }
+    button{
+        width: 40px;
+        font-size: 20px;
+        font-weight: bold;
+    }
 }

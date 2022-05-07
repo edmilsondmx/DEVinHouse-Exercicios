@@ -1,3 +1,12 @@
-
-<NGF-card-bebidas></NGF-card-bebidas>
+<div class="container title">
+  <h1>#Nossas Bebidas</h1>
+  <div class="search">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <input type="text" placeholder="Pesquise um item">
+  </div>
+</div>
+<div class="container d-flex align-items-center flex-wrap">
+  <NGF-item-cardapio [item]="bebida" *ngFor="let bebida of bebidas">
+  </NGF-item-cardapio>
+</div>
 

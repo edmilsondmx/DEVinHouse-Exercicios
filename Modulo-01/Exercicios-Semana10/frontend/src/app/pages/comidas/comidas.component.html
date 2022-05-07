@@ -1,4 +1,12 @@
-
-<NGF-cards></NGF-cards>
-
+<div class="container title">
+  <h1>#Nossos Lanches</h1>
+  <div class="search">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <input type="text" placeholder="Pesquise um item">
+  </div>
+</div>
+<div class="container d-flex align-items-center flex-wrap">
+  <NGF-item-cardapio [item]='lanche'  *ngFor="let lanche of lanches">
+  </NGF-item-cardapio>
+</div>
 

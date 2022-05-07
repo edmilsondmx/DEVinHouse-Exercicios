@@ -1,0 +1,32 @@
+
+<div class="container">
+  <h1>#Seu Pedido</h1>
+  <div class="d-flex justify-content-between">
+    <button *ngIf="listaPedido.length !== 0 " class="btn btn-success" (click)="finalizarPedido()">Finalizar Pedidos</button>
+    <span class="badge bg-success fs-3" *ngIf="listaPedido.length !== 0 ">Valor Total: R$ {{ valorTotal() }}</span>
+    <button *ngIf="listaPedido.length !== 0 " class="btn btn-danger" (click)="deletarPedido()">Limpar lista de Pedidos</button>
+  </div>
+  <hr>
+  <div class="row title d-flex justify-content-center">
+    <div *ngFor="let item of listaPedido" class=" col-6 card mb-3 me-3" style="max-width: 540px;">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img src="{{item.enderecoImg}}" class="img-fluid rounded-start h-100" alt="...">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title text-white">{{item.titulo}}</h5>
+            <p class="card-text text-white">{{item.descricao}}</p>
+            <p class="card-text text-white preco">R$ {{ item.preco }} <button type="button" class="btn btn-danger" (click)="removerItemLista(item.id)">Excluir</button></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+  </div>
+  
+  <div *ngIf="listaPedido.length === 0 " class="container d-flex align-items-center flex-wrap">
+    <h2>Ainda não há itens no Pedido!</h2>
+  
+  </div>
+</div>

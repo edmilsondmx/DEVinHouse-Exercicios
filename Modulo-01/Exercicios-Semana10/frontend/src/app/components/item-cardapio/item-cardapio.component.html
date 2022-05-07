@@ -1,13 +1,19 @@
 <div class="card mb-3 me-3" style="max-width: 540px;">
     <div class="row g-0">
       <div class="col-md-4">
-        <img src="{{lanches.enderecoImg || bebidas.enderecoImg}}" class="img-fluid rounded-start h-100" alt="...">
+        <img src="{{item.enderecoImg}}" class="img-fluid rounded-start h-100 w-100" alt="...">
       </div>
       <div class="col-md-8">
         <div class="card-body">
-          <h5 class="card-title text-white">{{lanches.titulo || bebidas.titulo}}</h5>
-          <p class="card-text text-white">{{lanches.descricao || bebidas.descricao}}</p>
-          <p class="card-text text-white preco">R$ {{ lanches.preco || bebidas.preco }} <input type="number" class="qtd" placeholder="Qtd"> <button type="button" class="btn btn-success">Adicionar</button></p>
+          <h5 class="card-title text-white">{{item.titulo}}</h5>
+          <p class="card-text text-white">{{item.descricao}}</p>
+          <span class="card-text text-white preco">R$ {{ item.preco }} 
+            <div class="quantidade">
+              <button class="btn btn-danger" (click)="diminuirQtd()">-</button>
+              <span>{{ qtd }}</span>
+              <button class="btn btn-success" (click)="incrementarQtd()">+</button>
+            </div>
+            <button (click)="adicionarItem(item)" type="button" class="btn btn-success">Adicionar</button></span>
         </div>
       </div>
     </div>

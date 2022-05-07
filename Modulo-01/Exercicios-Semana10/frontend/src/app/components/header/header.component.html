@@ -9,25 +9,25 @@
   
           <ul class="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">
             <li>
-              <a routerLink="" class="nav-link text-white">
+              <a routerLink="" routerLinkActive="active" class="nav-link text-white">
                 <div><i class="fa-solid fa-house"></i></div>
                 Home
               </a>
             </li>
             <li>
-              <a routerLink="/cardapio" class="nav-link text-white">
+              <a routerLink="/cardapio" routerLinkActive="active"  class="nav-link text-white">
                 <div><i class="fa-solid fa-list-check"></i></div>
                 Cardápio
               </a>
             </li>
             <li>
-              <a href="#" class="nav-link text-white">
-                <div><i class="fa-solid fa-cart-arrow-down"></i> <span class="itensCar">{{ qtdItensCarrinho }}</span></div>
+              <a routerLink="/pedido" routerLinkActive="active"  class="nav-link text-white">
+                <div><i class="fa-solid fa-cart-arrow-down"></i> <span class="itensCar">{{ buscaTotalItem()}}</span></div>
                 Pedido
               </a>
             </li>
             <li>
-              <a routerLink="/contato" class="nav-link text-white">
+              <a routerLink="/contato" routerLinkActive="active"  class="nav-link text-white">
                 <div><i class="fa-solid fa-user"></i></div>
                 Contato
               </a>

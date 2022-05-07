@@ -1,0 +1,39 @@
+.container > h1{
+    color: white;
+    text-shadow: 0 0 5px rgb(255, 152, 67);
+}
+h2{
+    color: white;
+}
+
+.card{
+
+    background: linear-gradient(to right, #da5103, #6b3c10);
+}
+.card-body{
+    font-weight: bold;
+}
+
+.preco{
+    font-size: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.qtd{
+    width: 100px;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+
+
+@media screen and (max-width: 1200px) {
+    .row{
+        margin: auto;
+        justify-content: center;
+    }
+    .container{
+        text-align: center;
+    }
+}
