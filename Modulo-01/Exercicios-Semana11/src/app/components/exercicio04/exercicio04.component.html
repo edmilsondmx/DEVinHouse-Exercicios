@@ -1,1 +1,13 @@
-<p>exercicio04 works!</p>
+<div class="container mt-4">
+    <h1>Exercício 04</h1>
+</div>
+
+<div class="row">
+    <div *ngFor=" let filme of arrayFotos" class="card col-6 container px-0 my-4" style="width: 20rem;">
+        <img src="{{ filme.url }}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">{{ filme.title }}</h5>
+          <p class="card-text">{{ filme.description }}</p>
+        </div>
+    </div>
+</div>
