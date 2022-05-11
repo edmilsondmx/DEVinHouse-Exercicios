@@ -1,0 +1,53 @@
+<div class="content">
+    <h1>Exercício 06</h1>
+</div>
+<div class="container">
+    <div class="form">
+        <h2 class="text-center">Cadastre-se</h2>
+        <hr>
+        <label class="input-group mb-3">
+            <span class="input-group-text bg-info" id="basic-addon1">Usuário: </span>
+            <input [(ngModel)]="usuario" type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+        </label>
+        <label class="input-group mb-3">
+            <span class="input-group-text bg-info" id="basic-addon1">CPF: </span>
+            <input [(ngModel)]="cpf" type="number" class="form-control" placeholder="CPF" aria-label="CPF" aria-describedby="basic-addon1">
+        </label>
+        <label class="input-group mb-3">
+            <span class="input-group-text bg-info" id="basic-addon1">Dia Aniversário: </span>
+            <input [(ngModel)]="diaAniversario" type="number" class="form-control" placeholder="Dia do aniversário" aria-label="Diaaniversario" aria-describedby="basic-addon1">
+        </label>
+        <label class="input-group mb-3">
+            <span class="input-group-text bg-info" id="basic-addon1">Senha: </span>
+            <input [(ngModel)]="senha" type="password" class="form-control" placeholder="Password" aria-label="password" aria-describedby="basic-addon1">
+        </label>
+        <button (click)="cadastrar()" type="button" class="btn btn-info">Cadastrar</button>
+    </div>
+    <div *ngIf="click; else erro">
+        <table>
+            <thead>
+                <th>Usuário</th>
+                <th>cpf</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>{{ usuario }}</th>
+                    <th>{{ cpf }}</th>
+                </tr>
+            </tbody>
+            <thead>
+                <th>Dia Aniversário</th>
+                <th>Senha</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>{{ diaAniversario }}</th>
+                    <th>{{ senha }}</th>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <ng-template #erro >
+        <p [ngStyle]="{'color':'red'}">Preencha todos os campos</p>
+    </ng-template>
+</div>
