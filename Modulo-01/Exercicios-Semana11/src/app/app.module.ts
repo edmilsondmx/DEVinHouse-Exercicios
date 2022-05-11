@@ -8,6 +8,7 @@ import { Route, RouterModule } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
 import { Exercicio03Component } from './components/exercicio03/exercicio03.component';
 import { Exercicio04Component } from './components/exercicio04/exercicio04.component';
+import { Exercicio05Component } from './components/exercicio05/exercicio05.component';
 
 const ROUTES:Route[] = [
   {
@@ -30,6 +31,10 @@ const ROUTES:Route[] = [
     path: 'exercicio04',
     component:Exercicio04Component
   },
+  {
+    path: 'exercicio05',
+    component:Exercicio05Component
+  },
 ]
 
 @NgModule({
@@ -40,7 +45,8 @@ const ROUTES:Route[] = [
     Exercicio02Component,
     HomeComponent,
     Exercicio03Component,
-    Exercicio04Component
+    Exercicio04Component,
+    Exercicio05Component
   ],
   imports: [
     BrowserModule,
