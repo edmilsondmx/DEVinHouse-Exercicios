@@ -1,0 +1,123 @@
+<div class="content bg-warning">
+    <h1>Exercício 09</h1>
+</div>
+<div class="container">
+    <div class="image">
+        <img src="https://img.freepik.com/vecteurs-libre/dessin-anime-logo-petshop_9645-749.jpg" alt="">
+    </div>
+    <form class="form" #form="ngForm" (ngSubmit)="cadastrar()">
+        <h2 class="text-center">Cadastre seu Pet</h2>
+        <hr>
+        <label class="input-group mb-3">
+            <span class="input-group-text bg-warning">Nome Dono: </span>
+            <input 
+            [(ngModel)]="animal.nomeDono" 
+            name="dono" 
+            type="text" 
+            class="form-control" 
+            placeholder="Nome do Dono" 
+            required>
+        </label>
+        <label class="input-group mb-3">
+            <span class="input-group-text bg-warning">CPF: </span>
+            <input 
+            [(ngModel)]="animal.cpf" 
+            name="cpf" 
+            type="text" 
+            class="form-control" 
+            placeholder="CPF" 
+            minlength="11"
+            maxlength="11" 
+            #numcpf="ngModel"
+            required/>
+        </label>
+<!--         <div>
+            <p *ngIf="!(numcpf.valid || numcpf.pristine)" class="alert alert-danger" >O CPF deve conter 11 dígitos</p>
+        </div> -->
+        <label class="input-group mb-3">
+            <span class="input-group-text bg-warning">E-mail: </span>
+            <input 
+            [(ngModel)]="animal.email" 
+            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" 
+            name="email" 
+            type="email" 
+            class="form-control" 
+            placeholder="E-mail" 
+            required>
+        </label>
+        <label class="input-group mb-3">
+            <span class="input-group-text bg-warning">Nome do Cachorro: </span>
+            <input 
+            [(ngModel)]="animal.nomeCachorro" 
+            name="nomeanimal" 
+            type="text" 
+            class="form-control" 
+            placeholder="Nome do cachorro" 
+            required>
+        </label>
+        <label class="input-group mb-3">
+            <span class="input-group-text bg-warning">Cod. Ident. Cachorro: </span>
+            <input 
+            [(ngModel)]="animal.codCachorro" 
+            name="cod.animal" 
+            min="1"
+            type="number" 
+            class="form-control" 
+            placeholder="Código de Identificação" 
+            required>
+        </label>
+        <button 
+        type="submit" 
+        class="btn btn-success"
+        [disabled]="!form.valid">Cadastrar</button>
+    </form>
+
+</div>
+
+
+<div class="modal" [ngStyle]="{'display':cadastro?'block':'none'}" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header justify-content-center">
+          <h4 class="modal-title">Cachorro Cadastrado com sucesso!</h4>
+        </div>
+        <div class="modal-body d-flex justify-content-center">
+
+            <table>
+                <thead>
+                    <th>Nome do Dono</th>
+                    <th>CPF</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>{{ animal.nomeDono }}</th>
+                        <th>{{ animal.cpf }}</th>
+                    </tr>
+                </tbody>
+                <thead>
+                    <th>Nome do Cachorro</th>
+                    <th>Cód. de Identificação</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>{{ animal.nomeCachorro }}</th>
+                        <th>{{ animal.codCachorro }}</th>
+                    </tr>
+                </tbody>
+                <thead>
+                    <th colspan="2">E-mail</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th colspan="2">{{ animal.email }}</th>
+                    </tr>
+                </tbody>
+            </table>
+  
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" (click)="cadastro = false; form.reset()">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>

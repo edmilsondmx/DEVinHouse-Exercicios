@@ -13,6 +13,7 @@ import { Exercicio06Component } from './components/exercicio06/exercicio06.compo
 import { FormsModule } from '@angular/forms';
 import { Exercicio07Component } from './components/exercicio07/exercicio07.component';
 import { Exercicio08Component } from './components/exercicio08/exercicio08.component';
+import { Exercicio09Component } from './components/exercicio09/exercicio09.component';
 
 const ROUTES:Route[] = [
   {
@@ -51,6 +52,10 @@ const ROUTES:Route[] = [
     path: 'exercicio08',
     component:Exercicio08Component
   },
+  {
+    path: 'exercicio09',
+    component:Exercicio09Component
+  },
 ]
 
 @NgModule({
@@ -65,7 +70,8 @@ const ROUTES:Route[] = [
     Exercicio05Component,
     Exercicio06Component,
     Exercicio07Component,
-    Exercicio08Component
+    Exercicio08Component,
+    Exercicio09Component
   ],
   imports: [
     BrowserModule,
