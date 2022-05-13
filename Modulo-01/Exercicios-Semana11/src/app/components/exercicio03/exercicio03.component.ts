@@ -12,7 +12,8 @@ export class Exercicio03Component implements OnInit {
     'Dragon Ball Super',
     'O Auto da Compadecida',
     'As Branquelas',
-    'Intocáveis'
+    'Intocáveis',
+    'O Poderoso Chefão'
   ]
 
   constructor() { }
