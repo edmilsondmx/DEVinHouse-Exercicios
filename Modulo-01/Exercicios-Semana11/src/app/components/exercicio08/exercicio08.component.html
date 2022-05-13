@@ -1,0 +1,28 @@
+<div  [ngSwitch]="page">
+    <header class="p-3 bg-dark text-white">
+        <div class="container">
+            <div  class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+    
+                <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+                <li><a (click)="page = 'home'" class="nav-link px-2 text-white">Home</a></li>
+                <li><a (click)="page = 'produtos'" class="nav-link px-2 text-white">Produtos</a></li>
+                <li><a  (click)="page = 'servicos'" class="nav-link px-2 text-white">Serviços</a></li>
+                <li><a (click)="page = 'contato'" class="nav-link px-2 text-white">Contato</a></li>
+                <li><a (click)="page = 'sobre'" class="nav-link px-2 text-white">Sobre</a></li>
+                </ul>
+    
+            </div>
+        </div>
+    </header>
+    <div class="container ">
+        <h1 *ngSwitchDefault >Nenhuma Página selecionada</h1>
+        <h2 *ngSwitchCase="'home'">Estou na página de Home</h2>
+        <h2 *ngSwitchCase="'produtos'">Estou na página de Produtos</h2>
+        <h2 *ngSwitchCase="'servicos'">Estou na página de Serviços</h2>
+        <h2 *ngSwitchCase="'contato'">Estou na página de Contato</h2>
+        <h2 *ngSwitchCase="'sobre'">Estou na página de Sobre</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus quasi labore molestias eLorem ipsum dolor sit amet consectetur adipisicing elit. Natus quasi labore molestias eaque corporis sunt laborum cumque, praesentium corrupti quidem ipsam quas mollitia impedit quis esse. Debitis aspernatur teLorem ipsum dolor sit amet consectetur adipisicing elit. Natus quasi labore molestias eaque corporis sunt laborum cumque, praesentium corrupti quidem ipsam quas mollitia impedit quis esse. Debitis aspernatur teLorem ipsum dolor sit amet consectetur adipisicing elit. Natus quasi labore molestias eaque corporis sunt laborum cumque, praesentium corrupti quidem ipsam quas mollitia impedit quis esse. Debitis aspernatur teaque corporis sunt laborum cumque, praesentium corrupti quidem ipsam quas mollitia impedit quis esse. Debitis aspernatur temporibus earum.</p>
+    </div>
+</div>
+
+
