@@ -14,13 +14,12 @@ export class ComidasComponent implements OnInit {
 
   lanches: ICardapio[] = [] /* COMIDAS_MOCK */;
 
-  lanche:string = "";
+  termo:string = "";
 
   constructor(private comidaService:ComidaService) { }
 
   ngOnInit(): void {
     this.buscarComida()
-
   }
 
   buscarComida(){
@@ -28,6 +27,16 @@ export class ComidasComponent implements OnInit {
     .subscribe((resultado) => {
       this.lanches = resultado;
     });
+  }
+
+  filtrarTermo(){
+    if(this.termo.trim()){
+
+      let pesquisa = this.lanches.filter((item) => item.descricao.toLowerCase().includes(this.termo) || item.titulo.toLowerCase().includes(this.termo))
+      this.lanches = pesquisa;
+    } else{
+      this.buscarComida()
+    }
   }
   
 

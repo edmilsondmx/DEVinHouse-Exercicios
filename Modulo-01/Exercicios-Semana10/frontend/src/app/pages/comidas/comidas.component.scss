@@ -26,6 +26,16 @@
     }
     
 }
+h3.text-white{
+    margin-left: 50px;
+    color: white;
+    
+    cursor: pointer;
+    text-decoration: underline;
+    &:hover{
+        text-shadow: 0 0 20px #ff9843;
+    }
+}
 
 @media screen and (max-width: 1200px) {
     .container{

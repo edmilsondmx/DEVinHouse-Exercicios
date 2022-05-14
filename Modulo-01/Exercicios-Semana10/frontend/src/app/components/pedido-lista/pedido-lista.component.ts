@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 import { ICardapio } from 'src/app/models/interface';
 import { PedidoService } from 'src/app/services/pedido.service';
 import Swal from 'sweetalert2';
@@ -14,7 +14,9 @@ export class PedidoListaComponent implements OnInit {
   listaPedido:ICardapio[] = []
 
 
-  constructor(private pedidoService:PedidoService) { }
+  constructor(
+    private pedidoService:PedidoService,
+    private router:Router) { }
 
   ngOnInit(): void {
     this.listaPedido = this.pedidoService.buscarItensPedido()
@@ -36,13 +38,14 @@ export class PedidoListaComponent implements OnInit {
   finalizarPedido(){
     Swal.fire({
       title: 'Pedido Confirmado!',
-      text: "Obrigado pela Preferência!",
+      text: `Valor Total do Pedido: R$ ${this.valorTotal()}`,
       icon: 'success',
       showCancelButton: false,
       confirmButtonColor: '#007e08',
       confirmButtonText: 'OK',
     }).then((result) => {
       if (result.isConfirmed) {
+        this.router.navigate(['']);
         this.limparLista()
         Swal.fire({
           title: 'Seu pedido está sendo Preparado!',
@@ -75,6 +78,7 @@ export class PedidoListaComponent implements OnInit {
       cancelButtonText: 'Cancelar'
     }).then((result) => {
       if (result.isConfirmed) {
+        this.router.navigate(['cardapio']);
         this.limparLista();
         Swal.fire(
           'Itens excluídos',

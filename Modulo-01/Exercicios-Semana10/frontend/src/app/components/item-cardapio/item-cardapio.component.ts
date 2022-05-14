@@ -23,7 +23,7 @@ export class ItemCardapioComponent implements OnInit {
   /* @Output() adicionaItem = new EventEmitter<ICardapio>() */
   
 
-  qtd:number = 0;
+  qtd:number = 1;
   constructor(private pedidoService:PedidoService) { }
 
   ngOnInit(): void {
@@ -39,7 +39,11 @@ export class ItemCardapioComponent implements OnInit {
     this.qtd = this.qtd + 1;
   }
   diminuirQtd(){
-    this.qtd = this.qtd - 1;
+    if (this.qtd <= 1){
+      this.qtd = this.qtd
+    } else{
+      this.qtd = this.qtd - 1;
+    }
   }
 
   
