@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Router, RouterLink } from '@angular/router';
+import { Title } from '@angular/platform-browser';
+import { Router } from '@angular/router';
 import { ICardapio } from 'src/app/models/interface';
 import { PedidoService } from 'src/app/services/pedido.service';
 import Swal from 'sweetalert2';
@@ -16,7 +17,10 @@ export class PedidoListaComponent implements OnInit {
 
   constructor(
     private pedidoService:PedidoService,
-    private router:Router) { }
+    private router:Router,
+    private serviceTitle: Title) {
+      this.serviceTitle.setTitle('NG-FOOD - Pedido')
+    }
 
   ngOnInit(): void {
     this.listaPedido = this.pedidoService.buscarItensPedido()

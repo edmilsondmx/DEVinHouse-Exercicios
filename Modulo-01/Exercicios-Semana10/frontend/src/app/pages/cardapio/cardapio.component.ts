@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
+
 
 @Component({
   selector: 'NGF-cardapio',
@@ -7,7 +9,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CardapioComponent implements OnInit {
 
-  constructor() { }
+  constructor(private titleService: Title) { 
+    this.titleService.setTitle('NG-FOOD - Cardápio')
+  }
 
   ngOnInit(): void {
   }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'NGF-contato',
@@ -7,7 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContatoComponent implements OnInit {
 
-  constructor() { }
+  constructor(private serviceTitle: Title) {
+    this.serviceTitle.setTitle('NG-FOOD - Contato')
+  }
 
   ngOnInit(): void {
   }

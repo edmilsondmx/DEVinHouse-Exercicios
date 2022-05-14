@@ -2,7 +2,7 @@
   <h1>#Nossas Bebidas</h1>
   <div class="search">
     <i class="fa-solid fa-magnifying-glass"></i>
-    <input type="text" placeholder="Pesquise um item">
+    <input type="text" placeholder="Pesquise um item" [(ngModel)]="termo" (ngModelChange)="filtrarTermo()">
   </div>
   <h3 class="text-white" routerLink="/comidas">Lanches</h3>
 </div>

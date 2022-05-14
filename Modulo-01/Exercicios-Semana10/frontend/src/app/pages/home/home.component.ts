@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'NGF-home',
@@ -7,7 +8,9 @@ import { Component } from '@angular/core';
 })
 export class HomeComponent{
 
-  constructor() { }
+  constructor(private serviceTitle: Title) { 
+    this.serviceTitle.setTitle('NG-FOOD - Home')
+  }
 
 
 }

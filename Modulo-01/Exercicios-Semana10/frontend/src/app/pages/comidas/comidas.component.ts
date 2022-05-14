@@ -1,9 +1,7 @@
-import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { COMIDAS_MOCK } from 'src/app/mocks/comidas_mock';
+import { Title } from '@angular/platform-browser';
 import { ICardapio } from 'src/app/models/interface';
 import { ComidaService } from 'src/app/services/comida.service';
-import { PedidoService } from 'src/app/services/pedido.service';
 
 @Component({
   selector: 'NGF-comidas',
@@ -16,7 +14,13 @@ export class ComidasComponent implements OnInit {
 
   termo:string = "";
 
-  constructor(private comidaService:ComidaService) { }
+  constructor(
+    private comidaService:ComidaService,
+    private titeService:Title 
+    ) 
+    { 
+      this.titeService.setTitle('NG-FOOD - Lanches')
+    }
 
   ngOnInit(): void {
     this.buscarComida()
@@ -31,11 +35,11 @@ export class ComidasComponent implements OnInit {
 
   filtrarTermo(){
     if(this.termo.trim()){
-
       let pesquisa = this.lanches.filter((item) => item.descricao.toLowerCase().includes(this.termo) || item.titulo.toLowerCase().includes(this.termo))
       this.lanches = pesquisa;
+      
     } else{
-      this.buscarComida()
+      this.buscarComida();
     }
   }
   
