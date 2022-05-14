@@ -27,8 +27,7 @@ export class Exercicio09Component implements OnInit {
 
   cadastrar(){
     this.cadastro = true;
-    
-
   }
+
 
 }

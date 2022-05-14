@@ -11,8 +11,11 @@
         </label>
         <label class="input-group mb-3">
             <span class="input-group-text bg-info">CPF: </span>
-            <input [(ngModel)]="cpf" type="number" name="cpf" class="form-control" placeholder="CPF" required>
+            <input [(ngModel)]="cpf" type="text" minlength="11" maxlength="11" name="cpf" #numcpf="ngModel" class="form-control" placeholder="CPF" required>
         </label>
+        <div *ngIf="!(numcpf.valid || numcpf.pristine)" class="alert alert-danger">
+            Apenas números, 11 dígitos!
+        </div>
         <label class="input-group mb-3">
             <span class="input-group-text bg-info">Dia Aniversário: </span>
             <input [(ngModel)]="diaAniversario" min="1" max="31" type="number" #aniversario="ngModel" name="diaAniversario" class="form-control" placeholder="Dia do aniversário">

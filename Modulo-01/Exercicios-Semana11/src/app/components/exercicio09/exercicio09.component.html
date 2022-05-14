@@ -6,7 +6,7 @@
         <img src="https://img.freepik.com/vecteurs-libre/dessin-anime-logo-petshop_9645-749.jpg" alt="">
     </div>
     <form class="form" #form="ngForm" (ngSubmit)="cadastrar()">
-        <h2 class="text-center">Cadastre seu Pet</h2>
+        <h2 class="text-center">Cadastre o Pet</h2>
         <hr>
         <label class="input-group mb-3">
             <span class="input-group-text bg-warning">Nome Dono: </span>
@@ -21,19 +21,20 @@
         <label class="input-group mb-3">
             <span class="input-group-text bg-warning">CPF: </span>
             <input 
-            [(ngModel)]="animal.cpf" 
+            [(ngModel)]="animal.cpf"
             name="cpf" 
-            type="text" 
+            type="text"
+            oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');"
             class="form-control" 
             placeholder="CPF" 
             minlength="11"
-            maxlength="11" 
+            maxlength="11"
             #numcpf="ngModel"
-            required/>
+            required>
         </label>
-<!--         <div>
-            <p *ngIf="!(numcpf.valid || numcpf.pristine)" class="alert alert-danger" >O CPF deve conter 11 dígitos</p>
-        </div> -->
+        <small *ngIf="!( numcpf.valid || numcpf.pristine )" class="text-danger" >O CPF deve conter 11 dígitos - Somente números
+            
+        </small>
         <label class="input-group mb-3">
             <span class="input-group-text bg-warning">E-mail: </span>
             <input 
@@ -42,9 +43,15 @@
             name="email" 
             type="email" 
             class="form-control" 
-            placeholder="E-mail" 
+            placeholder="E-mail"
+            #endemail="ngModel"
             required>
         </label>
+
+            <small *ngIf="!( endemail .valid || endemail .pristine )" class="text-danger" >E-mail fora do formato devido!
+
+            </small>
+
         <label class="input-group mb-3">
             <span class="input-group-text bg-warning">Nome do Cachorro: </span>
             <input 
@@ -75,7 +82,7 @@
 </div>
 
 
-<div class="modal" [ngStyle]="{'display':cadastro?'block':'none'}" tabindex="-1">
+<div class="modal" *ngIf="cadastro">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header justify-content-center">
@@ -116,7 +123,7 @@
   
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-danger" (click)="cadastro = false; form.reset()">Close</button>
+          <button type="button" class="btn btn-danger" (click)="cadastro = !cadastro; form.reset()">Close</button>
         </div>
       </div>
     </div>

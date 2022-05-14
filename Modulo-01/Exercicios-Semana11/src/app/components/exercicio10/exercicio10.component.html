@@ -1,0 +1,68 @@
+<div class="container">
+    <h1>Exercício 10 </h1>
+</div>
+
+<div class="container">
+    <button *ngIf="users.length == 0" class="btn btn-success" (click)="btnNewUser()">New User</button>
+    <div *ngIf="users.length == 0">
+        <h4>Não há usuários cadastrados!</h4>
+    </div>
+
+    <table *ngIf="users.length != 0">
+        <thead>
+            <th>#</th>
+            <th>First Name</th>
+            <th>Last Nome</th>
+            <th colspan="2"><button class="btn btn-success" (click)="btnNewUser()">New User</button></th>
+        </thead>
+        <tbody *ngFor="let user of users; let i = index">
+            <tr>
+                <th>{{ i }}</th>
+                <th>{{ user.firstName | titlecase }}</th>
+                <th>{{ user.lastName | titlecase }}</th>
+                <th><button class="btn btn-danger" (click)="remover(i)"> x </button></th>
+                <th><button class="btn btn-primary" (click)="editar(i)"> To Edit </button></th>
+            </tr>
+        </tbody>
+        
+    </table>
+    <br>
+    <form *ngIf="newUser" class="input-group" #form="ngForm" (ngSubmit)="salvar(); form.reset()" >
+        <input 
+        type="text" 
+        class="form-control" 
+        name="firstName"
+        placeholder="Digite o Primeiro Nome" 
+        [(ngModel)]="firstName">
+        <input 
+        type="text" 
+        class="form-control" 
+        name="lastName" 
+        placeholder="Digite o Último Nome" 
+        [(ngModel)]="lastName">
+        <button 
+        class="btn btn-outline-primary" 
+        type="submit"
+        >Salvar</button>
+    </form>
+
+    <form *ngIf="edicao" class="input-group" #form="ngForm" (ngSubmit)="salvarEdit(); form.reset()" >
+        <input 
+        type="text" 
+        class="form-control" 
+        name="firstName"
+        placeholder="Digite o Primeiro Nome" 
+        [(ngModel)]="first">
+        <input 
+        type="text" 
+        class="form-control" 
+        name="lastName" 
+        placeholder="Digite o Último Nome" 
+        [(ngModel)]="last">
+        <button 
+        class="btn btn-outline-primary" 
+        type="submit"
+        >Salvar</button>
+    </form>
+    
+</div>
