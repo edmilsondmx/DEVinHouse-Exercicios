@@ -7,9 +7,20 @@ public static class Menu
         Console.Clear();
         Bordas();
         Opcoes();
+
+        var opcoes = short.Parse(Console.ReadLine());
+        switch (opcoes)
+        {
+            case 1: Cadastro.Start(); Mostrar(); break;
+            case 2: break;
+            case 3: break;
+            case 4: break;
+            case 0: break;
+            default: break;
+        }
     }
 
-    static void Bordas()
+    public static void Bordas()
     {
        Console.BackgroundColor = ConsoleColor.DarkGray;
 
@@ -25,7 +36,7 @@ public static class Menu
         }
         LinhaHoriziontal(); 
     }
-    static void LinhaHoriziontal()
+    public static void LinhaHoriziontal()
     {
         Console.Write("+");
         for (int i = 0; i <= 35; i++)
@@ -59,6 +70,5 @@ public static class Menu
 
         Console.SetCursorPosition(2, 10);
         System.Console.Write("Digite a opção: ");
-        Console.ReadLine();
     }
 }
