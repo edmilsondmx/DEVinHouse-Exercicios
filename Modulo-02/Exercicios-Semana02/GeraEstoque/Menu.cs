@@ -11,7 +11,7 @@ public static class Menu
         var opcoes = short.Parse(Console.ReadLine());
         switch (opcoes)
         {
-            case 1: Cadastro.Start(); Mostrar(); break;
+            case 1: Cadastro.Start(); break;
             case 2: break;
             case 3: break;
             case 4: break;
