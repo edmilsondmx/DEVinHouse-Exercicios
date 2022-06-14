@@ -29,16 +29,16 @@ public static class Cadastro
 
         Console.SetCursorPosition(2, 6);
         Console.Write("Valor de Compra: ");
-        double valorCompra = double.Parse(Console.ReadLine());
+        decimal valorCompra = decimal.Parse(Console.ReadLine());
 
         Console.SetCursorPosition(2, 7);
         Console.Write("Valor de Venda: ");
-        double valorVenda = double.Parse(Console.ReadLine());
+        decimal valorVenda = decimal.Parse(Console.ReadLine());
 
         ShowProduto(idProduto, nomeProduto, quantidadeEstoque, valorCompra, valorVenda);
     }
 
-    public static void ShowProduto(string id, string? nome, ushort qtd, double vCompra, double vVenda)
+    public static void ShowProduto(string id, string? nome, ushort qtd, decimal vCompra, decimal vVenda)
     {
         Console.Clear();
         Menu.Bordas();
@@ -55,9 +55,20 @@ public static class Cadastro
         Console.SetCursorPosition(2, 6);
         System.Console.WriteLine($"Qtd: {qtd}");
         Console.SetCursorPosition(2, 7);
-        System.Console.WriteLine($"R$ Compra: R$ {vCompra}");
+        System.Console.WriteLine($"R$ Compra:{vCompra.ToString("c")}");
         Console.SetCursorPosition(2, 8);
-        System.Console.WriteLine($"R$ Venda: R$ {vVenda}");
+        System.Console.WriteLine($"R$ Venda:{vVenda.ToString("c")}");
+
+        Console.SetCursorPosition(2, 10);
+        System.Console.WriteLine("Pressione qualquer tecla");
+        Console.SetCursorPosition(2, 11);
+        System.Console.Write("para voltar ao menu principal!");
+        
+        if(Console.ReadKey().Key != ConsoleKey.F1)
+        {
+            Menu.Mostrar();
+        }
+
 
 
     }

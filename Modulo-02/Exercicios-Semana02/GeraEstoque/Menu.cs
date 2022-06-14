@@ -15,17 +15,19 @@ public static class Menu
             case 2: break;
             case 3: break;
             case 4: break;
-            case 0: break;
+            case 0: Console.Clear(); break;
             default: break;
         }
     }
 
     public static void Bordas()
     {
-       Console.BackgroundColor = ConsoleColor.DarkGray;
+
+        Console.BackgroundColor = ConsoleColor.Black;
+        Console.ForegroundColor = ConsoleColor.Green;
 
         LinhaHoriziontal();
-        for (int i = 0; i < 12; i++)
+        for (int i = 0; i < 14; i++)
         {
         Console.Write("|");
         for (int line = 0; line <= 35; line++)
