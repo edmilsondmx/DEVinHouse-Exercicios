@@ -1,4 +1,4 @@
-namespace GeraEstoque;
+/* namespace GeraEstoque;
 
 public static class Cadastro
 {
@@ -72,4 +72,4 @@ public static class Cadastro
 
 
     }
-}
+} */
