@@ -1,3 +1,4 @@
+using GeraEstoque.Models;
 namespace GeraEstoque.Screens;
 
 public static class CriarProdutoScreen
@@ -12,7 +13,8 @@ public static class CriarProdutoScreen
         Console.SetCursorPosition(2, 2);
         System.Console.WriteLine("=================");
 
-        var idProduto = Guid.NewGuid().ToString().Substring(0, 8);
+        
+        string idProduto = Guid.NewGuid().ToString().Substring(0, 8);
 
         Console.SetCursorPosition(2, 4);
         Console.Write("Nome do Produto: ");
@@ -30,6 +32,7 @@ public static class CriarProdutoScreen
         Console.Write("Valor de Venda: ");
         decimal valorVenda = decimal.Parse(Console.ReadLine());
 
+        
         ShowProduto(idProduto, nomeProduto, quantidadeEstoque, valorCompra, valorVenda);
     }
 
