@@ -1,10 +1,13 @@
 namespace GeraEstoque.Screens;
 
+using System.Collections.Generic;
+using GeraEstoque.Models;
+using GeraEstoque.Repositories;
+
 public static class MenuScreen
 {
-    public static void Iniciar()
+    public static void Iniciar(ProdutoRepository repository)
     {
-        
         Console.Clear();
         Bordas();
         Opcoes();
@@ -12,16 +15,18 @@ public static class MenuScreen
         var opcoes = short.Parse(Console.ReadLine());
         switch (opcoes)
         {
-            case 1: CriarProdutoScreen.Iniciar(); Iniciar(); break;
+            case 1: CriarProdutoScreen.Iniciar(repository); Iniciar(repository); break;
             case 2: break;
             case 3: break;
             case 4: break;
+            case 5: ListarProdutosScreen.Iniciar(repository); Iniciar(repository); break;
             case 0: Console.Clear(); Environment.Exit(0); break;
             default: break;
         }
         
 
     }
+
     public static void Bordas()
     {
 
@@ -70,6 +75,9 @@ public static class MenuScreen
         System.Console.WriteLine("4 - Excluir Produto");
 
         Console.SetCursorPosition(2, 8);
+        System.Console.WriteLine("5 - Listar Todos os Produtos");
+
+        Console.SetCursorPosition(2, 9);
         System.Console.WriteLine("0 - Sair");
 
         Console.SetCursorPosition(2, 10);

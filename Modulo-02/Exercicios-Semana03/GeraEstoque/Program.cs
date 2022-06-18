@@ -1,13 +1,15 @@
 ﻿using GeraEstoque.Models;
+using GeraEstoque.Repositories;
 namespace GeraEstoque.Screens;
 
 class Program
 {
     static void Main(string[] args)
     {
-        IList<Produto> listaDeProdutos = new List<Produto>();
-
-        MenuScreen.Iniciar();
+        ProdutoRepository repository = new ProdutoRepository();
+        
+        MenuScreen.Iniciar(repository);
+        
 
     }
     

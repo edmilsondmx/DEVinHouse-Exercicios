@@ -1,9 +1,10 @@
 using GeraEstoque.Models;
+using GeraEstoque.Repositories;
 namespace GeraEstoque.Screens;
 
 public static class CriarProdutoScreen
 {
-    public static void Iniciar()
+    public static void Iniciar(ProdutoRepository repository)
     {
         Console.Clear();
         MenuScreen.Bordas();
@@ -13,6 +14,7 @@ public static class CriarProdutoScreen
         Console.SetCursorPosition(2, 2);
         System.Console.WriteLine("=================");
 
+        DateTime DataDeCadastro = DateTime.Now;
         
         string idProduto = Guid.NewGuid().ToString().Substring(0, 8);
 
@@ -32,11 +34,12 @@ public static class CriarProdutoScreen
         Console.Write("Valor de Venda: ");
         decimal valorVenda = decimal.Parse(Console.ReadLine());
 
+        repository.ListaDeProdutos.Add(new Produto(nomeProduto, quantidadeEstoque,valorCompra, valorVenda));
         
-        ShowProduto(idProduto, nomeProduto, quantidadeEstoque, valorCompra, valorVenda);
+        ShowProduto(DataDeCadastro, idProduto, nomeProduto, quantidadeEstoque, valorCompra, valorVenda);
     }
 
-    public static void ShowProduto(string id, string? nome, ushort qtd, decimal vCompra, decimal vVenda)
+    public static void ShowProduto(DateTime data, string id, string? nome, ushort qtd, decimal vCompra, decimal vVenda)
         {
             Console.Clear();
             MenuScreen.Bordas();
@@ -56,17 +59,15 @@ public static class CriarProdutoScreen
             System.Console.WriteLine($"R$ Compra:{vCompra.ToString("c")}");
             Console.SetCursorPosition(2, 8);
             System.Console.WriteLine($"R$ Venda:{vVenda.ToString("c")}");
+            Console.SetCursorPosition(2, 9);
+            System.Console.WriteLine($"Data de Cadastro: "+ string.Format("{0:d}", data));
 
-            Console.SetCursorPosition(2, 10);
-            System.Console.WriteLine("Pressione qualquer tecla");
             Console.SetCursorPosition(2, 11);
+            System.Console.WriteLine("Pressione qualquer tecla");
+            Console.SetCursorPosition(2, 12);
             System.Console.Write("para voltar ao menu principal!");
-            
-            if(Console.ReadKey().Key != ConsoleKey.F1)
-            {
-                MenuScreen.Iniciar();
-            }
 
+            Console.ReadLine();
 
 
         }

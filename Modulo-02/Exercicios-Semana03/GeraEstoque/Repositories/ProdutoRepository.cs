@@ -3,11 +3,10 @@ namespace GeraEstoque.Repositories;
 
 public class ProdutoRepository
 {
-    IList<Produto> listaDeProdutos;
+    public IList<Produto> ListaDeProdutos;
 
     public ProdutoRepository()
     {
-
-    }   
-    
+        ListaDeProdutos = new List<Produto>();
+    }
 }
