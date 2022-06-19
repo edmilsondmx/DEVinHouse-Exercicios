@@ -4,8 +4,8 @@ public class Produto
 {
     public DateTime DataDeCadastro;
     
-    public string IdProduto;
-    public string NomeProduto;
+    public string? IdProduto;
+    public string? NomeProduto;
     public ushort QuantidadeEstoque;
     public decimal ValorCompra;
     public decimal ValorVenda;
@@ -23,5 +23,12 @@ public class Produto
         QuantidadeEstoque = qtdEstoque;
         ValorCompra = custo;
         ValorVenda = venda;
+    }
+    
+    public override string ToString()
+    {
+        Console.ForegroundColor = ConsoleColor.Yellow;
+        
+        return $"Produto: Data: {DataDeCadastro.ToString("d")} | Id: {IdProduto} |  Nome: {NomeProduto} | Qtd: {QuantidadeEstoque} | R$ Compra: {ValorCompra.ToString("c")} | R$ Venda: {ValorVenda.ToString("c")}";
     }
 }

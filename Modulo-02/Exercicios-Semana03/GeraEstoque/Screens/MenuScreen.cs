@@ -19,7 +19,7 @@ public static class MenuScreen
             case 2: break;
             case 3: break;
             case 4: break;
-            case 5: ListarProdutosScreen.Iniciar(repository); Iniciar(repository); break;
+            case 5: ListarProdutosScreen.Iniciar(repository); Iniciar(repository);  break;
             case 0: Console.Clear(); Environment.Exit(0); break;
             default: break;
         }
