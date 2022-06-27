@@ -32,6 +32,9 @@ public static class CadastroScreen
         Console.Write("Digite o valor da multa: ");
         decimal valorMulta = decimal.Parse(Console.ReadLine()!);
 
+        CobrarCusto custo = new CobrarCusto(valorCurso, valorMulta, valorDesconto);
+        
+
         cursos.Cursos.Add(new FichaInscricao(nome, curso, escolaridade, dataDeNascimento, valorCurso, valorDesconto, valorMulta));
 
         FichaInscricao ficha01 = new FichaInscricao(nome, curso, escolaridade, dataDeNascimento, valorCurso, valorDesconto, valorMulta);
@@ -39,11 +42,11 @@ public static class CadastroScreen
         Console.Clear();
 
         if(ficha01.ValorDesconto == 0)
-            System.Console.WriteLine(FormatacaoTexto.Formatacao(ficha01.Nome, ficha01.Curso, ficha01.ValorCurso));
+            System.Console.WriteLine(FormatacaoTexto.Formatacao(ficha01.Nome, ficha01.Curso, ficha01.ValorCurso, custo.Resultado));
         else if(ficha01.ValorDesconto > 0 && ficha01.Idade < 18)
-            System.Console.WriteLine(FormatacaoTexto.Formatacao(ficha01.Nome, ficha01.Curso, ficha01.ValorCurso, ficha01.ValorDesconto, ficha01.Idade));
+            System.Console.WriteLine(FormatacaoTexto.Formatacao(ficha01.Nome, ficha01.Curso, ficha01.ValorCurso, ficha01.ValorDesconto, ficha01.Idade, custo.Resultado));
         else if(ficha01.ValorDesconto > 0)
-            System.Console.WriteLine(FormatacaoTexto.Formatacao(ficha01.Nome, ficha01.Curso, ficha01.ValorCurso, ficha01.ValorDesconto));
+            System.Console.WriteLine(FormatacaoTexto.Formatacao(ficha01.Nome, ficha01.Curso, ficha01.ValorCurso, ficha01.ValorDesconto, custo.Resultado));
 
         
         Console.ReadLine();

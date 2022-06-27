@@ -20,15 +20,16 @@ public static class ListarCursos
         }
         else
         {
-
+            
             foreach (var curso in cursos.Cursos)
             {
+                CobrarCusto custo = new CobrarCusto(curso.ValorCurso, curso.ValorMulta, curso.ValorDesconto);
                 if(curso.ValorDesconto == 0)
-                    System.Console.WriteLine(FormatacaoTexto.Formatacao(curso.Nome, curso.Curso, curso.ValorCurso));
+                    System.Console.WriteLine(FormatacaoTexto.Formatacao(curso.Nome, curso.Curso, curso.ValorCurso, custo.Resultado));
                 else if(curso.ValorDesconto > 0 && curso.Idade < 18)
-                    System.Console.WriteLine(FormatacaoTexto.Formatacao(curso.Nome, curso.Curso, curso.ValorCurso, curso.ValorDesconto, curso.Idade));
+                    System.Console.WriteLine(FormatacaoTexto.Formatacao(curso.Nome, curso.Curso, curso.ValorCurso, curso.ValorDesconto, curso.Idade, custo.Resultado));
                 else if(curso.ValorDesconto > 0)
-                    System.Console.WriteLine(FormatacaoTexto.Formatacao(curso.Nome, curso.Curso, curso.ValorCurso, curso.ValorDesconto));
+                    System.Console.WriteLine(FormatacaoTexto.Formatacao(curso.Nome, curso.Curso, curso.ValorCurso, curso.ValorDesconto, custo.Resultado));
 
 
                 System.Console.WriteLine("=======================================================================================================================");

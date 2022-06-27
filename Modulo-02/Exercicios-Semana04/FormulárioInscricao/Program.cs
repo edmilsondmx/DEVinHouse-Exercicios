@@ -8,8 +8,5 @@ static class Program
 
         MenuScreen.Iniciar(Cursos);
 
-        
-
-        
     }
 }
