@@ -1,5 +1,4 @@
-﻿using GeraEstoque.Models;
-using GeraEstoque.Repositories;
+﻿using GeraEstoque.Repositories;
 namespace GeraEstoque.Screens;
 
 class Program

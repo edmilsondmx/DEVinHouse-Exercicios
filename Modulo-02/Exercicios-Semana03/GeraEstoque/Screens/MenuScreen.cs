@@ -1,7 +1,4 @@
 namespace GeraEstoque.Screens;
-
-using System.Collections.Generic;
-using GeraEstoque.Models;
 using GeraEstoque.Repositories;
 
 public static class MenuScreen
