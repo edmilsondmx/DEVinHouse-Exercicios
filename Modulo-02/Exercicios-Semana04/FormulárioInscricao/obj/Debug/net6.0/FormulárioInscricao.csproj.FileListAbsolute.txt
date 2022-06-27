@@ -1,0 +1,15 @@
+C:\Users\Edmilson\Documents\DevinHouse\exercicios\DEVinHouse-Exercicios\Modulo-02\Exercicios-Semana04\FormulárioInscricao\bin\Debug\net6.0\FormulárioInscricao.exe
+C:\Users\Edmilson\Documents\DevinHouse\exercicios\DEVinHouse-Exercicios\Modulo-02\Exercicios-Semana04\FormulárioInscricao\bin\Debug\net6.0\FormulárioInscricao.deps.json
+C:\Users\Edmilson\Documents\DevinHouse\exercicios\DEVinHouse-Exercicios\Modulo-02\Exercicios-Semana04\FormulárioInscricao\bin\Debug\net6.0\FormulárioInscricao.runtimeconfig.json
+C:\Users\Edmilson\Documents\DevinHouse\exercicios\DEVinHouse-Exercicios\Modulo-02\Exercicios-Semana04\FormulárioInscricao\bin\Debug\net6.0\FormulárioInscricao.dll
+C:\Users\Edmilson\Documents\DevinHouse\exercicios\DEVinHouse-Exercicios\Modulo-02\Exercicios-Semana04\FormulárioInscricao\bin\Debug\net6.0\FormulárioInscricao.pdb
+C:\Users\Edmilson\Documents\DevinHouse\exercicios\DEVinHouse-Exercicios\Modulo-02\Exercicios-Semana04\FormulárioInscricao\obj\Debug\net6.0\FormulárioInscricao.csproj.AssemblyReference.cache
+C:\Users\Edmilson\Documents\DevinHouse\exercicios\DEVinHouse-Exercicios\Modulo-02\Exercicios-Semana04\FormulárioInscricao\obj\Debug\net6.0\FormulárioInscricao.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Edmilson\Documents\DevinHouse\exercicios\DEVinHouse-Exercicios\Modulo-02\Exercicios-Semana04\FormulárioInscricao\obj\Debug\net6.0\FormulárioInscricao.AssemblyInfoInputs.cache
+C:\Users\Edmilson\Documents\DevinHouse\exercicios\DEVinHouse-Exercicios\Modulo-02\Exercicios-Semana04\FormulárioInscricao\obj\Debug\net6.0\FormulárioInscricao.AssemblyInfo.cs
+C:\Users\Edmilson\Documents\DevinHouse\exercicios\DEVinHouse-Exercicios\Modulo-02\Exercicios-Semana04\FormulárioInscricao\obj\Debug\net6.0\FormulárioInscricao.csproj.CoreCompileInputs.cache
+C:\Users\Edmilson\Documents\DevinHouse\exercicios\DEVinHouse-Exercicios\Modulo-02\Exercicios-Semana04\FormulárioInscricao\obj\Debug\net6.0\FormulárioInscricao.dll
+C:\Users\Edmilson\Documents\DevinHouse\exercicios\DEVinHouse-Exercicios\Modulo-02\Exercicios-Semana04\FormulárioInscricao\obj\Debug\net6.0\refint\FormulárioInscricao.dll
+C:\Users\Edmilson\Documents\DevinHouse\exercicios\DEVinHouse-Exercicios\Modulo-02\Exercicios-Semana04\FormulárioInscricao\obj\Debug\net6.0\FormulárioInscricao.pdb
+C:\Users\Edmilson\Documents\DevinHouse\exercicios\DEVinHouse-Exercicios\Modulo-02\Exercicios-Semana04\FormulárioInscricao\obj\Debug\net6.0\FormulárioInscricao.genruntimeconfig.cache
+C:\Users\Edmilson\Documents\DevinHouse\exercicios\DEVinHouse-Exercicios\Modulo-02\Exercicios-Semana04\FormulárioInscricao\obj\Debug\net6.0\ref\FormulárioInscricao.dll

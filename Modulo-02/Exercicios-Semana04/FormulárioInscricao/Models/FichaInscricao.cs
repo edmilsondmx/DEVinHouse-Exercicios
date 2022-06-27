@@ -18,7 +18,16 @@ public class FichaInscricao
 
     public decimal ValorMulta { get; set; }
 
-
+    private int CalcularIdade(DateTime dataNascimento)
+    {
+        int idade = 0;
+        idade = DateTime.Today.Year - dataNascimento.Year;
+        if(DateTime.Today.DayOfYear < dataNascimento.DayOfYear)
+        {
+            idade -= 1;
+        }
+        return idade;
+    }
 
     public FichaInscricao(string nome, string curso, string escolaridade, DateTime dataNascimento, decimal valorCurso, decimal valorDesconto, decimal valorMulta )
     {
@@ -29,6 +38,19 @@ public class FichaInscricao
         ValorCurso = valorCurso;
         ValorDesconto = valorDesconto;
         ValorMulta = valorMulta;
+        Idade = CalcularIdade(dataNascimento);
+    }
+
+    public override string ToString()
+    {
+        return $@"    Nome: {Nome}
+    Idade: {Idade}
+    Curso: {Curso}
+    Escolaridade: {Escolaridade}
+    Data de Nascimento: {DataNascimento.ToString("d")}
+    Valor do Curso: {ValorCurso}
+    Valor do Desconto: {ValorDesconto}
+    Valor da Multa: {ValorMulta}";
     }
 }
 
