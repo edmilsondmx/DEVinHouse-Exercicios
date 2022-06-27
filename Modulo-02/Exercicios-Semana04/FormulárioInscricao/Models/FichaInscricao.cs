@@ -43,9 +43,5 @@ public class FichaInscricao
         Idade = CalcularIdade(dataNascimento);
 
     }
-
-    
-    
-
     
 }

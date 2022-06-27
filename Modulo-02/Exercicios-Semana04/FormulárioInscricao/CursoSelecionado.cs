@@ -1,12 +1,13 @@
+using FormularioInscricao.Models;
 namespace FormularioInscricao;
 
-internal class CursoSelecionado
+public class CursoSelecionado
 {
-    private List<string> Cursos { get; set; }
+    public IList<FichaInscricao> Cursos { get; set; }
 
     public CursoSelecionado()
     {
-        Cursos = new List<string>();
+        Cursos = new List<FichaInscricao>();
 
     }
 
