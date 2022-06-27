@@ -1,3 +1,4 @@
+using FormularioInscricao;
 namespace FormularioInscricao.Models;
 
 public class FichaInscricao
@@ -28,6 +29,7 @@ public class FichaInscricao
         }
         return idade;
     }
+    
 
     public FichaInscricao(string nome, string curso, string escolaridade, DateTime dataNascimento, decimal valorCurso, decimal valorDesconto, decimal valorMulta )
     {
@@ -39,18 +41,11 @@ public class FichaInscricao
         ValorDesconto = valorDesconto;
         ValorMulta = valorMulta;
         Idade = CalcularIdade(dataNascimento);
+
     }
 
-    public override string ToString()
-    {
-        return $@"    Nome: {Nome}
-    Idade: {Idade}
-    Curso: {Curso}
-    Escolaridade: {Escolaridade}
-    Data de Nascimento: {DataNascimento.ToString("d")}
-    Valor do Curso: {ValorCurso}
-    Valor do Desconto: {ValorDesconto}
-    Valor da Multa: {ValorMulta}";
-    }
+    
+    
+
+    
 }
-
