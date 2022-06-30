@@ -1,0 +1,15 @@
+C:\Users\Edmilson\Documents\DevinHouse\exercicios\DEVinHouse-Exercicios\Modulo-02\Exercicios-Semana05\Empresa\bin\Debug\net6.0\Empresa.exe
+C:\Users\Edmilson\Documents\DevinHouse\exercicios\DEVinHouse-Exercicios\Modulo-02\Exercicios-Semana05\Empresa\bin\Debug\net6.0\Empresa.deps.json
+C:\Users\Edmilson\Documents\DevinHouse\exercicios\DEVinHouse-Exercicios\Modulo-02\Exercicios-Semana05\Empresa\bin\Debug\net6.0\Empresa.runtimeconfig.json
+C:\Users\Edmilson\Documents\DevinHouse\exercicios\DEVinHouse-Exercicios\Modulo-02\Exercicios-Semana05\Empresa\bin\Debug\net6.0\Empresa.dll
+C:\Users\Edmilson\Documents\DevinHouse\exercicios\DEVinHouse-Exercicios\Modulo-02\Exercicios-Semana05\Empresa\bin\Debug\net6.0\Empresa.pdb
+C:\Users\Edmilson\Documents\DevinHouse\exercicios\DEVinHouse-Exercicios\Modulo-02\Exercicios-Semana05\Empresa\obj\Debug\net6.0\Empresa.csproj.AssemblyReference.cache
+C:\Users\Edmilson\Documents\DevinHouse\exercicios\DEVinHouse-Exercicios\Modulo-02\Exercicios-Semana05\Empresa\obj\Debug\net6.0\Empresa.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Edmilson\Documents\DevinHouse\exercicios\DEVinHouse-Exercicios\Modulo-02\Exercicios-Semana05\Empresa\obj\Debug\net6.0\Empresa.AssemblyInfoInputs.cache
+C:\Users\Edmilson\Documents\DevinHouse\exercicios\DEVinHouse-Exercicios\Modulo-02\Exercicios-Semana05\Empresa\obj\Debug\net6.0\Empresa.AssemblyInfo.cs
+C:\Users\Edmilson\Documents\DevinHouse\exercicios\DEVinHouse-Exercicios\Modulo-02\Exercicios-Semana05\Empresa\obj\Debug\net6.0\Empresa.csproj.CoreCompileInputs.cache
+C:\Users\Edmilson\Documents\DevinHouse\exercicios\DEVinHouse-Exercicios\Modulo-02\Exercicios-Semana05\Empresa\obj\Debug\net6.0\Empresa.dll
+C:\Users\Edmilson\Documents\DevinHouse\exercicios\DEVinHouse-Exercicios\Modulo-02\Exercicios-Semana05\Empresa\obj\Debug\net6.0\refint\Empresa.dll
+C:\Users\Edmilson\Documents\DevinHouse\exercicios\DEVinHouse-Exercicios\Modulo-02\Exercicios-Semana05\Empresa\obj\Debug\net6.0\Empresa.pdb
+C:\Users\Edmilson\Documents\DevinHouse\exercicios\DEVinHouse-Exercicios\Modulo-02\Exercicios-Semana05\Empresa\obj\Debug\net6.0\Empresa.genruntimeconfig.cache
+C:\Users\Edmilson\Documents\DevinHouse\exercicios\DEVinHouse-Exercicios\Modulo-02\Exercicios-Semana05\Empresa\obj\Debug\net6.0\ref\Empresa.dll
