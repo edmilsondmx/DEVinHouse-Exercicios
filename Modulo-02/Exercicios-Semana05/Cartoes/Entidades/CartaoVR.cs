@@ -6,8 +6,12 @@ class CartaoVR : Cartao
     {
     }
 
-    public CartaoVR(string? bandeira, double saldo, double valorTaxa) : base(bandeira, saldo, valorTaxa)
+    public CartaoVR(string? bandeira, double saldo) : base(bandeira, saldo)
     {
         
+    }
+    public override double VerificarValorTaxaCartao()
+    {
+        return this.saldo * 0.02;
     }
 }

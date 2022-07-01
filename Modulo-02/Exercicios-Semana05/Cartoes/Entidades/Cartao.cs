@@ -8,14 +8,14 @@ public class Cartao
     public Cartao()
     {
     }
-    public Cartao(string? bandeira, double saldo, double valorTaxa)
+    public Cartao(string? bandeira, double saldo)
     {
         this.bandeira = bandeira;
         this.saldo = saldo;
-        this.valorTaxa = valorTaxa;
+        
     }
 
-    public double VerificarValorTaxaCartao()
+    public virtual double VerificarValorTaxaCartao()
     {
         var taxa = valorTaxa / 100;
         return saldo * taxa; 
