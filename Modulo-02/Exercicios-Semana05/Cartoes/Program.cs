@@ -24,5 +24,18 @@ public class Program
 
         Cartao cartaoVt = new CartaoVA("Elo", 250, 1.5);
         System.Console.WriteLine($"O cartão de Bandeira {cartaoVt.bandeira}, possui {cartaoVt.saldo.ToString("c")} de limite e a taxa é de {cartaoVt.VerificarValorTaxaCartao().ToString("c")}.");
+        System.Console.WriteLine("========================================================");
+
+
+        System.Console.WriteLine("EXEMPLOS UPCASTING E DOWNCASTING");
+        //Exemplos UpCasting
+        Cartao cartaoUp2 = new CartaoVR();
+        CartaoVR cartaoUp = new CartaoVR();
+        Cartao novoCartao = cartaoUp;
+        System.Console.WriteLine(novoCartao == cartaoUp);
+
+        //Exemplo DownCasting
+        CartaoVR cartaoDown = (CartaoVR)cartaoUp2;
+        System.Console.WriteLine(cartaoDown == cartaoUp2);
     }
 }
