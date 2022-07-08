@@ -12,7 +12,20 @@ public class ExemploTest : ConfiguracaoHostApi
         var resultado = await client.GetAsync($"/ExercicioVerdadeiroFalso/{tipo}");
         Assert.NotNull(resultado);
 
-        string expectativa = "O Retorno do valor é igual a Verdadeiro ou Falso!";
+        string expectativa = "O texto foi igual a verdadeiro ou falso";
+        var responseApi = await resultado.Content.ReadAsStringAsync();
+        Assert.NotNull(responseApi);
+        Assert.Equal(expectativa, responseApi);
+
+    }
+    [Theory]
+    [InlineData("Qualquer coisa")]
+    public async Task Consumir_Api_Valor_Verdadeiro_Ou_Falso_Erro(string tipo)
+    {
+        var resultado = await client.GetAsync($"/ExercicioVerdadeiroFalso/{tipo}");
+        Assert.NotNull(resultado);
+
+        string expectativa = "Texto diferente de verdadeiro ou falso";
         var responseApi = await resultado.Content.ReadAsStringAsync();
         Assert.NotNull(responseApi);
         Assert.Equal(expectativa, responseApi);
