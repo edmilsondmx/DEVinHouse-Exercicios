@@ -17,6 +17,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyProductAttribute("modulo2-semana6-api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("modulo2-semana6-api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
+[assembly: System.Runtime.CompilerServices.InternalsVisibleTo("modulo2-semana6-tests")]
 
 // Gerado pela classe WriteCodeFragment do MSBuild.
 
