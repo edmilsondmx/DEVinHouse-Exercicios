@@ -10,7 +10,7 @@ namespace modulo2_semana6_api.Controllers;
 public class ExercicioSomaController : ControllerBase
 {
     /// <summary>
-    /// /// Implementar a regra do exercicio 8 aqui dentro do método GET
+    /// /// Implementar a regra do exercicio 8 aqui dentro do mï¿½todo GET
     /// </summary>
     /// <param name="valorA"></param>
     /// <param name="valorB"></param>
@@ -18,6 +18,23 @@ public class ExercicioSomaController : ControllerBase
     [HttpGet("{valorA}/{valorB}")]
     public string Get(int valorA, int valorB)
     {
-        return "";
+        try
+        {
+            var resultado = valorA + valorB;
+
+            if(resultado < 10)
+                return $"O resultado da soma Ã©: {resultado}";
+
+            var numRandomico = new Random().Next();
+            return $"{numRandomico}";
+            throw new Exception($"{numRandomico}");
+        }
+        catch (Exception ex)
+        {
+            
+            return $"Erro: {ex}";
+        }
+        
+        
     }
 }
