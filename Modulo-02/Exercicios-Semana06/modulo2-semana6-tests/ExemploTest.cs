@@ -4,6 +4,8 @@ namespace modulo2_semana6_tests;
 
 public class ExemploTest : ConfiguracaoHostApi
 {
+    
+
     [Theory]
     [InlineData(500)]
     public void Consumir_Api_Exemplo_Com_Valor_Maior_Que_10_Sucesso(int valor)

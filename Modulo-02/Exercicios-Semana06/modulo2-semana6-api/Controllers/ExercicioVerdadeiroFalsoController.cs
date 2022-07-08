@@ -10,14 +10,16 @@ namespace modulo2_semana6_api.Controllers;
 public class ExercicioVerdadeiroFalsoController : ControllerBase
 {
     /// <summary>
-    /// Implementar a regra do exercicio 1 aqui dentro do método GET
+    /// Implementar a regra do exercicio 1 aqui dentro do mï¿½todo GET
     /// </summary>
     /// <param name="tipo"></param>
     /// <returns></returns>
     [HttpGet("{tipo}")]
     public string Get(string tipo)
     {
-
-        return "";
+        if(tipo == "Verdadeiro" && tipo == "falso")
+            return $"O texto foi {tipo}";
+        
+        throw new Exception("Texto diferente de verdadeiro ou falso");
     }
 }
