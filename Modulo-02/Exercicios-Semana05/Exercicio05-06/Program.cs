@@ -8,7 +8,7 @@ internal class Program
     static void Main(string[] args)
     {
         
-        Funcionario objetoFuncionario = new Funcionario("Edmil son", "256a482");
+        Funcionario objetoFuncionario = new Funcionario("Edmilson", "256a482");
         
 
         try
