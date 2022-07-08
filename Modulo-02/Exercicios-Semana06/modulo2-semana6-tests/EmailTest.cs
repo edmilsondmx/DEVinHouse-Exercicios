@@ -17,4 +17,17 @@ public class EmailTest : ConfiguracaoHostApi
         Assert.Equal(expectativa, responseApi);
     }
 
+    [Theory]
+    [InlineData("teste@te.")]
+    public async Task Consumir_Api_Validar_Email_Erro(string email)
+    {
+        var resultado = await client.GetAsync($"/ExercicioEmail/{email}");
+        Assert.NotNull(resultado);
+
+        string expectativa = "E-mail inválido!";
+        var responseApi = await resultado.Content.ReadAsStringAsync();
+        Assert.NotNull(responseApi);
+        Assert.Equal(expectativa, responseApi);
+    }
+
 }

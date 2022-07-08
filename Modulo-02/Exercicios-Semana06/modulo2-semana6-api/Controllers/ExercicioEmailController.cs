@@ -18,26 +18,23 @@ public class ExercicioEmailController : ControllerBase
     [HttpGet("{email}")]
     public string Get(string email)
     {
-        try
-        {
-            ValidarEmail(email);
+        if(ValidarEmail(email))
             return "E-mail válido!";
-        }
-        catch (Exception ex)
-        {
-            
-            return $"Erro: {ex}";
-        }
-        
+        return "E-mail inválido!";
+        throw new EmailInvalidoException(email);
         
     }
 
-    private static void ValidarEmail(string email)
+    private static bool ValidarEmail(string email)
     {
-        Regex regexEmail = new Regex("[A-Za-z0-9\\._-]+@[A-Za-z0-9]+\\..(\\.[A-Za-z]+)*");
-        if(!regexEmail.IsMatch(email))
-            throw new EmailInvalidoException(email);
+        var regexEmail = @"^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$";
 
+        var valido = Regex.IsMatch(email,regexEmail);
+        if(valido)
+            return true;
+        
+        return false;
+        
     }
 }
 
@@ -48,7 +45,7 @@ public class EmailInvalidoException : Exception
     {
     }
     public EmailInvalidoException(string email)
-    : base(String.Format($"Email invalido: {email}"))
+    : base(String.Format($"E-mail inválido: {email}"))
     {
 
     }
