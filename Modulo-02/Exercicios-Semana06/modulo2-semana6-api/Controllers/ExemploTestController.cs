@@ -12,9 +12,9 @@ public class ExemploTestController : ControllerBase
     {
         if (valor > 10)
         {
-            return "O Retorno do Valor é maior que dez";
+            return "O Retorno do Valor Ã© maior que dez";
         }
 
-        return "O Retorno do Valor é menor que dez";
+        return "O Retorno do Valor Ã© menor que dez";
     }
 }

@@ -4,7 +4,20 @@ namespace modulo2_semana6_tests;
 
 public class ExemploTest : ConfiguracaoHostApi
 {
-    
+    [Theory]
+    [InlineData("verdadeiro")]
+    [InlineData("falso")]
+    public async Task Consumir_Api_Valor_Verdadeiro_Ou_Falso_Sucesso(string tipo)
+    {
+        var resultado = await client.GetAsync($"/ExercicioVerdadeiroFalso/{tipo}");
+        Assert.NotNull(resultado);
+
+        string expectativa = "O Retorno do valor é igual a Verdadeiro ou Falso!";
+        var responseApi = await resultado.Content.ReadAsStringAsync();
+        Assert.NotNull(responseApi);
+        Assert.Equal(expectativa, responseApi);
+
+    }
 
     [Theory]
     [InlineData(500)]
