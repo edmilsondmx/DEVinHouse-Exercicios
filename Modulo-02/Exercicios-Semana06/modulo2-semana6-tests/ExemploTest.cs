@@ -103,7 +103,7 @@ public class ExemploTest : ConfiguracaoHostApi
         }
         catch (Exception ex)
         {
-            mensagem = ex.StackTrace;
+            mensagem = ex.StackTrace!;
             throw new Exception("Erro ao escrever aquirov.", ex);
         }
         finally
