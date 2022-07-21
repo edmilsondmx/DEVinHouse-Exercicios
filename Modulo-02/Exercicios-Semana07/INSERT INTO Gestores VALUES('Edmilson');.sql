@@ -1,0 +1,10 @@
+INSERT INTO Gestores VALUES('Edmilson');
+INSERT INTO Gestores VALUES('João Paulo');
+INSERT INTO Gestores VALUES('Henrique');
+INSERT INTO Gestores VALUES('Maria');
+INSERT INTO Gestores VALUES('Fernando');
+INSERT INTO Gestores VALUES('Cristina');
+INSERT INTO Gestores VALUES('Rose Meire');
+INSERT INTO Gestores VALUES('Adailton');
+INSERT INTO Gestores VALUES('Sandro');
+INSERT INTO Gestores VALUES('Nathália');

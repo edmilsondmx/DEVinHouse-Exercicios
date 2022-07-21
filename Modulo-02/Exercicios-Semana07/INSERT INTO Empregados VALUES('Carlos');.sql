@@ -1,0 +1,10 @@
+INSERT INTO Empregados VALUES('Carlos', 'Rua rio santos, 28', 35);
+INSERT INTO Empregados VALUES('Camila', 'Rua amarilha, 1865', 28);
+INSERT INTO Empregados VALUES('Devid', 'Rua santo antonio, 456', 45);
+INSERT INTO Empregados VALUES('Rubens', 'Rua cuiabá, 8978', 21);
+INSERT INTO Empregados VALUES('Nathaly', 'Rua araue, 23', 59);
+INSERT INTO Empregados VALUES('Silveira', 'Rua taubaté, 895', 36);
+INSERT INTO Empregados VALUES('Edgar', 'Rua novidade, 7894', 27);
+INSERT INTO Empregados VALUES('Edilene', 'Rua da criação, 1111', 18);
+INSERT INTO Empregados VALUES('Bruna', 'Rua pessegueiro, 2132', 45);
+INSERT INTO Empregados VALUES('Pedro', 'Rua penharol, 79', 36);
