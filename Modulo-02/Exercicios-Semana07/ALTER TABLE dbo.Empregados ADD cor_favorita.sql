@@ -1,0 +1,1 @@
+ALTER TABLE dbo.Empregados ADD cor_favorita VARCHAR(30);
