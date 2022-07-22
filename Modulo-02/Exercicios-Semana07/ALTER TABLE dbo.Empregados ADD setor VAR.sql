@@ -1,0 +1,1 @@
+ALTER TABLE dbo.Empregados ADD setor VARCHAR(50);
