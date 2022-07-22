@@ -1,0 +1,1 @@
+ALTER TABLE dbo.Empregados DROP COLUMN cor_favorita;
