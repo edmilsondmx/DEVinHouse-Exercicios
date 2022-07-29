@@ -1,0 +1,1 @@
+SELECT * FROM movimento_tipo;
