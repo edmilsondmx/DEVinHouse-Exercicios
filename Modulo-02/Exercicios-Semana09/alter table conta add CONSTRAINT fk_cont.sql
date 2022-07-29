@@ -1,0 +1,1 @@
+alter table conta add CONSTRAINT fk_conta_tipo_conta FOREIGN KEY (id_tipo) REFERENCES conta_tipo(id_tipo);

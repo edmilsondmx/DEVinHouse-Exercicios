@@ -1,0 +1,1 @@
+ALTER TABLE movimento ADD CONSTRAINT fk_conta_movimento FOREIGN KEY (id_conta) REFERENCES conta(id_conta);
