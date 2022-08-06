@@ -1,0 +1,15 @@
+C:\Users\Edmilson\Documents\DevinHouse\exercicios\DEVinHouse-Exercicios\Modulo-02\Exercicios-Semana10\Exercicio03_Httpclient\bin\Debug\net6.0\Exercicio03_Httpclient.exe
+C:\Users\Edmilson\Documents\DevinHouse\exercicios\DEVinHouse-Exercicios\Modulo-02\Exercicios-Semana10\Exercicio03_Httpclient\bin\Debug\net6.0\Exercicio03_Httpclient.deps.json
+C:\Users\Edmilson\Documents\DevinHouse\exercicios\DEVinHouse-Exercicios\Modulo-02\Exercicios-Semana10\Exercicio03_Httpclient\bin\Debug\net6.0\Exercicio03_Httpclient.runtimeconfig.json
+C:\Users\Edmilson\Documents\DevinHouse\exercicios\DEVinHouse-Exercicios\Modulo-02\Exercicios-Semana10\Exercicio03_Httpclient\bin\Debug\net6.0\Exercicio03_Httpclient.dll
+C:\Users\Edmilson\Documents\DevinHouse\exercicios\DEVinHouse-Exercicios\Modulo-02\Exercicios-Semana10\Exercicio03_Httpclient\bin\Debug\net6.0\Exercicio03_Httpclient.pdb
+C:\Users\Edmilson\Documents\DevinHouse\exercicios\DEVinHouse-Exercicios\Modulo-02\Exercicios-Semana10\Exercicio03_Httpclient\obj\Debug\net6.0\Exercicio03_Httpclient.csproj.AssemblyReference.cache
+C:\Users\Edmilson\Documents\DevinHouse\exercicios\DEVinHouse-Exercicios\Modulo-02\Exercicios-Semana10\Exercicio03_Httpclient\obj\Debug\net6.0\Exercicio03_Httpclient.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Edmilson\Documents\DevinHouse\exercicios\DEVinHouse-Exercicios\Modulo-02\Exercicios-Semana10\Exercicio03_Httpclient\obj\Debug\net6.0\Exercicio03_Httpclient.AssemblyInfoInputs.cache
+C:\Users\Edmilson\Documents\DevinHouse\exercicios\DEVinHouse-Exercicios\Modulo-02\Exercicios-Semana10\Exercicio03_Httpclient\obj\Debug\net6.0\Exercicio03_Httpclient.AssemblyInfo.cs
+C:\Users\Edmilson\Documents\DevinHouse\exercicios\DEVinHouse-Exercicios\Modulo-02\Exercicios-Semana10\Exercicio03_Httpclient\obj\Debug\net6.0\Exercicio03_Httpclient.csproj.CoreCompileInputs.cache
+C:\Users\Edmilson\Documents\DevinHouse\exercicios\DEVinHouse-Exercicios\Modulo-02\Exercicios-Semana10\Exercicio03_Httpclient\obj\Debug\net6.0\Exercicio03_Httpclient.dll
+C:\Users\Edmilson\Documents\DevinHouse\exercicios\DEVinHouse-Exercicios\Modulo-02\Exercicios-Semana10\Exercicio03_Httpclient\obj\Debug\net6.0\refint\Exercicio03_Httpclient.dll
+C:\Users\Edmilson\Documents\DevinHouse\exercicios\DEVinHouse-Exercicios\Modulo-02\Exercicios-Semana10\Exercicio03_Httpclient\obj\Debug\net6.0\Exercicio03_Httpclient.pdb
+C:\Users\Edmilson\Documents\DevinHouse\exercicios\DEVinHouse-Exercicios\Modulo-02\Exercicios-Semana10\Exercicio03_Httpclient\obj\Debug\net6.0\Exercicio03_Httpclient.genruntimeconfig.cache
+C:\Users\Edmilson\Documents\DevinHouse\exercicios\DEVinHouse-Exercicios\Modulo-02\Exercicios-Semana10\Exercicio03_Httpclient\obj\Debug\net6.0\ref\Exercicio03_Httpclient.dll
