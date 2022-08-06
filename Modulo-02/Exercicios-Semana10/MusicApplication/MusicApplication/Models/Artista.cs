@@ -2,7 +2,14 @@
 {
     public class Artista
     {
-        public int IdArtita { get; set; }
+
+        public int IdArtista { get; internal set; }
         public string Nome { get; set; }
+        public string NomeArtistico { get; set; }
+        public Artista(string nome, string nomeArtistico)
+        {
+            Nome = nome;
+            NomeArtistico = nomeArtistico;
+        }
     }
 }
