@@ -11,6 +11,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 builder.Services.AddScoped<ArtistaRepository>();
+builder.Services.AddScoped<AlbumRepository>();
 
 var app = builder.Build();
 

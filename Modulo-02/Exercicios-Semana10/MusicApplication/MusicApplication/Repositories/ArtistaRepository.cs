@@ -47,6 +47,7 @@ namespace MusicApplication.Repositories
 
             artistaAtual.Nome = artista.Nome;
             artistaAtual.NomeArtistico = artista.NomeArtistico;
+            artistaAtual.PaisOrigem = artista.PaisOrigem;
 
             return artistaAtual;
         }

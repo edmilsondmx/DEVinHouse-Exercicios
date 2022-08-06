@@ -7,5 +7,13 @@
         public string Titulo { get; set; }
         public int Ano { get; set; }
         public List<Musica> ListaMusicas { get; set; }
+
+        public Album(Artista artista, string titulo, int ano, List<Musica> listaMusicas)
+        {
+            Artista = artista;
+            Titulo = titulo;
+            Ano = ano;
+            ListaMusicas = listaMusicas;
+        }
     }
 }

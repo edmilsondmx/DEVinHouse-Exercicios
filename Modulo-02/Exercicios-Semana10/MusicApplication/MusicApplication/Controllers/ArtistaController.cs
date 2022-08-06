@@ -11,19 +11,21 @@ namespace MusicApplication.Controllers
         
 
         private readonly ArtistaRepository _artistaRepository;
+        private readonly AlbumRepository _albumRepository;
 
-        public ArtistaController(ArtistaRepository artistaRepository)
+        public ArtistaController(ArtistaRepository artistaRepository, AlbumRepository albumRepository)
         {
             _artistaRepository = artistaRepository;
+            _albumRepository = albumRepository;
         }
 
         [HttpGet]
         public List<Artista> Get(
             [FromQuery] string? nome)
         {
-            if(!String.IsNullOrEmpty(nome.ToLower()))
+            if(!String.IsNullOrEmpty(nome))
             {
-                return _artistaRepository.ObterPorNome(nome.ToLower());
+                return _artistaRepository.ObterPorNome(nome);
             }
             return _artistaRepository.ObterTodosArtistas();
         }
@@ -31,11 +33,13 @@ namespace MusicApplication.Controllers
         [HttpPost]
         public ActionResult<Artista> Post(
             [FromBody] Artista novoArtista)
+            
         {
 
             var artista = new Artista(
                 novoArtista.Nome,
-                novoArtista.NomeArtistico
+                novoArtista.NomeArtistico,
+                novoArtista.PaisOrigem
             );
 
             _artistaRepository.CriarArtista(artista);
@@ -52,6 +56,7 @@ namespace MusicApplication.Controllers
 
             artista.Nome = body.Nome;
             artista.NomeArtistico = body.NomeArtistico;
+            artista.PaisOrigem = body.PaisOrigem;
 
             _artistaRepository.AtualizarArtista(artista);
 
