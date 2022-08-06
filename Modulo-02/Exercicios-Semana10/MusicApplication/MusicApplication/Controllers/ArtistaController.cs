@@ -11,12 +11,11 @@ namespace MusicApplication.Controllers
         
 
         private readonly ArtistaRepository _artistaRepository;
-        private readonly AlbumRepository _albumRepository;
+        
 
-        public ArtistaController(ArtistaRepository artistaRepository, AlbumRepository albumRepository)
+        public ArtistaController(ArtistaRepository artistaRepository)
         {
             _artistaRepository = artistaRepository;
-            _albumRepository = albumRepository;
         }
 
         [HttpGet]

@@ -12,6 +12,7 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddScoped<ArtistaRepository>();
 builder.Services.AddScoped<AlbumRepository>();
+builder.Services.AddScoped<MusicaRepository>();
 
 var app = builder.Build();
 

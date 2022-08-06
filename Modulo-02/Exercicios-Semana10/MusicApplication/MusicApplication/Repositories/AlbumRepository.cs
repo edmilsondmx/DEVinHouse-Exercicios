@@ -39,9 +39,9 @@ namespace MusicApplication.Repositories
         {
             var albumAtual = ObterPorId(album.IdAlbum);
 
-            albumAtual.Artista = album.Artista;
             albumAtual.Titulo = album.Titulo;
-            albumAtual.ListaMusicas = album.ListaMusicas;
+            albumAtual.Ano = album.Ano;
+            albumAtual.Artista = album.Artista;
 
             return albumAtual;
         }
