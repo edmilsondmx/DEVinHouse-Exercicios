@@ -63,5 +63,12 @@ namespace MusicApplication.Repositories
                 .Where(musica => musica.Album.IdAlbum == idAlbum)
                 .ToList();
         }
+
+        public List<Musica> ObterPorPesquisa(string nome, string artista, string album)
+        {
+            var listaMusicas = _musica
+                .Where(m => m.Nome == nome || m.Artista.Nome == artista || m.Album?.Titulo == album).ToList();
+            return listaMusicas;
+        }
     }
 }

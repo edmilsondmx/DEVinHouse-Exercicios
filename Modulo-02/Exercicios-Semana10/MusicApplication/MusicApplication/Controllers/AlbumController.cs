@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using MusicApplication.DTOs;
 using MusicApplication.Models;
 using MusicApplication.Repositories;
 
@@ -6,34 +7,37 @@ namespace MusicApplication.Controllers
 {
     [ApiController]
     [Route("api/album")]
-    public class AlbumController : Controller
+    public class AlbumController : ControllerBase
     {
 
         private readonly AlbumRepository _albumRepository;
+        private readonly ArtistaRepository _artistaRepository;
 
-        public AlbumController(AlbumRepository albumRepository)
+        public AlbumController(
+            AlbumRepository albumRepository, 
+            ArtistaRepository artistaRepository)
         {
             _albumRepository = albumRepository;
+            _artistaRepository = artistaRepository;
         }
 
         [HttpGet]
-        public List<Album> Get()
+        public ActionResult<Album> Get()
         {
             
-            return _albumRepository.ObterTodosAlbuns();
+            return Ok(_albumRepository.ObterTodosAlbuns());
         }
 
         [HttpPost]
         public ActionResult<Album> Post(
-            [FromBody] Album novoAlbum)
+            [FromBody] AlbumDto novoAlbum)
 
         {
-
+            var artista = _artistaRepository.ObterPorId(novoAlbum.ArtistaId);
             var album = new Album(
-                novoAlbum.Artista,
-                novoAlbum.Titulo,
+                artista,
+                novoAlbum.Nome,
                 novoAlbum.Ano
-
             ) ;
 
             _albumRepository.AdicionarAlbum(album);
