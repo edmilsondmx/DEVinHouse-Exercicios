@@ -10,6 +10,7 @@ namespace MusicApplication.Models
         public double Duracao { get; set; }
         public Artista Artista { get; set; }
         public Album Album { get; set; }
+        public Playlist Playlist { get; set; }
 
         public Musica(string nome, double duracao, Artista artista)
         {

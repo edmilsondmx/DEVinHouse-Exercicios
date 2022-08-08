@@ -10,49 +10,57 @@ namespace MusicApplication.Repositories
 
         public Playlist AdicionarPlaylist(Playlist playlist)
         {
-            album.IdAlbum = _idIndice;
+            playlist.Id = _idIndice;
             _idIndice++;
 
-            _album.Add(album);
+            _playlist.Add(playlist);
 
-            return album;
+            return playlist;
 
         }
 
-        public List<Album> ObterTodosAlbuns()
+        public List<Playlist> ObterTodasPlaylist()
         {
-            return _album;
+            return _playlist;
         }
 
-        public Album ObterPorId(int id)
+        public Playlist ObterPorId(int id)
         {
-            var album = _album.FirstOrDefault(a => a.IdAlbum == id);
+            var playlist = _playlist.FirstOrDefault(p => p.Id == id);
 
-            if (album == null)
+            if (playlist == null)
                 return null;
 
-            return album;
+            return playlist;
 
         }
 
-        public Album EditarAlbum(Album album)
+        public Playlist EditarPlaylist(Playlist playlist)
         {
-            var albumAtual = ObterPorId(album.IdAlbum);
+            var playlistAtual = ObterPorId(playlist.Id);
 
-            albumAtual.Titulo = album.Titulo;
-            albumAtual.Ano = album.Ano;
-            albumAtual.Artista = album.Artista;
+            playlistAtual.Nome = playlist.Nome;
 
-            return albumAtual;
+            return playlistAtual;
         }
 
-        public string DeletarAlbum(int idAlbum)
+        public string DeletarPlaylist(int id)
         {
-            var album = ObterPorId(idAlbum);
+            var playlist = ObterPorId(id);
 
-            _album.Remove(album);
+            _playlist.Remove(playlist);
 
-            return $"Album: {album.Titulo} | {album.Artista.NomeArtistico}, removido com sucesso!";
+            return $"Playlist: {playlist.Nome}, removida com sucesso!";
+        }
+
+        public Playlist AdicionarMusicaNaPlaylist(Playlist playlist, Musica musica)
+        {
+            var playlistAtual = ObterPorId(playlist.Id);
+
+            playlistAtual.AdicionarMusicas(musica);
+
+            return playlistAtual;
+
         }
     }
 }

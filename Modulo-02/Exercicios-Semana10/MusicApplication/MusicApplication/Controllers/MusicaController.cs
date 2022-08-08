@@ -12,15 +12,18 @@ namespace MusicApplication.Controllers
         private readonly MusicaRepository _musicaRepository;
         private readonly ArtistaRepository _artistaRepository;
         private readonly AlbumRepository _albumRepository;
+        private readonly PlaylistRepository _playlistRepository;
 
         public MusicaController(
             MusicaRepository musicaRepository, 
             ArtistaRepository artistaRepository,
-            AlbumRepository albumRepository)
+            AlbumRepository albumRepository,
+            PlaylistRepository playlistRepository)
         {
             _musicaRepository = musicaRepository;
             _artistaRepository = artistaRepository;
             _albumRepository = albumRepository;
+            _playlistRepository = playlistRepository;
         }
 
         [HttpGet()]
@@ -50,14 +53,16 @@ namespace MusicApplication.Controllers
             [FromBody] MusicaDto body)
 
         {
+            var playlist = _playlistRepository.ObterPorId(body.PlaylistId);
             var artista = _artistaRepository.ObterPorId(body.ArtistaId);
-            var Album = _albumRepository.ObterPorId(body.AlbumId);
+            var album = _albumRepository.ObterPorId(body.AlbumId);
             var musica = new Musica(
                 body.Nome, 
                 body.Duracao, 
                 artista
             );
-            musica.Album = Album;
+            musica.Album = album;
+            musica.Playlist = playlist;
             _musicaRepository.AdicionarMusica(musica);
 
             return Ok(musica);

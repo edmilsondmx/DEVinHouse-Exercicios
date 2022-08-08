@@ -30,14 +30,29 @@ namespace MusicApplication.Controllers
         public ActionResult<Playlist> Post(
             [FromBody] PlaylistDto novaLista)
         {
-            var musica = _musicaRepository.ObterPorId(novaLista.MusicaId);
             var playlist = new Playlist(
                 novaLista.Nome,
-                musica);
+                novaLista.Estilo);
 
             _playlistRepository.AdicionarPlaylist(playlist);
 
             return Ok(playlist);
         }
+
+        [HttpPost("AddMusicas")]
+        public ActionResult<Playlist> PostAddMusica(
+            [FromBody] AddNaPlaylistDto body)
+        {
+            var playlist = _playlistRepository.ObterPorId(body.IdPlaylist);
+            var musica = _musicaRepository.ObterPorId(body.MusicaId);
+
+            _playlistRepository.AdicionarMusicaNaPlaylist(playlist, musica);
+
+            return Ok(playlist);
+        }
+
+
+
+
     }
 }
