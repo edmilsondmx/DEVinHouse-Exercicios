@@ -23,5 +23,11 @@ namespace MusicApplication.Models
 
             Musicas.Add(musica);
         }
+
+        public void RemoverMusicas(int idMusica)
+        {
+            var musicaAtual = Musicas.FirstOrDefault(m => m.IdMusica == idMusica);
+            Musicas.Remove(musicaAtual);
+        }
     }
 }

@@ -62,5 +62,14 @@ namespace MusicApplication.Repositories
             return playlistAtual;
 
         }
+
+        public Playlist RemoverMusicaDaPlaylist(Playlist playlist, int idMusica)
+        {
+            var playlistAtual = ObterPorId(playlist.Id);
+
+            playlistAtual.RemoverMusicas(idMusica);
+
+            return playlistAtual;
+        }
     }
 }

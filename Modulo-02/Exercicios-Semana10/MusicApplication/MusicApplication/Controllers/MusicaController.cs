@@ -28,9 +28,9 @@ namespace MusicApplication.Controllers
 
         [HttpGet()]
         public List<Musica> Get(
-            [FromQuery] string? nomeMusica,
-            [FromQuery] string? nomeArtista,
-            [FromQuery] string? nomeAlbum)
+            [FromQuery] string nomeMusica,
+            [FromQuery] string nomeArtista,
+            [FromQuery] string nomeAlbum)
         {
             if(nomeMusica != null || nomeArtista != null || nomeAlbum != null)
             {

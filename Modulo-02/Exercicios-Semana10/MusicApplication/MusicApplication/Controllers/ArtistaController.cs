@@ -20,7 +20,7 @@ namespace MusicApplication.Controllers
 
         [HttpGet]
         public List<Artista> Get(
-            [FromQuery] string? nome)
+            [FromQuery] string nome)
         {
             if(!String.IsNullOrEmpty(nome))
             {

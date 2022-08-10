@@ -51,6 +51,39 @@ namespace MusicApplication.Controllers
             return Ok(playlist);
         }
 
+        [HttpPut("{idPlaylist}")]
+        public Playlist Put(
+            [FromBody] PlaylistDto body,
+            [FromRoute] int idPlaylist
+        )
+        {
+            var playlist = _playlistRepository.ObterPorId(idPlaylist);
+
+            playlist.Nome = body.Nome;
+            playlist.Estilo = body.Estilo;
+
+            _playlistRepository.EditarPlaylist(playlist);
+            return playlist;
+        }
+
+        [HttpDelete("{idPlaylist}")]
+        public string Delete(
+            [FromRoute] int idPlaylist
+        )
+        {
+            return _playlistRepository.DeletarPlaylist(idPlaylist);
+        }
+
+        [HttpDelete("{idPlaylist}/{idMusica}")]
+        public Playlist DeleteMusica(
+            [FromRoute] int idPlaylist,
+            [FromRoute] int idMusica
+        )
+        {
+            var playlist = _playlistRepository.ObterPorId(idPlaylist);
+            return _playlistRepository.RemoverMusicaDaPlaylist(playlist, idMusica);
+        }
+
 
 
 
