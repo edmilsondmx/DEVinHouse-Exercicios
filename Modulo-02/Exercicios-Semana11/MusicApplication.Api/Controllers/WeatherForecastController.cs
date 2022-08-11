@@ -12,6 +12,6 @@ public class WeatherForecastController : ControllerBase
     [HttpGet]
     public ActionResult Get()
     {
-        return 
+        return Ok();
     }
 }
