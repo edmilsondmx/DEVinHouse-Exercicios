@@ -8,7 +8,7 @@ public class Artista
     public string PaisOrigem { get; set; }
 
     public List<Musica> Musicas { get; set; }
-    public List<Album> Albuns { get; set; }
+    public List<Album> Albuns { internal get; set; }
 
     public Artista(string nome, string nomeArtistico, string paisOrigem)
     {

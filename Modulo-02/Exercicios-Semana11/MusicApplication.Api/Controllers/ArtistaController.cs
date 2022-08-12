@@ -48,7 +48,7 @@ public class ArtistaController : ControllerBase
         return Created("api/artista", novoArtista);
     }
 
-    [HttpPut("{id}")]
+    [HttpPut("{idArtista}")]
     public ActionResult<Artista> Put(
         [FromRoute] int idArtista,
         [FromBody] ArtistaDto artistaDto
@@ -64,7 +64,7 @@ public class ArtistaController : ControllerBase
         return Ok(artistaAtual);
     }
 
-    [HttpDelete("{id}")]
+    [HttpDelete("{idArtista}")]
     public ActionResult Delete(
         [FromRoute] int idArtista
     )

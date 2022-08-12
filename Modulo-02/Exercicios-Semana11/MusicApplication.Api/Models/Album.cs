@@ -9,4 +9,16 @@ public class Album
     public Artista Artista { get; set; }
     public List<Musica> Musicas { get; set; }
 
+    public Album(string nome, int ano, Artista artista)
+    {
+        Nome = nome;
+        Ano = ano;
+        Artista = artista;
+    }
+
+    public Album()
+    {
+        
+    }
+
 }
