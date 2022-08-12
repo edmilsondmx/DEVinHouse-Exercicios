@@ -9,4 +9,18 @@ public class Artista
 
     public List<Musica> Musicas { get; set; }
     public List<Album> Albuns { get; set; }
+
+    public Artista(string nome, string nomeArtistico, string paisOrigem)
+    {
+        Nome = nome;
+        NomeArtistico = nomeArtistico;
+        PaisOrigem = paisOrigem;
+    }
+
+    public Artista()
+    {
+        
+    }
+
+
 }
