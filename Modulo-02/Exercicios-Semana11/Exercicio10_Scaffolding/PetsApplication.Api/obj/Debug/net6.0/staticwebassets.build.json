@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "AfOHXiPEAtPNVf//GnbCvxTqv5lyUDNxEDu/SIl7Cu8=",
+  "Source": "PetsApplication.Api",
+  "BasePath": "_content/PetsApplication.Api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
