@@ -8,5 +8,18 @@ public class Musica
     public int ArtistaId { get; set; }
     public int AlbumId { get; set; }
     public Artista Artista { get; set; }
-    public Album Album { get; set; }
+    public Album Album { internal get; set; }
+
+    public Musica(string nome, double duracao, Artista artista, Album album)
+    {
+        Nome = nome;
+        Duracao = duracao;
+        Artista = artista;
+        Album = album;
+    }
+
+    public Musica()
+    {
+        
+    }
 }

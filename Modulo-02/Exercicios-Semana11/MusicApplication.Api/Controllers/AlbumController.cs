@@ -9,11 +9,11 @@ namespace MusicApplication.Api.Controllers;
 
 [ApiController]
 [Route("api/album")]
-public class AlbumControler : ControllerBase
+public class AlbumController : ControllerBase
 {
     private readonly MusicDbContext _context;
 
-    public AlbumControler(MusicDbContext context)
+    public AlbumController(MusicDbContext context)
     {
         _context = context;
     }
@@ -21,7 +21,7 @@ public class AlbumControler : ControllerBase
     [HttpGet]
     public ActionResult<List<Album>> Get()
     {
-        return Ok(_context.Albuns.ToList());
+        return Ok(_context.Albuns.Include(al => al.Artista));
     }
 
     [HttpGet("{idAlbum}")]
