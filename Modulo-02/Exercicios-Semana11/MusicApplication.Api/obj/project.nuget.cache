@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "it8eVkZQkCIn4418sOWHpMAWoPUAnlbUod2cbd3Bmut/+xwJ8q036LQYXjU+hjPHFOCfdN0uWZk/ML6ykRWNXQ==",
+  "dgSpecHash": "h/QIbBq6dOuUee5tr5nZ1c4qcchZhkgHgSrNKrAtgLbWdCCEoCVCpWodQGS5UVlXq8sTQikWF/s04bHtd/QIfQ==",
   "success": true,
-  "projectFilePath": "c:\\Users\\Edmilson\\Documents\\DevinHouse\\exercicios\\DEVinHouse-Exercicios\\Modulo-02\\Exercicios-Semana11\\MusicApplication.Api\\MusicApplication.Api.csproj",
+  "projectFilePath": "C:\\Users\\Edmilson\\Documents\\DevinHouse\\exercicios\\DEVinHouse-Exercicios\\Modulo-02\\Exercicios-Semana11\\MusicApplication.Api\\MusicApplication.Api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Edmilson\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Edmilson\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",

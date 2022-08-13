@@ -15,6 +15,7 @@ public class MusicDbContext : DbContext
     public DbSet<Artista> Artistas { get; set; } 
     public DbSet<Musica> Musicas { get; set; } 
     public DbSet<Album> Albuns { get; set; } 
+    public DbSet<Playlist> Playlists { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
@@ -98,5 +99,20 @@ public class MusicDbContext : DbContext
             .HasForeignKey(album => album.ArtistaId)
             .OnDelete(DeleteBehavior.Restrict);
 
+        //Playlist
+        modelBuilder.Entity<Playlist>()
+            .ToTable("Playlists");
+        
+        modelBuilder.Entity<Playlist>()
+            .HasKey(p => p.Id);
+
+        modelBuilder.Entity<Playlist>()
+            .Property(p => p.Nome)
+            .HasMaxLength(200)
+            .IsRequired();
+
+        modelBuilder.Entity<Playlist>()
+        .Property(p => p.Estilo)
+        .HasMaxLength(50);
     }
 }
