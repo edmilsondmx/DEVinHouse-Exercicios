@@ -1,3 +1,5 @@
+using Escola.Domain.DTO;
+
 namespace Escola.Domain.Models;
 
 public class Boletim
@@ -8,4 +10,11 @@ public class Boletim
     public Guid AlunoId  { get; set; }
     public virtual Aluno Aluno { get; set; }
     public virtual List<NotasMateria> Notas { get; set; }
+
+    public Boletim(BoletimDTO boletim)
+    {
+        Periodo = boletim.Periodo;
+        Faltas = boletim.Faltas;
+        AlunoId = boletim.AlunoId;
+    }
 }

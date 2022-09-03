@@ -1,3 +1,4 @@
+using Escola.Domain.DTO;
 using Escola.Domain.Interfaces.Services;
 using Escola.Domain.Models;
 using Microsoft.AspNetCore.Mvc;
@@ -55,6 +56,15 @@ public class BoletinsController : ControllerBase
 
         Response.Headers.Add("x-Paginacao-TotalRegistros", totalRegistros.ToString());
         return Ok(_boletimServico.ObterPorIdAluno(idaluno, paginacao));
+    }
+
+    [HttpPost]
+    public IActionResult Inserir(
+        [FromBody] BoletimDTO boletim
+    )
+    {
+        _boletimServico.Inserir(boletim);
+        return StatusCode(StatusCodes.Status201Created);
     }
     
     

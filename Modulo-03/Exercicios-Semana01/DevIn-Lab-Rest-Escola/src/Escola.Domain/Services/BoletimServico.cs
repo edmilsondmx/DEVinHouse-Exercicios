@@ -26,7 +26,7 @@ public class BoletimServico : IBoletimServico
 
     public void Inserir(BoletimDTO boletim)
     {
-        throw new NotImplementedException();
+        _boletimRepositorio.Inserir(new Boletim(boletim));
     }
 
     public BoletimDTO ObterPorId(int id)

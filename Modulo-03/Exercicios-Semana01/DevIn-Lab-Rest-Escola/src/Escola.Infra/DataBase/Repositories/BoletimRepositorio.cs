@@ -28,7 +28,8 @@ public class BoletimRepositorio : IBoletimRepositorio
 
     public void Inserir(Boletim boletim)
     {
-        throw new NotImplementedException();
+        _contexto.Boletins.Add(boletim);
+        _contexto.SaveChanges();
     }
 
     public Boletim ObterPorId(int id)
