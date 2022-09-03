@@ -15,6 +15,7 @@ namespace Escola.Domain.Models
         public string Sobrenome { get; set; }
         public string Email { get; set; }
         public DateTime DataNascimento { get; set; }
+        public virtual List<Boletim> Boletins { get; set; }
 
         public Aluno(AlunoDTO aluno)
         {
