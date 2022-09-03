@@ -18,8 +18,11 @@ namespace Escola.Infra.DataBase
             _configuration = configuration;
         }
         public DbSet<Aluno> Alunos {get; set;}
-        
-        protected override void OnConfiguring(DbContextOptionsBuilder options){
+        public DbSet<Boletim> Boletins {get; set;}  
+        public DbSet<Materia> Materias { get; set; }
+        public DbSet<NotasMateria> NotasMaterias { get; set; }
+        protected override void OnConfiguring(DbContextOptionsBuilder options)
+        {
             base.OnConfiguring(options);
 
             options.UseSqlServer(
@@ -27,8 +30,17 @@ namespace Escola.Infra.DataBase
             );
         }
 
-        protected override void OnModelCreating(ModelBuilder modelBuilder){
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+            
             modelBuilder.ApplyConfiguration(new AlunoMap());
+
+            modelBuilder.ApplyConfiguration(new BoletimMap());
+
+            modelBuilder.ApplyConfiguration(new MateriaMap());
+
+            modelBuilder.ApplyConfiguration(new NotasMateriaMap());
         }
     }
 }

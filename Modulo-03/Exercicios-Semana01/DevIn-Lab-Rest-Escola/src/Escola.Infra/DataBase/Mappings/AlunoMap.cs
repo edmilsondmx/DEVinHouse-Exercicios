@@ -47,8 +47,6 @@ namespace Escola.Infra.DataBase.Mappings
                     .HasColumnType("int"); 
 
              builder.HasIndex(x => x.Matricula).IsUnique();
-
-            
         }
     }
 }
