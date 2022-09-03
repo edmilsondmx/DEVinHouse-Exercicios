@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Escola.Domain.DTO;
 using Escola.Domain.Interfaces.Services;
 using Escola.Domain.Exceptions;
+using Escola.Domain.Models;
 
 namespace Escola.Api.Controllers
 {
@@ -20,11 +21,15 @@ namespace Escola.Api.Controllers
             _alunoServico = alunoServico;
         }
         [HttpGet]
-        public IActionResult BuscarTodos()
+        public IActionResult BuscarTodos(int skip = 0, int take = 20)
         {
             try
             {
-               return Ok(_alunoServico.ObterTodos().ToList());
+                var paginacao = new Paginacao(take, skip);
+                var totalRegistros = _alunoServico.ObterTotal();
+
+                Response.Headers.Add("x-Paginacao-TotalRegistros", totalRegistros.ToString());
+                return Ok(_alunoServico.ObterTodos(paginacao).ToList());
             }
             catch
             {
@@ -51,18 +56,9 @@ namespace Escola.Api.Controllers
         public IActionResult Inserir(
             [FromBody] AlunoDTO aluno)
         {
-            try{
-                _alunoServico.Inserir(aluno);
-                return Created("api/aluno", aluno);
-            }
-            catch(DuplicadoException ex)
-            {
-                return StatusCode(StatusCodes.Status406NotAcceptable, new ErrorDTO(ex.Message));
-            }
-            catch{
-                return StatusCode(StatusCodes.Status500InternalServerError, new ErrorDTO("Ocorreu um erro no servidor, favor contactar a TI!"));
-            }
-            
+            _alunoServico.Inserir(aluno);
+
+            return StatusCode(StatusCodes.Status201Created);
         }
         
         [HttpPut("{id}")]
