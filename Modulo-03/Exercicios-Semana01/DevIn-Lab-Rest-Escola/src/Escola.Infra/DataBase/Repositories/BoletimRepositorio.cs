@@ -17,9 +17,10 @@ public class BoletimRepositorio : IBoletimRepositorio
         _contexto.SaveChanges();
     }
 
-    public void Excluir(Boletim boletim)
+    public void ExcluirMateria(Boletim boletim, NotasMateria materia)
     {
-        throw new NotImplementedException();
+        boletim.Notas.Remove(materia);
+        _contexto.SaveChanges();
     }
 
     public bool ExisteMatricula(int matricula)

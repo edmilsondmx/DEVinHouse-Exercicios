@@ -25,9 +25,17 @@ public class BoletimServico : IBoletimServico
         _boletimRepositorio.Alterar(boletimDb);
     }
 
-    public void Excluir(int id)
+    public void ExcluirMateria(int boletimId, int materiaId)
     {
-        throw new NotImplementedException();
+        var boletimDb = _boletimRepositorio.ObterPorId(boletimId);
+        if(boletimDb == null)
+            throw new ExisteRegistroException("Boletim não encontrado!");
+
+        var materia = boletimDb.Notas.FirstOrDefault(m => m.Id == materiaId);
+        if(materia == null)
+            throw new ExisteRegistroException("Materia não encontrada!");
+
+        _boletimRepositorio.ExcluirMateria(boletimDb, materia);
     }
 
     public void Inserir(BoletimDTO boletim)

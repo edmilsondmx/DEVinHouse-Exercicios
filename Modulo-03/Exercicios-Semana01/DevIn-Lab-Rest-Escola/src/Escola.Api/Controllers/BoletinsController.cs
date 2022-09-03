@@ -76,6 +76,16 @@ public class BoletinsController : ControllerBase
         _boletimServico.Alterar(boletim, id);
         return Ok();
     }
+
+    [HttpDelete("{boletimId}/materia")]
+    public IActionResult Excluir(
+        [FromRoute] int boletimId,
+        int materiaId
+    )
+    {
+        _boletimServico.ExcluirMateria(boletimId, materiaId);
+        return NoContent();
+    }
     
     
 

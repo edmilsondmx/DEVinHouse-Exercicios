@@ -10,7 +10,7 @@ public interface IBoletimServico
     IList<BoletimDTO> ObterPorIdAluno(Guid id, Paginacao paginacao);
     IList<BoletimDTO> ObterPorNome(string nome, Paginacao paginacao);
     void Inserir(BoletimDTO boletim);
-    void Excluir (int id);
+    void ExcluirMateria (int boletimId, int materiaId);
     void Alterar (BoletimDTO boletim, int id);
     int ObterTotal();
 }
