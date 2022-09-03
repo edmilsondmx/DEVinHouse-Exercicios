@@ -40,6 +40,11 @@ public class ErrorMiddleware
             status = HttpStatusCode.NotAcceptable;
             message = ex.Message;
         }
+        else if(ex is ExisteRegistroException)
+        {
+            status = HttpStatusCode.NotFound;
+            message = ex.Message;
+        }
         else
         {
             status = HttpStatusCode.InternalServerError;

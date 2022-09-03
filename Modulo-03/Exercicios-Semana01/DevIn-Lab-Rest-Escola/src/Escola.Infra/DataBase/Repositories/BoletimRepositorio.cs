@@ -13,7 +13,8 @@ public class BoletimRepositorio : IBoletimRepositorio
     }
     public void Alterar(Boletim boletim)
     {
-        throw new NotImplementedException();
+        _contexto.Update(boletim);
+        _contexto.SaveChanges();
     }
 
     public void Excluir(Boletim boletim)

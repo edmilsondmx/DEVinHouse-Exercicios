@@ -66,6 +66,16 @@ public class BoletinsController : ControllerBase
         _boletimServico.Inserir(boletim);
         return StatusCode(StatusCodes.Status201Created);
     }
+
+    [HttpPut("{id}")]
+    public IActionResult Alterar(
+        [FromRoute] int id,
+        [FromBody] BoletimDTO boletim
+    )
+    {
+        _boletimServico.Alterar(boletim, id);
+        return Ok();
+    }
     
     
 

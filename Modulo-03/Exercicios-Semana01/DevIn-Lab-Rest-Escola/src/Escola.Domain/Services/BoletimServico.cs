@@ -1,4 +1,5 @@
 using Escola.Domain.DTO;
+using Escola.Domain.Exceptions;
 using Escola.Domain.Interfaces.Repositories;
 using Escola.Domain.Interfaces.Services;
 using Escola.Domain.Models;
@@ -14,9 +15,14 @@ public class BoletimServico : IBoletimServico
         _boletimRepositorio = boletimRepositorio;
     }
 
-    public void Alterar(BoletimDTO boletim)
+    public void Alterar(BoletimDTO boletim, int id)
     {
-        throw new NotImplementedException();
+        var boletimDb = _boletimRepositorio.ObterPorId(id);
+        if(boletimDb == null) 
+            throw new ExisteRegistroException("Boletim não encontrado!");
+
+        boletimDb.Update(boletim);
+        _boletimRepositorio.Alterar(boletimDb);
     }
 
     public void Excluir(int id)

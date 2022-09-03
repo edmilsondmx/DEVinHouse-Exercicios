@@ -17,4 +17,15 @@ public class Boletim
         Faltas = boletim.Faltas;
         AlunoId = boletim.AlunoId;
     }
+    public Boletim()
+    {
+
+    }
+
+    public void Update(BoletimDTO boletim)
+    {
+        Periodo = boletim.Periodo;
+        Faltas = boletim.Faltas;
+        AlunoId = boletim.AlunoId;
+    }
 }
