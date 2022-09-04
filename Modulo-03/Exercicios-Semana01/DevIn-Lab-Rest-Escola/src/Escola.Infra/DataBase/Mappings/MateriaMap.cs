@@ -8,7 +8,7 @@ public class MateriaMap : IEntityTypeConfiguration<Materia>
 {
     public void Configure(EntityTypeBuilder<Materia> builder)
     {
-        builder.ToTable("Materia");
+        builder.ToTable("MATERIA");
 
         builder.HasKey(m => m.Id);
 
@@ -18,7 +18,7 @@ public class MateriaMap : IEntityTypeConfiguration<Materia>
                 .ValueGeneratedOnAdd();
 
         builder.Property(m => m.Nome)
-                .HasColumnName("MATERIA")
+                .HasColumnName("NOME")
                 .HasColumnType("VARCHAR")
                 .HasMaxLength(50);
     }
