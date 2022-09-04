@@ -27,7 +27,12 @@ public class MateriaServico : IMateriaServico
 
     public void Excluir(int materiaId)
     {
-        throw new NotImplementedException();
+        var materiaDb = _materiaRepositorio.ObterPorId(materiaId);
+        if(materiaDb == null)
+            throw new ExisteRegistroException("Materia não encontrada!");
+        
+        _materiaRepositorio.Excluir(materiaDb);
+
     }
 
     public void Inserir(MateriaDTO materia)

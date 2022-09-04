@@ -45,13 +45,22 @@ public class MateriasController : ControllerBase
     }
 
     [HttpPut("{id}")]
-        public IActionResult Put ( 
-            [FromRoute]int id,
-            [FromBody] MateriaDTO materia
-        )
-        {
-            materia.Id = id;
-            _materiaServico.Alterar(materia, id);
-            return Ok();
-        }
+    public IActionResult Atualizar( 
+        [FromRoute]int id,
+        [FromBody] MateriaDTO materia
+    )
+    {
+        materia.Id = id;
+        _materiaServico.Alterar(materia, id);
+        return Ok();
+    }
+
+    [HttpDelete("{id}")]
+    public IActionResult Excluir(
+        [FromRoute] int id
+    )
+    {
+        _materiaServico.Excluir(id);
+        return NoContent();
+    }
 }

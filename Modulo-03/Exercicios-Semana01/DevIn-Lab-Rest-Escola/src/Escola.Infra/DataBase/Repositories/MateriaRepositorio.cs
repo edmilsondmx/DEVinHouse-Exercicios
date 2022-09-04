@@ -18,7 +18,8 @@ public class MateriaRepositorio : IMateriaRepositorio
 
     public void Excluir(Materia materia)
     {
-        throw new NotImplementedException();
+        _contexto.Materias.Remove(materia);
+        _contexto.SaveChanges();
     }
 
     public void Inserir(Materia materia)
