@@ -2,6 +2,7 @@ using Escola.Domain.DTO;
 using Escola.Domain.Exceptions;
 using Escola.Domain.Interfaces.Repositories;
 using Escola.Domain.Interfaces.Services;
+using Escola.Domain.Models;
 
 namespace Escola.Domain.Services;
 
@@ -12,19 +13,26 @@ public class MateriaServico : IMateriaServico
     {
         _materiaRepositorio = materiaRepositorio;
     }
-    public void Alterar(MateriaDTO boletim, int id)
+    public void Alterar(MateriaDTO materia, int id)
     {
         throw new NotImplementedException();
     }
 
-    public void ExcluirMateria(int boletimId, int materiaId)
+    public void Excluir(int materiaId)
     {
         throw new NotImplementedException();
     }
 
-    public void Inserir(MateriaDTO boletim)
+    public void Inserir(MateriaDTO materia)
     {
-        throw new NotImplementedException();
+        var existeMateria = _materiaRepositorio
+            .ObterPorNome(materia.Nome)
+            .FirstOrDefault();
+        
+        if(existeMateria != null)
+            throw new ExisteRegistroException("Já existe Materia cadastrada!");
+            
+        _materiaRepositorio.Inserir(new Materia(materia));
     }
 
     public MateriaDTO ObterPorId(int id)

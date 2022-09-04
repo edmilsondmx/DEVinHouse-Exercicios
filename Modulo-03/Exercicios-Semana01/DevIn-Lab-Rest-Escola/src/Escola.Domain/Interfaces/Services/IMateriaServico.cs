@@ -8,7 +8,7 @@ public interface IMateriaServico
     IList<MateriaDTO> ObterTodos();
     MateriaDTO ObterPorId(int id);
     IList<MateriaDTO> ObterPorNome(string nome);
-    void Inserir(MateriaDTO boletim);
-    void ExcluirMateria (int boletimId, int materiaId);
-    void Alterar (MateriaDTO boletim, int id);
+    void Inserir(MateriaDTO materia);
+    void Excluir(int materiaId);
+    void Alterar (MateriaDTO materia, int id);
 }

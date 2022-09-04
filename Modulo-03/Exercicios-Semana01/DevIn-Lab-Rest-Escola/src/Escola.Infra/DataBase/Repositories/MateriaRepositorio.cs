@@ -10,19 +10,20 @@ public class MateriaRepositorio : IMateriaRepositorio
     {
         _contexto = contexto;
     }
-    public void Alterar(Materia boletim, int id)
+    public void Alterar(Materia materia, int id)
     {
         throw new NotImplementedException();
     }
 
-    public void ExcluirMateria(int boletimId, int materiaId)
+    public void Excluir(Materia materia)
     {
         throw new NotImplementedException();
     }
 
-    public void Inserir(Materia boletim)
+    public void Inserir(Materia materia)
     {
-        throw new NotImplementedException();
+        _contexto.Materias.Add(materia);
+        _contexto.SaveChanges();
     }
 
     public Materia ObterPorId(int id)

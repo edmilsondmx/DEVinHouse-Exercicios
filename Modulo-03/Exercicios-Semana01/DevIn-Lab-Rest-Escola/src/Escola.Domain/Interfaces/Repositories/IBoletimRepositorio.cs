@@ -9,6 +9,5 @@ public interface IBoletimRepositorio
     void Inserir(Boletim boletim);
     void ExcluirMateria(Boletim boletim, NotasMateria materia);
     void Alterar (Boletim boletim);
-    bool ExisteMatricula(int matricula);
     int ObterTotal();
 }

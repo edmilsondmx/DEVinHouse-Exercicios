@@ -10,6 +10,7 @@ public class Materia
 
     public Materia(MateriaDTO materia)
     {
+        Id = materia.Id;
         Nome = materia.Nome;
     }
     public Materia()

@@ -12,8 +12,8 @@ namespace Escola.Domain.Interfaces.Repositories
         IList<Materia> ObterTodos();
         Materia ObterPorId(int id);
         IList<Materia> ObterPorNome(string nome);
-        void Inserir(Materia boletim);
-        void ExcluirMateria(int boletimId, int materiaId);
-        void Alterar(Materia boletim, int id);
+        void Inserir(Materia materia);
+        void Excluir(Materia materiaId);
+        void Alterar(Materia materia, int id);
     }
 }
