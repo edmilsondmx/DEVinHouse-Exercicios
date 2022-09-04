@@ -1,4 +1,5 @@
 using Escola.Domain.DTO;
+using Escola.Domain.Exceptions;
 using Escola.Domain.Interfaces.Repositories;
 using Escola.Domain.Interfaces.Services;
 
@@ -28,12 +29,20 @@ public class MateriaServico : IMateriaServico
 
     public MateriaDTO ObterPorId(int id)
     {
-        throw new NotImplementedException();
+        var materia = _materiaRepositorio.ObterPorId(id);
+        if(materia == null)
+            throw new ExisteRegistroException("Materia não encontrada!");
+        
+        return new MateriaDTO(materia);
     }
 
     public IList<MateriaDTO> ObterPorNome(string nome)
     {
-        throw new NotImplementedException();
+        var materias = _materiaRepositorio.ObterPorNome(nome);
+        if(materias.Count == 0)
+            throw new ExisteRegistroException("Materias não encontradas!");
+
+        return _materiaRepositorio.ObterPorNome(nome).Select(m => new MateriaDTO(m)).ToList();
     }
 
     public IList<MateriaDTO> ObterTodos()

@@ -15,8 +15,21 @@ public class MateriasController : ControllerBase
     }
 
     [HttpGet]
-    public IActionResult ObterTodos()
+    public IActionResult ObterTodos(
+        [FromQuery] string nome
+    )
     {
+        if(!string.IsNullOrEmpty(nome))
+            return Ok(_materiaServico.ObterPorNome(nome));
+
         return Ok(_materiaServico.ObterTodos());
+    }
+
+    [HttpGet("{id}")]
+    public IActionResult ObterPorId(
+        [FromRoute] int id
+    )
+    {
+        return Ok(_materiaServico.ObterPorId(id));
     }
 }

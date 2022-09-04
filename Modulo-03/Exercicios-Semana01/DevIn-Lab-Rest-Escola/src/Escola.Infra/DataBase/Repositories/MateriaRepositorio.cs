@@ -27,12 +27,15 @@ public class MateriaRepositorio : IMateriaRepositorio
 
     public Materia ObterPorId(int id)
     {
-        throw new NotImplementedException();
+        return _contexto.Materias.Find(id);
     }
 
     public IList<Materia> ObterPorNome(string nome)
     {
-        throw new NotImplementedException();
+        return _contexto.Materias
+            .Where(m => m.Nome
+            .Contains(nome))
+            .ToList();
     }
 
     public IList<Materia> ObterTodos()
