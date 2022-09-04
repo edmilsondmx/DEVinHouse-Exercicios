@@ -10,9 +10,10 @@ public class MateriaRepositorio : IMateriaRepositorio
     {
         _contexto = contexto;
     }
-    public void Alterar(Materia materia, int id)
+    public void Alterar(Materia materia)
     {
-        throw new NotImplementedException();
+        _contexto.Update(materia);
+        _contexto.SaveChanges();
     }
 
     public void Excluir(Materia materia)

@@ -43,4 +43,15 @@ public class MateriasController : ControllerBase
         _materiaServico.Inserir(materia);
         return StatusCode(StatusCodes.Status201Created);
     }
+
+    [HttpPut("{id}")]
+        public IActionResult Put ( 
+            [FromRoute]int id,
+            [FromBody] MateriaDTO materia
+        )
+        {
+            materia.Id = id;
+            _materiaServico.Alterar(materia, id);
+            return Ok();
+        }
 }

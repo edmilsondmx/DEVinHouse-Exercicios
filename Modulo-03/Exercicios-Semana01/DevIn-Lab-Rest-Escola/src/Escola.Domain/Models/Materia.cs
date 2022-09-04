@@ -17,4 +17,9 @@ public class Materia
     {
         
     }
+
+    public void Update(MateriaDTO materia)
+    {
+        Nome = materia.Nome;
+    }
 }

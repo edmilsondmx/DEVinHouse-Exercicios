@@ -15,7 +15,14 @@ public class MateriaServico : IMateriaServico
     }
     public void Alterar(MateriaDTO materia, int id)
     {
-        throw new NotImplementedException();
+        var materiaDb = _materiaRepositorio.ObterPorId(id);
+
+        if(materiaDb == null)
+            throw new ExisteRegistroException("Materia não encontrada!");
+
+        materiaDb.Update(materia);
+
+        _materiaRepositorio.Alterar(materiaDb);
     }
 
     public void Excluir(int materiaId)
@@ -31,7 +38,7 @@ public class MateriaServico : IMateriaServico
         
         if(existeMateria != null)
             throw new ExisteRegistroException("Já existe Materia cadastrada!");
-            
+
         _materiaRepositorio.Inserir(new Materia(materia));
     }
 
