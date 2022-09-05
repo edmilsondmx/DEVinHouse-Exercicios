@@ -17,8 +17,7 @@ public class NotasMateriaServico : INotasMateriaServico
     public void Alterar(NotasMateriaDTO notasMateria)
     {
         var notasMateriaDb = _notasMateriaRepositorio.ObterPorId(notasMateria.Id);
-        if(notasMateriaDb == null)
-            throw new ExisteRegistroException("Registro não encontrado!");
+        ExisteRegistro(notasMateriaDb);
         
         notasMateriaDb.Uptade(notasMateria);
         _notasMateriaRepositorio.Alterar(notasMateriaDb);
@@ -27,7 +26,10 @@ public class NotasMateriaServico : INotasMateriaServico
 
     public void Excluir(int notasMateriaId)
     {
-        throw new NotImplementedException();
+        var notasMateriaDb = _notasMateriaRepositorio.ObterPorId(notasMateriaId);
+        ExisteRegistro(notasMateriaDb);
+        
+        _notasMateriaRepositorio.Excluir(notasMateriaDb);
     }
 
     public void Inserir(NotasMateriaDTO notasMateria)
@@ -41,7 +43,7 @@ public class NotasMateriaServico : INotasMateriaServico
             .ObterTodos()
             .Where(nm => nm.BoletimId == boletimId && nm.Boletim.AlunoId == alunoId);
 
-        if(notasMateriaDb == null)
+        if(notasMateriaDb.Count() == 0)
             throw new ExisteRegistroException("Registro não encontrado!");
         
         return notasMateriaDb.Select(nm => new NotasMateriaDTO(nm)).ToList();
@@ -50,8 +52,7 @@ public class NotasMateriaServico : INotasMateriaServico
     public NotasMateriaDTO ObterPorId(int id)
     {
         var notasMateriaDb = _notasMateriaRepositorio.ObterPorId(id);
-        if(notasMateriaDb == null)
-            throw new ExisteRegistroException("Registro não encontrado!");
+        ExisteRegistro(notasMateriaDb);
         
         return new NotasMateriaDTO(notasMateriaDb);
     }
@@ -62,5 +63,11 @@ public class NotasMateriaServico : INotasMateriaServico
             .ObterTodos()
             .Select(nm => new NotasMateriaDTO(nm))
             .ToList();
+    }
+
+    private void ExisteRegistro(NotasMateria notasMateria)
+    {
+        if(notasMateria == null)
+            throw new ExisteRegistroException("Registro não encontrado!");
     }
 }
