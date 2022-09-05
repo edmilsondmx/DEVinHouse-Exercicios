@@ -23,7 +23,8 @@ public class NotasMateriaRepositorio : INotasMateriaRepositorio
 
     public void Inserir(NotasMateria notasMateria)
     {
-        throw new NotImplementedException();
+        _contexto.NotasMaterias.Add(notasMateria);
+        _contexto.SaveChanges();
     }
 
     public NotasMateria ObterPorId(int id)

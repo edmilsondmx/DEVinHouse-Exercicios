@@ -2,6 +2,7 @@ using Escola.Domain.DTO;
 using Escola.Domain.Exceptions;
 using Escola.Domain.Interfaces.Repositories;
 using Escola.Domain.Interfaces.Services;
+using Escola.Domain.Models;
 
 namespace Escola.Domain.Services;
 
@@ -25,7 +26,7 @@ public class NotasMateriaServico : INotasMateriaServico
 
     public void Inserir(NotasMateriaDTO notasMateria)
     {
-        throw new NotImplementedException();
+        _notasMateriaRepositorio.Inserir(new NotasMateria(notasMateria));
     }
 
     public IList<NotasMateriaDTO> ObterPorBoletim(Guid alunoId, int boletimId)

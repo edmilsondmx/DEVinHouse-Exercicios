@@ -1,4 +1,5 @@
 
+using Escola.Domain.DTO;
 using Escola.Domain.Interfaces.Services;
 using Microsoft.AspNetCore.Mvc;
 
@@ -29,6 +30,15 @@ public class NotasMateriasController : ControllerBase
     )
     {
         return Ok(_notasMateriaServico.ObterPorBoletim((Guid)idAluno, (int)idBoletim));
+    }
+
+    [HttpPost]
+    public IActionResult Inserir(
+        [FromBody] NotasMateriaDTO notasMateria
+    )
+    {
+        _notasMateriaServico.Inserir(notasMateria);
+        return StatusCode(StatusCodes.Status201Created);
     }
 
 }
