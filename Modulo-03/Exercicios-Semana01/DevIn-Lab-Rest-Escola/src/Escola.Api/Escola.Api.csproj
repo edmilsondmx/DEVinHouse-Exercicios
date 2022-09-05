@@ -14,5 +14,6 @@
   <ItemGroup>
     <ProjectReference Include="..\Escola.Domain\Escola.Domain.csproj" />
     <ProjectReference Include="..\Escola.Infra\Escola.Infra.csproj" />
+    <Folder Include="Controllers\" />
   </ItemGroup>
 </Project>
