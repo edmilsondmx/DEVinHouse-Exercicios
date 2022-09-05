@@ -51,5 +51,14 @@ public class NotasMateriasController : ControllerBase
         return Ok();
     }
 
+    [HttpDelete("{id}")]
+    public IActionResult Deletar(
+        [FromRoute] int id
+    )
+    {
+        _notasMateriaServico.Excluir(id);
+        return NoContent();
+    }
+
 
 }

@@ -15,6 +15,8 @@ builder.Services.AddScoped<IBoletimRepositorio,BoletimRepositorio>();
 builder.Services.AddScoped<IBoletimServico,BoletimServico>();
 builder.Services.AddScoped<IMateriaRepositorio,MateriaRepositorio>();
 builder.Services.AddScoped<IMateriaServico,MateriaServico>();
+builder.Services.AddScoped<INotasMateriaRepositorio,NotasMateriaRepositorio>();
+builder.Services.AddScoped<INotasMateriaServico,NotasMateriaServico>();
 
 
 builder.Services.AddControllers();
