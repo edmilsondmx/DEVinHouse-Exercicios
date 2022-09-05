@@ -14,9 +14,15 @@ public class NotasMateriaServico : INotasMateriaServico
         _notasMateriaRepositorio = notasMateriaRepositorio;
     }
 
-    public void Alterar(NotasMateriaDTO notasMateria, int notasMateriaId)
+    public void Alterar(NotasMateriaDTO notasMateria)
     {
-        throw new NotImplementedException();
+        var notasMateriaDb = _notasMateriaRepositorio.ObterPorId(notasMateria.Id);
+        if(notasMateriaDb == null)
+            throw new ExisteRegistroException("Registro não encontrado!");
+        
+        notasMateriaDb.Uptade(notasMateria);
+        _notasMateriaRepositorio.Alterar(notasMateriaDb);
+        
     }
 
     public void Excluir(int notasMateriaId)

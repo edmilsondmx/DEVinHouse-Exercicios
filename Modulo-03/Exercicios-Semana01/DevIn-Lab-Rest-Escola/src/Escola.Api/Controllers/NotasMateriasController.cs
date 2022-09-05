@@ -40,5 +40,16 @@ public class NotasMateriasController : ControllerBase
         _notasMateriaServico.Inserir(notasMateria);
         return StatusCode(StatusCodes.Status201Created);
     }
+    [HttpPut("{id}")]
+    public IActionResult Atualizar(
+        [FromRoute] int id,
+        [FromBody] NotasMateriaDTO notasMateria
+    )
+    {
+        notasMateria.Id = id;
+        _notasMateriaServico.Alterar(notasMateria);
+        return Ok();
+    }
+
 
 }

@@ -9,6 +9,6 @@ public interface INotasMateriaServico
     IList<NotasMateriaDTO> ObterPorBoletim(Guid alunoId, int boletimId);
     void Inserir(NotasMateriaDTO notasMateria);
     void Excluir(int notasMateriaId);
-    void Alterar (NotasMateriaDTO notasMateria, int notasMateriaId);
+    void Alterar (NotasMateriaDTO notasMateria);
 
 }

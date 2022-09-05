@@ -11,9 +11,10 @@ public class NotasMateriaRepositorio : INotasMateriaRepositorio
         _contexto = contexto;
     }
 
-    public void Alterar(NotasMateria notasMateria, int notasMateriaId)
+    public void Alterar(NotasMateria notasMateria)
     {
-        throw new NotImplementedException();
+        _contexto.NotasMaterias.Update(notasMateria);
+        _contexto.SaveChanges();
     }
 
     public void Excluir(int notasMateriaId)

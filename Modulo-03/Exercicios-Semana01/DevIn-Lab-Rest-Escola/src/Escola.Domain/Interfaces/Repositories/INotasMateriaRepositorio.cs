@@ -8,5 +8,5 @@ public interface INotasMateriaRepositorio
     NotasMateria ObterPorId(int id);
     void Inserir(NotasMateria notasMateria);
     void Excluir(int notasMateriaId);
-    void Alterar (NotasMateria notasMateria, int notasMateriaId);
+    void Alterar (NotasMateria notasMateria);
 }
