@@ -41,8 +41,16 @@ public class MateriaRepositorio : IMateriaRepositorio
             .ToList();
     }
 
-    public IList<Materia> ObterTodos()
+    public IList<Materia> ObterTodos(Paginacao paginacao)
     {
-        return _contexto.Materias.ToList();
+        return _contexto.Materias
+        .Take(paginacao.Take)
+        .Skip(paginacao.Skip)
+        .ToList();
+    }
+
+    public int ObterTotal()
+    {
+        return _contexto.Materias.Count();
     }
 }

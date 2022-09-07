@@ -18,13 +18,18 @@ public class MateriasController : ControllerBase
 
     [HttpGet]
     public IActionResult ObterTodos(
-        [FromQuery] string nome
+        [FromQuery] string nome,
+        int skip = 0,
+        int take = 10
     )
     {
+        var paginacao = new Paginacao(take, skip);
+        var totalRegistros = _materiaServico.ObterTotal();
+
         if(!string.IsNullOrEmpty(nome))
             return Ok(_materiaServico.ObterPorNome(nome));
 
-        return Ok(_materiaServico.ObterTodos());
+        return Ok(_materiaServico.ObterTodos(paginacao));
     }
 
     [HttpGet("{id}")]

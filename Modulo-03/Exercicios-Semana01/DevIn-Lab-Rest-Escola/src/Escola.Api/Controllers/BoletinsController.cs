@@ -44,7 +44,8 @@ public class BoletinsController : ControllerBase
         return Ok(_boletimServico.ObterTodos(paginacao));
     }
 
-    [HttpGet("aluno/{idaluno}/boletins")]
+    [HttpGet]
+    [Route("~/api/alunos/{idaluno}/boletins")]
     public IActionResult ObterPoId(
         [FromRoute] Guid idaluno,
         int take = 0, 

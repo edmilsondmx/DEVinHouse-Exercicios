@@ -65,11 +65,16 @@ public class MateriaServico : IMateriaServico
         return _materiaRepositorio.ObterPorNome(nome).Select(m => new MateriaDTO(m)).ToList();
     }
 
-    public IList<MateriaDTO> ObterTodos()
+    public IList<MateriaDTO> ObterTodos(Paginacao paginacao)
     {
         return _materiaRepositorio
-            .ObterTodos()
+            .ObterTodos(paginacao)
             .Select(m => new MateriaDTO(m))
             .ToList();
+    }
+
+    public int ObterTotal()
+    {
+        return _materiaRepositorio.ObterTotal();
     }
 }

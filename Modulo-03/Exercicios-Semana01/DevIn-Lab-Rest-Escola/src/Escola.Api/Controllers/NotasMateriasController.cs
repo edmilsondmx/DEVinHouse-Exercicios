@@ -23,7 +23,8 @@ public class NotasMateriasController : ControllerBase
         return Ok(_notasMateriaServico.ObterPorId(id));
     }
 
-    [HttpGet("/alunos/{idAluno}/boletims/{idBoletim}/notasmateria/")]
+    [HttpGet]
+    [Route("~/api/alunos/{idAluno}/boletims/{idBoletim}/notasmateria")]
     public IActionResult ObterPorBoletim(
         [FromRoute] Guid idAluno,
         [FromRoute] int idBoletim

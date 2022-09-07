@@ -9,11 +9,12 @@ namespace Escola.Domain.Interfaces.Repositories
 {
     public interface IMateriaRepositorio
     {
-        IList<Materia> ObterTodos();
+        IList<Materia> ObterTodos(Paginacao paginacao);
         Materia ObterPorId(int id);
         IList<Materia> ObterPorNome(string nome);
         void Inserir(Materia materia);
         void Excluir(Materia materiaId);
         void Alterar(Materia materia);
+        int ObterTotal();
     }
 }
