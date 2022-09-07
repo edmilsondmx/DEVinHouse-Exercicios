@@ -26,6 +26,8 @@ public class MateriasController : ControllerBase
         var paginacao = new Paginacao(take, skip);
         var totalRegistros = _materiaServico.ObterTotal();
 
+        Response.Headers.Add("x-Paginacao-TotalRegistros", totalRegistros.ToString());
+
         if(!string.IsNullOrEmpty(nome))
             return Ok(_materiaServico.ObterPorNome(nome));
 
