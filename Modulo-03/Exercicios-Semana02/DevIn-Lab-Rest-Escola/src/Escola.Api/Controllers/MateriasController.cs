@@ -3,6 +3,7 @@ using Escola.Domain.DTO;
 using Escola.Domain.Interfaces.Services;
 using Escola.Domain.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Caching.Memory;
 
 namespace Escola.Api.Controllers;
 
@@ -11,9 +12,11 @@ namespace Escola.Api.Controllers;
 public class MateriasController : ControllerBase
 {
     private readonly IMateriaServico _materiaServico;
-    public MateriasController(IMateriaServico materiaServico)
+    private readonly IMemoryCache _cache;
+    public MateriasController(IMateriaServico materiaServico, IMemoryCache cache)
     {
         _materiaServico = materiaServico;
+        _cache = cache;
     }
 
     [HttpGet]
@@ -28,9 +31,17 @@ public class MateriasController : ControllerBase
 
         Response.Headers.Add("x-Paginacao-TotalRegistros", totalRegistros.ToString());
 
+        IList<MateriaDTO> materia;
         if(!string.IsNullOrEmpty(nome))
-            return Ok(_materiaServico.ObterPorNome(nome));
-
+        {
+            if(!_cache.TryGetValue($"materia {nome}", out materia))
+            {
+                materia = _materiaServico.ObterPorNome(nome);
+                _cache.Set($"materia {nome}", materia, new TimeSpan(0,5,0));
+            }
+            return Ok(materia);
+        }
+            
         return Ok(_materiaServico.ObterTodos(paginacao));
     }
 
@@ -39,7 +50,14 @@ public class MateriasController : ControllerBase
         [FromRoute] int id
     )
     {
-        return Ok(_materiaServico.ObterPorId(id));
+        MateriaDTO materia;
+        if(!_cache.TryGetValue($"materia {id}", out materia))
+        {
+            materia = _materiaServico.ObterPorId(id);
+            _cache.Set($"materia {id}", materia, new TimeSpan(0,5,0));
+        }
+
+        return Ok(materia);
     }
 
     [HttpPost]
@@ -59,6 +77,8 @@ public class MateriasController : ControllerBase
     {
         materia.Id = id;
         _materiaServico.Alterar(materia, id);
+        _cache.Remove($"materia {id}");
+        _cache.Set($"materia {id}", materia, new TimeSpan(0,5,0));
         return Ok();
     }
 
@@ -68,6 +88,7 @@ public class MateriasController : ControllerBase
     )
     {
         _materiaServico.Excluir(id);
+        _cache.Remove($"materia {id}");
         return NoContent();
     }
 }
