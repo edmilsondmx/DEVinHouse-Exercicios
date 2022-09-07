@@ -11,6 +11,11 @@ public class MateriaDTO
         Id = materia.Id;
         Nome = materia.Nome;
     }
+    public MateriaDTO(MateriaV2DTO materia)
+    {
+        Id = materia.Id;
+        Nome = materia.Diciplina;
+    }
 
     public MateriaDTO()
     {
