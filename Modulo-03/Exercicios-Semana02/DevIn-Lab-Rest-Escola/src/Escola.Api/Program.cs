@@ -4,6 +4,7 @@ using Escola.Infra.DataBase.Repositories;
 using Escola.Domain.Services;
 using Escola.Infra.DataBase;
 using Escola.Api.Config;
+using Escola.Domain.DTO;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -19,8 +20,11 @@ builder.Services.AddScoped<INotasMateriaRepositorio,NotasMateriaRepositorio>();
 builder.Services.AddScoped<INotasMateriaServico,NotasMateriaServico>();
 
 
+
 builder.Services.AddControllers();
 builder.Services.AddSwaggerGen();
+
+builder.Services.AddMemoryCache();
 
 var app = builder.Build();
 app.MapControllers();

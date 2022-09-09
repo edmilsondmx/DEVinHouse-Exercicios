@@ -1,4 +1,5 @@
 
+using Escola.Api.Config;
 using Escola.Domain.DTO;
 using Escola.Domain.Interfaces.Services;
 using Escola.Domain.Models;
@@ -13,7 +14,9 @@ public class MateriasController : ControllerBase
 {
     private readonly IMateriaServico _materiaServico;
     private readonly IMemoryCache _cache;
-    public MateriasController(IMateriaServico materiaServico, IMemoryCache cache)
+    public MateriasController(
+        IMateriaServico materiaServico, 
+        IMemoryCache cache)
     {
         _materiaServico = materiaServico;
         _cache = cache;
@@ -26,6 +29,7 @@ public class MateriasController : ControllerBase
         int take = 10
     )
     {
+        var uri = $"{Request.Scheme}://{Request.Host}";
         var paginacao = new Paginacao(take, skip);
         var totalRegistros = _materiaServico.ObterTotal();
 
@@ -41,8 +45,16 @@ public class MateriasController : ControllerBase
             }
             return Ok(materia);
         }
+        var materias = new BaseDTO<IList<MateriaDTO>>(){
+            Data = _materiaServico.ObterTodos(paginacao).ToList(),
+            Links = GetHateoasForAll(uri, take, skip, totalRegistros)
+        };
+        foreach (var item in materias.Data)
+        {
+            item.Links = GetHateoas(item, uri);
+        }
             
-        return Ok(_materiaServico.ObterTodos(paginacao));
+        return Ok(materias);
     }
 
     [HttpGet("{id}")]
@@ -50,11 +62,13 @@ public class MateriasController : ControllerBase
         [FromRoute] int id
     )
     {
+        var uri = $"{Request.Scheme}://{Request.Host}";
         MateriaDTO materia;
         if(!_cache.TryGetValue($"materia {id}", out materia))
         {
             materia = _materiaServico.ObterPorId(id);
             _cache.Set($"materia {id}", materia, new TimeSpan(0,5,0));
+            materia.Links =  GetHateoas(materia, uri);
         }
 
         return Ok(materia);
@@ -91,4 +105,77 @@ public class MateriasController : ControllerBase
         _cache.Remove($"materia {id}");
         return NoContent();
     }
+
+
+    private static List<HateoasDTO> GetHateoas(MateriaDTO materia, string baseUri)
+    {
+        var hateoas = new List<HateoasDTO>(){
+            new HateoasDTO(){
+                    Rel = "self",
+                    Type = "Get",
+                    Uri = $"{baseUri}/api/materias/{materia.Id}"
+                },
+                new HateoasDTO(){
+                    Rel = "materia",
+                    Type = "Put",
+                    Uri = $"{baseUri}/api/materias/{materia.Id}"
+                },
+                new HateoasDTO(){
+                    Rel = "materia",
+                    Type = "Get",
+                    Uri = $"{baseUri}/api/materias/"
+                },
+                new HateoasDTO(){
+                    Rel = "materia",
+                    Type = "Delete",
+                    Uri = $"{baseUri}/api/materias/{materia.Id}"
+                }
+        };
+        return hateoas;
+    }
+    private List<HateoasDTO> GetHateoasForAll( string baseUri, int take, int skip, int ultimo)
+    {
+        var hateoas =   new List<HateoasDTO>(){
+            new HateoasDTO(){
+                Rel = "self",
+                Type = "Get",
+                Uri = $"{baseUri}/api/materias?skip={skip}&take={take}"
+            },
+            new HateoasDTO(){
+                Rel = "materia",
+                Type = "Post",
+                Uri = $"{baseUri}/api/materias/"
+            }
+        };
+        var razao = take - skip;
+        if(skip != 0)
+        {
+            var newSkip = skip - razao;
+            if(newSkip < 0)
+            {
+                newSkip = 0;
+            }
+            hateoas.Add(new HateoasDTO()
+                {
+                    Rel = "prev",
+                    Type = "Get",
+                    Uri = $"{baseUri}/api/materias?skip={newSkip}&take={take - razao}"
+                }
+            );
+        }
+
+        if(take < ultimo)
+        {
+            hateoas.Add(new HateoasDTO()
+                {
+                    Rel = "next",
+                    Type = "Get",
+                    Uri = $"{baseUri}/api/materias?skip={skip + razao}&take={take + razao}"
+                }
+            );
+        }
+
+        return hateoas;
+    }
+    
 }
