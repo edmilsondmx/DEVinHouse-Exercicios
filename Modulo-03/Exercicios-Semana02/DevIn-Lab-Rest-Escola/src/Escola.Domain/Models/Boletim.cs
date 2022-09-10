@@ -13,6 +13,7 @@ public class Boletim
 
     public Boletim(BoletimDTO boletim)
     {
+        Id = boletim.Id;
         Periodo = boletim.Periodo;
         Faltas = boletim.Faltas;
         AlunoId = boletim.AlunoId;

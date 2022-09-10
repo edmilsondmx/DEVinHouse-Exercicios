@@ -8,6 +8,7 @@ using Escola.Domain.DTO;
 using Escola.Domain.Interfaces.Services;
 using Escola.Domain.Exceptions;
 using Escola.Domain.Models;
+using Escola.Api.Config;
 
 namespace Escola.Api.Controllers
 {
@@ -15,26 +16,30 @@ namespace Escola.Api.Controllers
     [Route("api/[controller]")]
     public class AlunosController : ControllerBase
     {
+        private readonly CacheService<AlunoDTO> _alunoCache;
         private readonly IAlunoServico _alunoServico;
-        public AlunosController(IAlunoServico alunoServico)
+        public AlunosController(IAlunoServico alunoServico, CacheService<AlunoDTO> cache)
         {
             _alunoServico = alunoServico;
+            _alunoCache = cache;
         }
         [HttpGet]
         public IActionResult BuscarTodos(int skip = 0, int take = 20)
         {
-            try
-            {
-                var paginacao = new Paginacao(take, skip);
-                var totalRegistros = _alunoServico.ObterTotal();
+            var uri = $"{Request.Scheme}://{Request.Host}";
+            var paginacao = new Paginacao(take, skip);
+            var totalRegistros = _alunoServico.ObterTotal();
 
-                Response.Headers.Add("x-Paginacao-TotalRegistros", totalRegistros.ToString());
-                return Ok(_alunoServico.ObterTodos(paginacao).ToList());
-            }
-            catch
+            Response.Headers.Add("x-Paginacao-TotalRegistros", totalRegistros.ToString());
+            var alunos = new BaseDTO<IList<AlunoDTO>>{
+                Data = _alunoServico.ObterTodos(paginacao),
+                Links = GetHateoasForAll(uri, take, skip, totalRegistros)
+            };
+            foreach (var aluno in alunos.Data)
             {
-                return StatusCode(StatusCodes.Status500InternalServerError);
+                aluno.Links = GetHateoas(aluno, uri);
             }
+            return Ok(alunos);
         }
         
         [HttpGet("{id}")]
@@ -42,14 +47,16 @@ namespace Escola.Api.Controllers
             [FromRoute] Guid id
         )
         {
-            try
+            var uri = $"{Request.Scheme}://{Request.Host}";
+            AlunoDTO aluno;
+            if(!_alunoCache.TryGetValue($"{id}", out aluno))
             {
-                return Ok(_alunoServico.ObterPorId(id));
+                aluno = _alunoServico.ObterPorId(id);
+                _alunoCache.Set($"{id}", aluno);
+                aluno.Links = GetHateoas(aluno, uri);
             }
-            catch
-            {
-                return StatusCode(StatusCodes.Status500InternalServerError);
-            } 
+            return Ok(aluno);
+            
         }
 
         [HttpPost]
@@ -67,16 +74,12 @@ namespace Escola.Api.Controllers
             [FromRoute] Guid id
         )
         {
-            try
-            {
-                alunoDto.Id = id;
-                _alunoServico.Alterar(alunoDto);
-            }
-            catch
-            {
-                
-                return StatusCode(StatusCodes.Status500InternalServerError);
-            }
+            
+            alunoDto.Id = id;
+            _alunoServico.Alterar(alunoDto);
+            _alunoCache.Remove($"{id}");
+            _alunoCache.Set($"{id}", alunoDto);
+         
             return Ok();
         }
 
@@ -85,15 +88,82 @@ namespace Escola.Api.Controllers
             [FromRoute] Guid id
         )
         {
-            try
+            _alunoServico.Excluir(id);
+            _alunoCache.Remove($"{id}");
+            return NoContent();
+            
+        }
+
+        private static IList<HateoasDTO> GetHateoas(AlunoDTO aluno, string baseUrl)
+        {
+            var hateoas = new List<HateoasDTO>(){
+                new HateoasDTO{
+                    Rel = "self",
+                    Type = "Get",
+                    Uri = $"{baseUrl}/api/alunos/{aluno.Id}"
+                },
+                new HateoasDTO{
+                    Rel = "aluno",
+                    Type = "Get",
+                    Uri = $"{baseUrl}/api/alunos/"
+                },
+                new HateoasDTO{
+                    Rel = "aluno",
+                    Type = "Put",
+                    Uri = $"{baseUrl}/api/alunos/{aluno.Id}"
+                },
+                new HateoasDTO{
+                    Rel = "aluno",
+                    Type = "Delete",
+                    Uri = $"{baseUrl}/api/alunos/{aluno.Id}"
+                },
+            };
+            return hateoas;
+        }
+
+        private List<HateoasDTO> GetHateoasForAll( string baseUri, int take, int skip, int ultimo)
+        {
+            var hateoas =   new List<HateoasDTO>(){
+                new HateoasDTO(){
+                    Rel = "self",
+                    Type = "Get",
+                    Uri = $"{baseUri}/api/alunos?skip={skip}&take={take}"
+                },
+                new HateoasDTO(){
+                    Rel = "aluno",
+                    Type = "Post",
+                    Uri = $"{baseUri}/api/alunos/"
+                }
+            };
+            var razao = take - skip;
+            if(skip != 0)
             {
-                _alunoServico.Excluir(id);
-                return NoContent();
+                var newSkip = skip - razao;
+                if(newSkip < 0)
+                {
+                    newSkip = 0;
+                }
+                hateoas.Add(new HateoasDTO()
+                    {
+                        Rel = "prev",
+                        Type = "Get",
+                        Uri = $"{baseUri}/api/alunos?skip={newSkip}&take={take - razao}"
+                    }
+                );
             }
-            catch
+
+            if(take < ultimo)
             {
-                return StatusCode(StatusCodes.Status500InternalServerError);
+                hateoas.Add(new HateoasDTO()
+                    {
+                        Rel = "next",
+                        Type = "Get",
+                        Uri = $"{baseUri}/api/alunos?skip={skip + razao}&take={take + razao}"
+                    }
+                );
             }
+
+            return hateoas;
         }
     }
 }

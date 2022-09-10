@@ -1,3 +1,4 @@
+using Escola.Api.Config;
 using Escola.Domain.DTO;
 using Escola.Domain.Interfaces.Services;
 using Escola.Domain.Models;
@@ -9,37 +10,41 @@ namespace Escola.Api.Controllers;
 [Route("api/[controller]")]
 public class BoletinsController : ControllerBase
 {
+    private readonly CacheService<BoletimDTO> _boletimCache;
     private readonly IBoletimServico _boletimServico;
 
-    public BoletinsController(IBoletimServico boletimServico)
+    public BoletinsController(IBoletimServico boletimServico, CacheService<BoletimDTO> cache)
     {
         _boletimServico = boletimServico;
+        _boletimCache = cache;
+        cache.Config("boletim", new TimeSpan(0,5,0));
+
     }
 
-    /* [HttpGet]
-    public IActionResult ObterTodos(
-        int take = 0, int skip = 20)
-    {
-        var paginacao = new Paginacao(take, skip);
-        var totalRegistros = _boletimServico.ObterTotal();
-
-        Response.Headers.Add("x-Paginacao-TotalRegistros", totalRegistros.ToString());
-        return Ok(_boletimServico.ObterTodos(paginacao).ToList());
-    } */
     [HttpGet]
     public IActionResult ObterPorNome(
         string nome,
         int take = 0, 
-        int skip = 20
+        int skip = 10
     )
     {
+        var uri = $"{Request.Scheme}://{Request.Host}";
         var paginacao = new Paginacao(take, skip);
         var totalRegistros = _boletimServico.ObterTotal();
 
         Response.Headers.Add("x-Paginacao-TotalRegistros", totalRegistros.ToString());
         if(!string.IsNullOrEmpty(nome))
         {
-            return Ok(_boletimServico.ObterPorNome(nome, paginacao));
+            var boletins = new BaseDTO<IList<BoletimDTO>>(){
+                Data = _boletimServico.ObterPorNome(nome, paginacao),
+                Links = GetHateoasForAll(uri, take, skip, totalRegistros)
+            };
+        
+            foreach (var boletim in boletins.Data)
+            {
+                boletim.Links = GetHateoas(boletim, uri);
+            }
+            return Ok(boletins);
         }
         return Ok(_boletimServico.ObterTodos(paginacao));
     }
@@ -52,11 +57,22 @@ public class BoletinsController : ControllerBase
         int skip = 20
     )
     {
+        var uri = $"{Request.Scheme}://{Request.Host}";
         var paginacao =  new Paginacao(take, skip);
         var totalRegistros = _boletimServico.ObterTotal();
 
         Response.Headers.Add("x-Paginacao-TotalRegistros", totalRegistros.ToString());
-        return Ok(_boletimServico.ObterPorIdAluno(idaluno, paginacao));
+
+        var boletins = new BaseDTO<IList<BoletimDTO>>(){
+            Data = _boletimServico.ObterPorIdAluno(idaluno, paginacao),
+            Links = GetHateoasForAll(uri, take, skip, totalRegistros)
+        };
+        foreach (var boletim in boletins.Data)
+        {
+            boletim.Links = GetHateoas(boletim, uri);
+        }
+
+        return Ok(boletins);
     }
 
     [HttpPost]
@@ -88,6 +104,76 @@ public class BoletinsController : ControllerBase
         return NoContent();
     }
     
-    
+    private static IList<HateoasDTO> GetHateoas(BoletimDTO boletim, string baseUrl)
+        {
+            var hateoas = new List<HateoasDTO>(){
+                new HateoasDTO{
+                    Rel = "self",
+                    Type = "Get",
+                    Uri = $"{baseUrl}/api/boletins/{boletim.Id}"
+                },
+                new HateoasDTO{
+                    Rel = "boletim",
+                    Type = "Get",
+                    Uri = $"{baseUrl}/api/alunos/{boletim.AlunoId}/boletins/"
+                },
+                new HateoasDTO{
+                    Rel = "boletim",
+                    Type = "Put",
+                    Uri = $"{baseUrl}/api/boletins/{boletim.Id}"
+                },
+                new HateoasDTO{
+                    Rel = "boletim",
+                    Type = "Delete",
+                    Uri = $"{baseUrl}/api/boletins/{boletim.Id}"
+                },
+            };
+            return hateoas;
+        }
+
+        private List<HateoasDTO> GetHateoasForAll( string baseUri, int take, int skip, int ultimo)
+        {
+            var hateoas =   new List<HateoasDTO>(){
+                new HateoasDTO(){
+                    Rel = "self",
+                    Type = "Get",
+                    Uri = $"{baseUri}/api/boletins?skip={skip}&take={take}"
+                },
+                new HateoasDTO(){
+                    Rel = "boletim",
+                    Type = "Post",
+                    Uri = $"{baseUri}/api/boletins/"
+                }
+            };
+            var razao = take - skip;
+            if(skip != 0)
+            {
+                var newSkip = skip - razao;
+                if(newSkip < 0)
+                {
+                    newSkip = 0;
+                }
+                hateoas.Add(new HateoasDTO()
+                    {
+                        Rel = "prev",
+                        Type = "Get",
+                        Uri = $"{baseUri}/api/boletins?skip={newSkip}&take={take - razao}"
+                    }
+                );
+            }
+
+            if(take < ultimo)
+            {
+                hateoas.Add(new HateoasDTO()
+                    {
+                        Rel = "next",
+                        Type = "Get",
+                        Uri = $"{baseUri}/api/boletins?skip={skip + razao}&take={take + razao}"
+                    }
+                );
+            }
+
+            return hateoas;
+        }
 
 }

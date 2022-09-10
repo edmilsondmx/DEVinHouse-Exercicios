@@ -6,7 +6,7 @@ using Escola.Domain.Models;
 
 namespace Escola.Domain.DTO
 {
-    public class AlunoDTO
+    public class AlunoDTO : BaseHateoasDTO
     {
         public AlunoDTO()
         {

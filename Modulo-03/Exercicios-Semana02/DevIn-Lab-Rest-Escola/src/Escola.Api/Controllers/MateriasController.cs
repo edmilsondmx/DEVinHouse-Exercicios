@@ -12,14 +12,15 @@ namespace Escola.Api.Controllers;
 [Route("api/[controller]")]
 public class MateriasController : ControllerBase
 {
+    private readonly CacheService<MateriaDTO> _materiaCache;
     private readonly IMateriaServico _materiaServico;
-    private readonly IMemoryCache _cache;
     public MateriasController(
-        IMateriaServico materiaServico, 
-        IMemoryCache cache)
+        IMateriaServico materiaServico,
+        CacheService<MateriaDTO> materiaCache)
     {
         _materiaServico = materiaServico;
-        _cache = cache;
+        _materiaCache = materiaCache;
+        materiaCache.Config("materia", new TimeSpan(0,5,0));
     }
 
     [HttpGet]
@@ -38,20 +39,16 @@ public class MateriasController : ControllerBase
         BaseDTO<IList<MateriaDTO>> materiasPorNome;
 
         if(!string.IsNullOrEmpty(nome))
-        {
-            if(!_cache.TryGetValue($"materia {nome}", out materiasPorNome))
+        {   
+            materiasPorNome = new BaseDTO<IList<MateriaDTO>>()
             {
-                materiasPorNome = new BaseDTO<IList<MateriaDTO>>()
-                {
-                    Data = _materiaServico.ObterPorNome(nome).ToList(),
-                    Links = GetHateoasForAll(uri, take, skip,totalRegistros)
-                };
-                
-                _cache.Set($"materia {nome}", materiasPorNome, new TimeSpan(0,5,0));
-                foreach (var materia in materiasPorNome.Data)
-                {
-                    materia.Links = GetHateoas(materia, uri);
-                }
+                Data = _materiaServico.ObterPorNome(nome).ToList(),
+                Links = GetHateoasForAll(uri, take, skip,totalRegistros)
+            };
+            
+            foreach (var materia in materiasPorNome.Data)
+            {
+                materia.Links = GetHateoas(materia, uri);
             }
             return Ok(materiasPorNome);
         }
@@ -75,10 +72,10 @@ public class MateriasController : ControllerBase
     {
         var uri = $"{Request.Scheme}://{Request.Host}";
         MateriaDTO materia;
-        if(!_cache.TryGetValue($"materia {id}", out materia))
+        if(!_materiaCache.TryGetValue($"{id}", out materia))
         {
             materia = _materiaServico.ObterPorId(id);
-            _cache.Set($"materia {id}", materia, new TimeSpan(0,5,0));
+            _materiaCache.Set($"{id}", materia);
             materia.Links =  GetHateoas(materia, uri);
         }
 
@@ -102,8 +99,9 @@ public class MateriasController : ControllerBase
     {
         materia.Id = id;
         _materiaServico.Alterar(materia, id);
-        _cache.Remove($"materia {id}");
-        _cache.Set($"materia {id}", materia, new TimeSpan(0,5,0));
+        _materiaCache.Remove($"{id}");
+        _materiaCache.Set($"{id}", materia);
+
         return Ok();
     }
 
@@ -113,7 +111,7 @@ public class MateriasController : ControllerBase
     )
     {
         _materiaServico.Excluir(id);
-        _cache.Remove($"materia {id}");
+        _materiaCache.Remove($"{id}");
         return NoContent();
     }
 

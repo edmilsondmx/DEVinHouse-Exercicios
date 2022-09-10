@@ -25,6 +25,7 @@ builder.Services.AddControllers();
 builder.Services.AddSwaggerGen();
 
 builder.Services.AddMemoryCache();
+builder.Services.AddScoped(typeof(CacheService<>));
 
 var app = builder.Build();
 app.MapControllers();
