@@ -35,23 +35,34 @@ public class MateriasController : ControllerBase
 
         Response.Headers.Add("x-Paginacao-TotalRegistros", totalRegistros.ToString());
 
-        IList<MateriaDTO> materia;
+        BaseDTO<IList<MateriaDTO>> materiasPorNome;
+
         if(!string.IsNullOrEmpty(nome))
         {
-            if(!_cache.TryGetValue($"materia {nome}", out materia))
+            if(!_cache.TryGetValue($"materia {nome}", out materiasPorNome))
             {
-                materia = _materiaServico.ObterPorNome(nome);
-                _cache.Set($"materia {nome}", materia, new TimeSpan(0,5,0));
+                materiasPorNome = new BaseDTO<IList<MateriaDTO>>()
+                {
+                    Data = _materiaServico.ObterPorNome(nome).ToList(),
+                    Links = GetHateoasForAll(uri, take, skip,totalRegistros)
+                };
+                
+                _cache.Set($"materia {nome}", materiasPorNome, new TimeSpan(0,5,0));
+                foreach (var materia in materiasPorNome.Data)
+                {
+                    materia.Links = GetHateoas(materia, uri);
+                }
             }
-            return Ok(materia);
+            return Ok(materiasPorNome);
         }
+
         var materias = new BaseDTO<IList<MateriaDTO>>(){
             Data = _materiaServico.ObterTodos(paginacao).ToList(),
             Links = GetHateoasForAll(uri, take, skip, totalRegistros)
         };
-        foreach (var item in materias.Data)
+        foreach (var materia in materias.Data)
         {
-            item.Links = GetHateoas(item, uri);
+            materia.Links = GetHateoas(materia, uri);
         }
             
         return Ok(materias);

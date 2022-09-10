@@ -3,34 +3,10 @@ using Escola.Domain.Models;
 
 namespace Escola.Infra.DataBase.Repositories;
 
-public class MateriaRepositorio : IMateriaRepositorio
+public class MateriaRepositorio : BaseRepositorio<Materia, int>, IMateriaRepositorio
 {
-    private readonly EscolaDBContexto _contexto;
-    public MateriaRepositorio(EscolaDBContexto contexto)
+    public MateriaRepositorio(EscolaDBContexto contexto) : base(contexto)
     {
-        _contexto = contexto;
-    }
-    public void Alterar(Materia materia)
-    {
-        _contexto.Update(materia);
-        _contexto.SaveChanges();
-    }
-
-    public void Excluir(Materia materia)
-    {
-        _contexto.Materias.Remove(materia);
-        _contexto.SaveChanges();
-    }
-
-    public void Inserir(Materia materia)
-    {
-        _contexto.Materias.Add(materia);
-        _contexto.SaveChanges();
-    }
-
-    public Materia ObterPorId(int id)
-    {
-        return _contexto.Materias.Find(id);
     }
 
     public IList<Materia> ObterPorNome(string nome)
@@ -39,18 +15,5 @@ public class MateriaRepositorio : IMateriaRepositorio
             .Where(m => m.Nome
             .Contains(nome))
             .ToList();
-    }
-
-    public IList<Materia> ObterTodos(Paginacao paginacao)
-    {
-        return _contexto.Materias
-        .Take(paginacao.Take)
-        .Skip(paginacao.Skip)
-        .ToList();
-    }
-
-    public int ObterTotal()
-    {
-        return _contexto.Materias.Count();
     }
 }

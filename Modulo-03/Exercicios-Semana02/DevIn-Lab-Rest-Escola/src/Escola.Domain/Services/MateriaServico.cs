@@ -60,7 +60,7 @@ public class MateriaServico : IMateriaServico
     {
         var materias = _materiaRepositorio.ObterPorNome(nome);
         if(materias.Count == 0)
-            throw new ExisteRegistroException("Materias não encontradas!");
+            throw new ExisteRegistroException("Materia não encontrada!");
 
         return _materiaRepositorio.ObterPorNome(nome).Select(m => new MateriaDTO(m)).ToList();
     }
