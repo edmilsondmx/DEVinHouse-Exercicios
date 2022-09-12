@@ -2,7 +2,7 @@ using Escola.Domain.Models;
 
 namespace Escola.Domain.DTO;
 
-public class NotasMateriaDTO
+public class NotasMateriaDTO : BaseHateoasDTO
 {
     public int Id { get; set; }
     public int Nota { get; set; }
