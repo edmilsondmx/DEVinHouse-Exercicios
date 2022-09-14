@@ -646,6 +646,29 @@
         "runtime": {
           "lib/netstandard2.0/System.Text.Encodings.Web.dll": {}
         }
+      },
+      "Rh.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/Rh.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Rh.Domain.dll": {}
+        }
+      },
+      "Rh.infra/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Rh.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Rh.infra.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Rh.infra.dll": {}
+        }
       }
     }
   },
@@ -1737,12 +1760,24 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
+    },
+    "Rh.Domain/1.0.0": {
+      "type": "project",
+      "path": "../Rh.Domain/Rh.Domain.csproj",
+      "msbuildProject": "../Rh.Domain/Rh.Domain.csproj"
+    },
+    "Rh.infra/1.0.0": {
+      "type": "project",
+      "path": "../Rh.infra/Rh.infra.csproj",
+      "msbuildProject": "../Rh.infra/Rh.infra.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
       "Microsoft.AspNetCore.Authentication >= 2.2.0",
       "Microsoft.AspNetCore.Authentication.JwtBearer >= 6.0.9",
+      "Rh.Domain >= 1.0.0",
+      "Rh.infra >= 1.0.0",
       "Swashbuckle.AspNetCore >= 6.2.3"
     ]
   },
@@ -1777,7 +1812,14 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "c:\\Users\\Edmilson\\Documents\\DevinHouse\\exercicios\\DEVinHouse-Exercicios\\Modulo-03\\Exercicios-Semana03\\Rh.Domain\\Rh.Domain.csproj": {
+              "projectPath": "c:\\Users\\Edmilson\\Documents\\DevinHouse\\exercicios\\DEVinHouse-Exercicios\\Modulo-03\\Exercicios-Semana03\\Rh.Domain\\Rh.Domain.csproj"
+            },
+            "c:\\Users\\Edmilson\\Documents\\DevinHouse\\exercicios\\DEVinHouse-Exercicios\\Modulo-03\\Exercicios-Semana03\\Rh.infra\\Rh.infra.csproj": {
+              "projectPath": "c:\\Users\\Edmilson\\Documents\\DevinHouse\\exercicios\\DEVinHouse-Exercicios\\Modulo-03\\Exercicios-Semana03\\Rh.infra\\Rh.infra.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
