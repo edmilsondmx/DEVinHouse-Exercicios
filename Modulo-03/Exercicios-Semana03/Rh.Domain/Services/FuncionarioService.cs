@@ -6,6 +6,7 @@ using Rh.Api.DTOs;
 using Rh.Api.Interfaces.Repository;
 using Rh.Api.Interfaces.Service;
 using Rh.Api.Models;
+using Rh.Domain.DTOs;
 
 namespace Rh.Api.Services
 {
@@ -30,14 +31,14 @@ namespace Rh.Api.Services
             _funcionarioRepository.Editar(new Funcionario(funcionario));
         }
 
-        public FuncionarioDTO ObterPorId(int id)
+        public FuncionarioDTO ObterPorId(string id)
         {
             return new FuncionarioDTO(_funcionarioRepository.ObterPorId(id));
         }
 
-        public FuncionarioDTO ObterPorUsuario(string nome, string senha)
+        public Funcionario ObterPorUsuario(FuncionarioLoginDto funcionario)
         {
-            return new FuncionarioDTO(_funcionarioRepository.ObterPorUsuario(nome, senha));
+            return _funcionarioRepository.ObterPorUsuario(funcionario);
         }
 
         public IList<FuncionarioDTO> ObterTodos()
