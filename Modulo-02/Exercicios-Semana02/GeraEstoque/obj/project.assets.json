@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Edmilson\\Documents\\DevinHouse\\exercicios\\DEVinHouse-Exercicios\\Modulo-02\\Exercicios-Semana02\\GeraEstoque\\GeraEstoque.csproj",
+      "projectUniqueName": "c:\\Users\\Edmilson\\Documents\\DevinHouse\\exercicios\\DEVinHouse-Exercicios\\Modulo-02\\Exercicios-Semana02\\GeraEstoque\\GeraEstoque.csproj",
       "projectName": "GeraEstoque",
-      "projectPath": "C:\\Users\\Edmilson\\Documents\\DevinHouse\\exercicios\\DEVinHouse-Exercicios\\Modulo-02\\Exercicios-Semana02\\GeraEstoque\\GeraEstoque.csproj",
+      "projectPath": "c:\\Users\\Edmilson\\Documents\\DevinHouse\\exercicios\\DEVinHouse-Exercicios\\Modulo-02\\Exercicios-Semana02\\GeraEstoque\\GeraEstoque.csproj",
       "packagesPath": "C:\\Users\\Edmilson\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Edmilson\\Documents\\DevinHouse\\exercicios\\DEVinHouse-Exercicios\\Modulo-02\\Exercicios-Semana02\\GeraEstoque\\obj\\",
+      "outputPath": "c:\\Users\\Edmilson\\Documents\\DevinHouse\\exercicios\\DEVinHouse-Exercicios\\Modulo-02\\Exercicios-Semana02\\GeraEstoque\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -65,7 +65,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
       }
     }
   }

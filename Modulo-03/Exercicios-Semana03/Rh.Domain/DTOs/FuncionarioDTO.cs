@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 using Rh.Api.Enuns;
@@ -9,6 +10,7 @@ namespace Rh.Api.DTOs
 {
     public class FuncionarioDTO
     {
+        public string Id { get; set; }
         public string Nome { get; set; }
         public string Senha { get; set; }
         public Permissoes Permissao { get; set; }
@@ -20,6 +22,7 @@ namespace Rh.Api.DTOs
         }
         public FuncionarioDTO(Funcionario funcionario)
         {
+            Id = funcionario.Id;
             Nome = funcionario.Nome;
             Senha = funcionario.Senha;
             Permissao = funcionario.Permissao;

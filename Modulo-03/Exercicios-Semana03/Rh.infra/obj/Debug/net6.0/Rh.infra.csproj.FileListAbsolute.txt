@@ -1,0 +1,15 @@
+c:\Users\Edmilson\Documents\DevinHouse\exercicios\DEVinHouse-Exercicios\Modulo-03\Exercicios-Semana03\Rh.infra\bin\Debug\net6.0\Rh.infra.deps.json
+c:\Users\Edmilson\Documents\DevinHouse\exercicios\DEVinHouse-Exercicios\Modulo-03\Exercicios-Semana03\Rh.infra\bin\Debug\net6.0\Rh.infra.dll
+c:\Users\Edmilson\Documents\DevinHouse\exercicios\DEVinHouse-Exercicios\Modulo-03\Exercicios-Semana03\Rh.infra\bin\Debug\net6.0\Rh.infra.pdb
+c:\Users\Edmilson\Documents\DevinHouse\exercicios\DEVinHouse-Exercicios\Modulo-03\Exercicios-Semana03\Rh.infra\bin\Debug\net6.0\Rh.Domain.dll
+c:\Users\Edmilson\Documents\DevinHouse\exercicios\DEVinHouse-Exercicios\Modulo-03\Exercicios-Semana03\Rh.infra\bin\Debug\net6.0\Rh.Domain.pdb
+c:\Users\Edmilson\Documents\DevinHouse\exercicios\DEVinHouse-Exercicios\Modulo-03\Exercicios-Semana03\Rh.infra\obj\Debug\net6.0\Rh.infra.csproj.AssemblyReference.cache
+c:\Users\Edmilson\Documents\DevinHouse\exercicios\DEVinHouse-Exercicios\Modulo-03\Exercicios-Semana03\Rh.infra\obj\Debug\net6.0\Rh.infra.GeneratedMSBuildEditorConfig.editorconfig
+c:\Users\Edmilson\Documents\DevinHouse\exercicios\DEVinHouse-Exercicios\Modulo-03\Exercicios-Semana03\Rh.infra\obj\Debug\net6.0\Rh.infra.AssemblyInfoInputs.cache
+c:\Users\Edmilson\Documents\DevinHouse\exercicios\DEVinHouse-Exercicios\Modulo-03\Exercicios-Semana03\Rh.infra\obj\Debug\net6.0\Rh.infra.AssemblyInfo.cs
+c:\Users\Edmilson\Documents\DevinHouse\exercicios\DEVinHouse-Exercicios\Modulo-03\Exercicios-Semana03\Rh.infra\obj\Debug\net6.0\Rh.infra.csproj.CoreCompileInputs.cache
+c:\Users\Edmilson\Documents\DevinHouse\exercicios\DEVinHouse-Exercicios\Modulo-03\Exercicios-Semana03\Rh.infra\obj\Debug\net6.0\Rh.infra.csproj.CopyComplete
+c:\Users\Edmilson\Documents\DevinHouse\exercicios\DEVinHouse-Exercicios\Modulo-03\Exercicios-Semana03\Rh.infra\obj\Debug\net6.0\Rh.infra.dll
+c:\Users\Edmilson\Documents\DevinHouse\exercicios\DEVinHouse-Exercicios\Modulo-03\Exercicios-Semana03\Rh.infra\obj\Debug\net6.0\refint\Rh.infra.dll
+c:\Users\Edmilson\Documents\DevinHouse\exercicios\DEVinHouse-Exercicios\Modulo-03\Exercicios-Semana03\Rh.infra\obj\Debug\net6.0\Rh.infra.pdb
+c:\Users\Edmilson\Documents\DevinHouse\exercicios\DEVinHouse-Exercicios\Modulo-03\Exercicios-Semana03\Rh.infra\obj\Debug\net6.0\ref\Rh.infra.dll

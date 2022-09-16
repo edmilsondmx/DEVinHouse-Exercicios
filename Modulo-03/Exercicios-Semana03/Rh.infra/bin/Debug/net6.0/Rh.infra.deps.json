@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "Rh.infra/1.0.0": {
+        "dependencies": {
+          "Rh.Domain": "1.0.0"
+        },
+        "runtime": {
+          "Rh.infra.dll": {}
+        }
+      },
+      "Rh.Domain/1.0.0": {
+        "runtime": {
+          "Rh.Domain.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Rh.infra/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Rh.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

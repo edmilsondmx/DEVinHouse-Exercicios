@@ -2,6 +2,7 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
 using Microsoft.IdentityModel.Tokens;
+using Microsoft.OpenApi.Extensions;
 using Rh.Api.Models;
 using Rh.Api.Security;
 
@@ -19,7 +20,7 @@ public class TokenService
             Subject = new ClaimsIdentity(new Claim[]
             {
                 new Claim(ClaimTypes.Name, funcionario.Nome),
-                new Claim(ClaimTypes.Role, funcionario.Permissao.ToString()),
+                new Claim(ClaimTypes.Role, funcionario.Permissao.GetDisplayName()),
             }),
             Expires = DateTime.UtcNow.AddHours(2),
             SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)

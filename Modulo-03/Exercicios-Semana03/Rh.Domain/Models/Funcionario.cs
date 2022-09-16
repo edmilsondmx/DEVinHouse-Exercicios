@@ -9,7 +9,7 @@ namespace Rh.Api.Models;
 
 public class Funcionario
 {
-    public int Id { get; set; }
+    public string Id { get; set; }
     public string Nome { get; set; }
     public string Senha { get; set; }
     public Permissoes Permissao { get; set; }
@@ -21,6 +21,7 @@ public class Funcionario
     }
     public Funcionario(FuncionarioDTO funcionario)
     {
+        Id = funcionario.Id;
         Nome = funcionario.Nome;
         Senha = funcionario.Senha;
         Permissao = funcionario.Permissao;
