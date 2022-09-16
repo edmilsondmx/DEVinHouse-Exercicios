@@ -33,11 +33,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Edmilson\\Documents\\DevinHouse\\exercicios\\DEVinHouse-Exercicios\\Modulo-03\\Exercicios-Semana03\\Rh.infra\\Rh.infra.csproj",
+      "projectUniqueName": "c:\\Users\\Edmilson\\Documents\\DevinHouse\\exercicios\\DEVinHouse-Exercicios\\Modulo-03\\Exercicios-Semana03\\Rh.infra\\Rh.infra.csproj",
       "projectName": "Rh.infra",
-      "projectPath": "C:\\Users\\Edmilson\\Documents\\DevinHouse\\exercicios\\DEVinHouse-Exercicios\\Modulo-03\\Exercicios-Semana03\\Rh.infra\\Rh.infra.csproj",
+      "projectPath": "c:\\Users\\Edmilson\\Documents\\DevinHouse\\exercicios\\DEVinHouse-Exercicios\\Modulo-03\\Exercicios-Semana03\\Rh.infra\\Rh.infra.csproj",
       "packagesPath": "C:\\Users\\Edmilson\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Edmilson\\Documents\\DevinHouse\\exercicios\\DEVinHouse-Exercicios\\Modulo-03\\Exercicios-Semana03\\Rh.infra\\obj\\",
+      "outputPath": "c:\\Users\\Edmilson\\Documents\\DevinHouse\\exercicios\\DEVinHouse-Exercicios\\Modulo-03\\Exercicios-Semana03\\Rh.infra\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

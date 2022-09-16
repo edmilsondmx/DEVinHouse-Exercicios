@@ -1,13 +1,14 @@
 using System.ComponentModel.DataAnnotations;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.OpenApi.Extensions;
+//using Microsoft.OpenApi.Extensions;
 using Rh.Api.DTOs;
 using Rh.Api.Enuns;
 using Rh.Api.Interfaces.Service;
 using Rh.Api.Models;
 using Rh.Api.Services;
 using Rh.Domain.DTOs;
+using Rh.Domain.Services;
 
 namespace Rh.Api.Controllers;
 
@@ -26,12 +27,13 @@ public class FuncionarioController : ControllerBase
     public IActionResult Listar(
     )
     {
-        if(User.IsInRole(Permissoes.Funcionario.GetDisplayName()))
+        if(User.IsInRole(Permissoes.Funcionario.ToString()))
         {
-            return Ok(_funcionarioService.ObterTodos().Select(f => new {f.Nome, f.Permissao}));
+            return Ok(ConverterFuncionario.ToDto(_funcionarioService.ObterTodos())
+                .Select(f => new {f.Nome, f.Permissao}));
         }
         
-        return Ok(_funcionarioService.ObterTodos());
+        return Ok(ConverterFuncionario.ToDto(_funcionarioService.ObterTodos()));
     }
 
     [Authorize(Roles = "Administrador")]
