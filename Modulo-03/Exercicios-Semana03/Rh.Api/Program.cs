@@ -1,5 +1,6 @@
 using System.Text;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Mvc.Formatters;
 using Microsoft.IdentityModel.Tokens;
 using Rh.Api.Interfaces.Repository;
 using Rh.Api.Interfaces.Service;
@@ -36,6 +37,12 @@ builder.Services.AddAuthentication(x => {
         ValidateIssuer = false,
         ValidateAudience = false
     };
+});
+
+builder.Services.AddMvc( config => {
+    config.ReturnHttpNotAcceptable = true;
+    config.OutputFormatters.Add(new XmlSerializerOutputFormatter());
+    config.InputFormatters.Add(new XmlSerializerInputFormatter(config));
 });
 
 var app = builder.Build();
