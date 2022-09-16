@@ -34,6 +34,7 @@ public class FuncionarioController : ControllerBase
         return Ok(_funcionarioService.ObterTodos());
     }
 
+    [Authorize(Roles = "Administrador")]
     [HttpPost("cadastrar-funcionario")]
     public IActionResult Cadastrar(
         [FromBody] FuncionarioDTO funcionario
@@ -43,16 +44,21 @@ public class FuncionarioController : ControllerBase
         return StatusCode(StatusCodes.Status201Created);
     }
 
+    [Authorize(Roles = "Administrador, Gerente")]
     [HttpDelete("excluir-funcionario/{id}")]
     public IActionResult ExcluirFuncionario(
         [FromRoute] string id
     )
     {
         var funcionario  = _funcionarioService.ObterPorId(id);
+        if(funcionario.Permissao == Permissoes.Administrador || funcionario.Permissao == Permissoes.Gerente)
+            return StatusCode(StatusCodes.Status401Unauthorized);
+            
         _funcionarioService.Remover(funcionario);
         return NoContent();
     }
 
+    [Authorize(Roles = "Administrador")]
     [HttpDelete("excluir-gerente/{id}")]
     public IActionResult ExcluirGerente(
         [FromRoute] string id
@@ -63,6 +69,7 @@ public class FuncionarioController : ControllerBase
         return NoContent();
     }
 
+    [Authorize(Roles = "Gerente")]
     [HttpPut("alterar-salario/{id}")]
     public IActionResult AlterarSalario(
         [FromRoute] string id,
