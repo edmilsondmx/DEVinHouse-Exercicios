@@ -20,13 +20,20 @@ public enum Permissoes
 
  public static class EnumExtensions
   {
-    public static string GetDisplayName(this Enum enumValue)
+    public static string GetName(this Enum enumValue)
     {
-      return enumValue.GetType()
+      string displayName;
+      displayName =  enumValue.GetType()
         .GetMember(enumValue.ToString())
         .First()
-        .GetCustomAttribute<DisplayAttribute>()
+        ?.GetCustomAttribute<DisplayAttribute>()
         ?.GetName();
+      
+      if (String.IsNullOrEmpty(displayName))
+      {
+          displayName = enumValue.ToString();
+      }
+      return displayName;
     }
   }
 

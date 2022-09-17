@@ -10,8 +10,8 @@ public static class ConverterFuncionario
     {
         return new UserDto{
             Id = dto.Id,
-            Nome = dto.Id,
-            Permissao = dto.Permissao.GetDisplayName(),
+            Nome = dto.Nome,
+            Permissao = dto.Permissao.GetName(),
             Salario = dto.Salario
         };
     }

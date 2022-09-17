@@ -1,7 +1,7 @@
 using System.ComponentModel.DataAnnotations;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-//using Microsoft.OpenApi.Extensions;
+using Microsoft.OpenApi.Extensions;
 using Rh.Api.DTOs;
 using Rh.Api.Enuns;
 using Rh.Api.Interfaces.Service;
@@ -27,7 +27,7 @@ public class FuncionarioController : ControllerBase
     public IActionResult Listar(
     )
     {
-        if(User.IsInRole(Permissoes.Funcionario.ToString()))
+        if(User.IsInRole(Permissoes.Funcionario.GetDisplayName()))
         {
             return Ok(ConverterFuncionario.ToDto(_funcionarioService.ObterTodos())
                 .Select(f => new {f.Nome, f.Permissao}));
