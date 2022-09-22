@@ -1,0 +1,26 @@
+{
+  "FilePath": "c:\\Users\\Edmilson\\Documents\\DevinHouse\\exercicios\\DEVinHouse-Exercicios\\Modulo-03\\Exercicios-Semana04\\Banda.Domain\\Banda.Domain.csproj",
+  "Configuration": {
+    "ConfigurationName": "Default",
+    "LanguageVersion": "6.0",
+    "Extensions": []
+  },
+  "ProjectWorkspaceState": {
+    "TagHelpers": [],
+    "CSharpLanguageVersion": 1000
+  },
+  "RootNamespace": "Banda.Domain",
+  "Documents": [
+    {
+      "FilePath": "c:\\Users\\Edmilson\\Documents\\DevinHouse\\exercicios\\DEVinHouse-Exercicios\\Modulo-03\\Exercicios-Semana04\\Banda.Domain\\Component1.razor",
+      "TargetPath": "Component1.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "c:\\Users\\Edmilson\\Documents\\DevinHouse\\exercicios\\DEVinHouse-Exercicios\\Modulo-03\\Exercicios-Semana04\\Banda.Domain\\_Imports.razor",
+      "TargetPath": "_Imports.razor",
+      "FileKind": "componentImport"
+    }
+  ],
+  "SerializationFormat": "0.2"
+}

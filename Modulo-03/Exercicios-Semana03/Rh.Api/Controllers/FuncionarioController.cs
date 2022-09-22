@@ -24,7 +24,7 @@ public class FuncionarioController : ControllerBase
 
     [Authorize]
     [HttpGet("listar")]
-    public IActionResult Listar(
+    public IActionResult ListarFuncionarios(
     )
     {
         if(User.IsInRole(Permissoes.Funcionario.GetDisplayName()))
@@ -38,12 +38,12 @@ public class FuncionarioController : ControllerBase
 
     [Authorize(Roles = "Administrador")]
     [HttpPost("cadastrar-funcionario")]
-    public IActionResult Cadastrar(
+    public IActionResult CadastrarFuncionario(
         [FromBody] FuncionarioDTO funcionario
     )
     {
         _funcionarioService.CadastrarFuncionario(funcionario);
-        return StatusCode(StatusCodes.Status201Created);
+        return Created("api/funcionario", funcionario);
     }
 
     [Authorize(Roles = "Administrador, Gerente")]

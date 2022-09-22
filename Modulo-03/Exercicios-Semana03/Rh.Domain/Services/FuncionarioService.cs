@@ -7,6 +7,7 @@ using Rh.Api.Interfaces.Repository;
 using Rh.Api.Interfaces.Service;
 using Rh.Api.Models;
 using Rh.Domain.DTOs;
+using Rh.Domain.Exceptions;
 
 namespace Rh.Api.Services
 {
@@ -38,7 +39,9 @@ namespace Rh.Api.Services
 
         public Funcionario ObterPorUsuario(FuncionarioLoginDto funcionario)
         {
-            return _funcionarioRepository.ObterPorUsuario(funcionario);
+            var usuarioBd = _funcionarioRepository.ObterPorUsuario(funcionario);
+            
+            return usuarioBd;
         }
 
         public IList<FuncionarioDTO> ObterTodos()

@@ -28,7 +28,7 @@ public class AutenticacaoController : ControllerBase
     {
         var funcionario = _funcionarioService.ObterPorUsuario(dto);
         if(funcionario == null)
-            return StatusCode(StatusCodes.Status401Unauthorized);
+            return StatusCode(StatusCodes.Status403Forbidden);
 
         var token = TokenService.GenerateToken(funcionario);
         var refreshToken = TokenService.GenerateRefreshToken();
