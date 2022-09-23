@@ -1,7 +1,6 @@
 <Project Sdk="Microsoft.NET.Sdk.Web">
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
-    <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
   <ItemGroup>
@@ -10,6 +9,5 @@
   <ItemGroup>
     <ProjectReference Include="..\Banda.Domain\Banda.Domain.csproj" />
     <ProjectReference Include="..\Banda.DI\Banda.DI.csproj" />
-    <ProjectReference Include="..\Banda.Infra\Banda.Infra.csproj" />
   </ItemGroup>
 </Project>
