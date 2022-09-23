@@ -17,6 +17,8 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyProductAttribute("Banda.Domain")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Banda.Domain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
+[assembly: System.Runtime.CompilerServices.InternalsVisibleTo("Banda.Infra")]
+[assembly: System.Runtime.CompilerServices.InternalsVisibleTo("Banda.DI")]
 
 // Gerado pela classe WriteCodeFragment do MSBuild.
 
