@@ -700,6 +700,9 @@
       "Banda.Domain/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "AutoMapper": "11.0.1"
+        },
         "compile": {
           "bin/placeholder/Banda.Domain.dll": {}
         },
@@ -2046,6 +2049,7 @@
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+      "AutoMapper >= 11.0.1",
       "Banda.DI >= 1.0.0",
       "Banda.Domain >= 1.0.0",
       "Swashbuckle.AspNetCore >= 6.2.3"
@@ -2102,6 +2106,10 @@
       "net6.0": {
         "targetAlias": "net6.0",
         "dependencies": {
+          "AutoMapper": {
+            "target": "Package",
+            "version": "[11.0.1, )"
+          },
           "Swashbuckle.AspNetCore": {
             "target": "Package",
             "version": "[6.2.3, )"

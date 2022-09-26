@@ -684,6 +684,9 @@
       "Banda.Domain/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "AutoMapper": "11.0.1"
+        },
         "compile": {
           "bin/placeholder/Banda.Domain.dll": {}
         },

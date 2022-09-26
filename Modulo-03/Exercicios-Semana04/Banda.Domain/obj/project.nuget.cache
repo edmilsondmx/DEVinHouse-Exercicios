@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "RqfF1E3R1AqN/HOYB7g1Pekrf3btwDAFJHruHXe27oGqzFdMQa5wQWTuJquDdK3D+L8B1pNbDoIDqulbAzvyNw==",
+  "dgSpecHash": "SCrkMn0SMgD1f348V3/9sqS9JiLOs23OVE+rWAyU6yRm3CmYwzu0DM0Hr6STSga17tZD2EuZKEbc+hDzVZrMIQ==",
   "success": true,
   "projectFilePath": "c:\\Users\\Edmilson\\Documents\\DevinHouse\\exercicios\\DEVinHouse-Exercicios\\Modulo-03\\Exercicios-Semana04\\Banda.Domain\\Banda.Domain.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Edmilson\\.nuget\\packages\\automapper\\11.0.1\\automapper.11.0.1.nupkg.sha512",
+    "C:\\Users\\Edmilson\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512"
+  ],
   "logs": []
 }

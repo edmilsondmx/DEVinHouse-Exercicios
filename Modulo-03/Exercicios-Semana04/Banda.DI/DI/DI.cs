@@ -14,6 +14,7 @@ public static class DI
         return builder
             .AddDbContext<BandaDBContexto>()
             .AddScoped<ITocarRepositorio, TocarRepositorio>()
-            .AddScoped<ITocarServico, TocarServico>();
+            .AddScoped<ITocarServico, TocarServico>()
+            .AddScoped<ITocarPost, TocarPost>();
     }
 }
