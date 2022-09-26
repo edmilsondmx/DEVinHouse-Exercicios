@@ -6,7 +6,7 @@
   <ItemGroup>
     <InternalsVisibleTo Include="Banda.Infra" />
     <InternalsVisibleTo Include="Banda.DI" />
-	 <InternalsVisibleTo Include="Banda.Api" />
+    <InternalsVisibleTo Include="Banda.Api" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="AutoMapper" Version="11.0.1" />

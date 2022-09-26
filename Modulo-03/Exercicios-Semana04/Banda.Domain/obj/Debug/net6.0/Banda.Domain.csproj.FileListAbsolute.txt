@@ -1,0 +1,12 @@
+C:\Users\Edmilson\Documents\DevinHouse\exercicios\DEVinHouse-Exercicios\Modulo-03\Exercicios-Semana04\Banda.Domain\bin\Debug\net6.0\Banda.Domain.deps.json
+C:\Users\Edmilson\Documents\DevinHouse\exercicios\DEVinHouse-Exercicios\Modulo-03\Exercicios-Semana04\Banda.Domain\bin\Debug\net6.0\Banda.Domain.dll
+C:\Users\Edmilson\Documents\DevinHouse\exercicios\DEVinHouse-Exercicios\Modulo-03\Exercicios-Semana04\Banda.Domain\bin\Debug\net6.0\Banda.Domain.pdb
+C:\Users\Edmilson\Documents\DevinHouse\exercicios\DEVinHouse-Exercicios\Modulo-03\Exercicios-Semana04\Banda.Domain\obj\Debug\net6.0\Banda.Domain.csproj.AssemblyReference.cache
+C:\Users\Edmilson\Documents\DevinHouse\exercicios\DEVinHouse-Exercicios\Modulo-03\Exercicios-Semana04\Banda.Domain\obj\Debug\net6.0\Banda.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Edmilson\Documents\DevinHouse\exercicios\DEVinHouse-Exercicios\Modulo-03\Exercicios-Semana04\Banda.Domain\obj\Debug\net6.0\Banda.Domain.AssemblyInfoInputs.cache
+C:\Users\Edmilson\Documents\DevinHouse\exercicios\DEVinHouse-Exercicios\Modulo-03\Exercicios-Semana04\Banda.Domain\obj\Debug\net6.0\Banda.Domain.AssemblyInfo.cs
+C:\Users\Edmilson\Documents\DevinHouse\exercicios\DEVinHouse-Exercicios\Modulo-03\Exercicios-Semana04\Banda.Domain\obj\Debug\net6.0\Banda.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Edmilson\Documents\DevinHouse\exercicios\DEVinHouse-Exercicios\Modulo-03\Exercicios-Semana04\Banda.Domain\obj\Debug\net6.0\Banda.Domain.dll
+C:\Users\Edmilson\Documents\DevinHouse\exercicios\DEVinHouse-Exercicios\Modulo-03\Exercicios-Semana04\Banda.Domain\obj\Debug\net6.0\refint\Banda.Domain.dll
+C:\Users\Edmilson\Documents\DevinHouse\exercicios\DEVinHouse-Exercicios\Modulo-03\Exercicios-Semana04\Banda.Domain\obj\Debug\net6.0\Banda.Domain.pdb
+C:\Users\Edmilson\Documents\DevinHouse\exercicios\DEVinHouse-Exercicios\Modulo-03\Exercicios-Semana04\Banda.Domain\obj\Debug\net6.0\ref\Banda.Domain.dll

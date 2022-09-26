@@ -688,7 +688,7 @@
           "AutoMapper": "11.0.1",
           "Banda.Domain": "1.0.0",
           "Banda.Infra": "1.0.0",
-          "Swashbuckle.AspNetCore": "6.4.0"
+          "Swashbuckle.AspNetCore": "6.2.3"
         },
         "compile": {
           "bin/placeholder/Banda.DI.dll": {}
@@ -2136,16 +2136,5 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU1605",
-      "level": "Error",
-      "message": "Detected package downgrade: Swashbuckle.AspNetCore from 6.4.0 to 6.2.3. Reference the package directly from the project to select a different version. \r\n Banda.Api -> Banda.DI -> Swashbuckle.AspNetCore (>= 6.4.0) \r\n Banda.Api -> Swashbuckle.AspNetCore (>= 6.2.3)",
-      "libraryId": "Swashbuckle.AspNetCore",
-      "targetGraphs": [
-        "net6.0"
-      ]
-    }
-  ]
+  }
 }

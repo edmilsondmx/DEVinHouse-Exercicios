@@ -1,5 +1,6 @@
 using Banda.Domain.DTOs;
 using Banda.Domain.Interfaces.Servico;
+using Banda.Domain.Services;
 using Microsoft.AspNetCore.Mvc;
 
 
@@ -7,7 +8,7 @@ namespace Banda.Api.Controllers;
 
 [ApiController]
 [Route("api/[controller]")]
-internal class BandaTocarController : ControllerBase
+public class BandaTocarController : ControllerBase
 {
     private readonly ITocarServico _tocarServico;
     private readonly ITocarPost _tocarPost;
@@ -54,5 +55,20 @@ internal class BandaTocarController : ControllerBase
     {
         _tocarServico.Excluir(id);
         return NoContent();
+    }
+
+    [HttpGet]
+    [Route("GetCommand")]
+    public string GetCommand()
+    {
+        TestesCommand testes = new TestesCommand();
+
+        ICommand bandaInterage = new BandaCommand("Banda Interage com o público!");
+        ICommand testeSom = new TecnicoSomCommand(testes);
+        ICommand testeLuz = new TecnicoLuzCommand(testes);
+
+        Invoker invoker = new Invoker(bandaInterage, testeSom, testeLuz);
+
+        return invoker.ExecutarRotinaDoCommand();
     }
 }

@@ -1,7 +1,7 @@
 {
   "version": 2,
-  "dgSpecHash": "T3k5THBHV+rPFbHC6ryhg8S2nUduFPuVLxRs9KU38Kr1SBsSkis9wqvpB3fyPfeuJ+eAXw44WUQZwwgRX5B+lA==",
-  "success": false,
+  "dgSpecHash": "NFzY60hMY9pgR9+F6cFeIERZYIFosRo+kyPsRsNZc2rDJvhqJkmUVzDfJKhBL0TsHWUiQR3EcbnBkH7QoJne3w==",
+  "success": true,
   "projectFilePath": "c:\\Users\\Edmilson\\Documents\\DevinHouse\\exercicios\\DEVinHouse-Exercicios\\Modulo-03\\Exercicios-Semana04\\Banda.Api\\Banda.Api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Edmilson\\.nuget\\packages\\automapper\\11.0.1\\automapper.11.0.1.nupkg.sha512",
@@ -52,15 +52,5 @@
     "C:\\Users\\Edmilson\\.nuget\\packages\\system.text.encoding.codepages\\4.7.0\\system.text.encoding.codepages.4.7.0.nupkg.sha512",
     "C:\\Users\\Edmilson\\.nuget\\packages\\system.windows.extensions\\4.7.0\\system.windows.extensions.4.7.0.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "NU1605",
-      "level": "Error",
-      "message": "Detected package downgrade: Swashbuckle.AspNetCore from 6.4.0 to 6.2.3. Reference the package directly from the project to select a different version. \r\n Banda.Api -> Banda.DI -> Swashbuckle.AspNetCore (>= 6.4.0) \r\n Banda.Api -> Swashbuckle.AspNetCore (>= 6.2.3)",
-      "libraryId": "Swashbuckle.AspNetCore",
-      "targetGraphs": [
-        "net6.0"
-      ]
-    }
-  ]
+  "logs": []
 }

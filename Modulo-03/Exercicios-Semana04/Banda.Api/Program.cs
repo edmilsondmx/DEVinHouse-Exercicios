@@ -1,8 +1,11 @@
+using Banda.DI.AutoMapper;
+using Banda.DI.DI;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
-builder.services.Register();
+builder.Services.Register();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

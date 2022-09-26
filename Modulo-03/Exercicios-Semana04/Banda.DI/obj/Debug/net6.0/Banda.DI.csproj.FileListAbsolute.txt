@@ -1,0 +1,17 @@
+C:\Users\Edmilson\Documents\DevinHouse\exercicios\DEVinHouse-Exercicios\Modulo-03\Exercicios-Semana04\Banda.DI\bin\Debug\net6.0\Banda.DI.deps.json
+C:\Users\Edmilson\Documents\DevinHouse\exercicios\DEVinHouse-Exercicios\Modulo-03\Exercicios-Semana04\Banda.DI\bin\Debug\net6.0\Banda.DI.dll
+C:\Users\Edmilson\Documents\DevinHouse\exercicios\DEVinHouse-Exercicios\Modulo-03\Exercicios-Semana04\Banda.DI\bin\Debug\net6.0\Banda.DI.pdb
+C:\Users\Edmilson\Documents\DevinHouse\exercicios\DEVinHouse-Exercicios\Modulo-03\Exercicios-Semana04\Banda.DI\bin\Debug\net6.0\Banda.Domain.dll
+C:\Users\Edmilson\Documents\DevinHouse\exercicios\DEVinHouse-Exercicios\Modulo-03\Exercicios-Semana04\Banda.DI\bin\Debug\net6.0\Banda.Infra.dll
+C:\Users\Edmilson\Documents\DevinHouse\exercicios\DEVinHouse-Exercicios\Modulo-03\Exercicios-Semana04\Banda.DI\bin\Debug\net6.0\Banda.Domain.pdb
+C:\Users\Edmilson\Documents\DevinHouse\exercicios\DEVinHouse-Exercicios\Modulo-03\Exercicios-Semana04\Banda.DI\bin\Debug\net6.0\Banda.Infra.pdb
+C:\Users\Edmilson\Documents\DevinHouse\exercicios\DEVinHouse-Exercicios\Modulo-03\Exercicios-Semana04\Banda.DI\obj\Debug\net6.0\Banda.DI.csproj.AssemblyReference.cache
+C:\Users\Edmilson\Documents\DevinHouse\exercicios\DEVinHouse-Exercicios\Modulo-03\Exercicios-Semana04\Banda.DI\obj\Debug\net6.0\Banda.DI.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Edmilson\Documents\DevinHouse\exercicios\DEVinHouse-Exercicios\Modulo-03\Exercicios-Semana04\Banda.DI\obj\Debug\net6.0\Banda.DI.AssemblyInfoInputs.cache
+C:\Users\Edmilson\Documents\DevinHouse\exercicios\DEVinHouse-Exercicios\Modulo-03\Exercicios-Semana04\Banda.DI\obj\Debug\net6.0\Banda.DI.AssemblyInfo.cs
+C:\Users\Edmilson\Documents\DevinHouse\exercicios\DEVinHouse-Exercicios\Modulo-03\Exercicios-Semana04\Banda.DI\obj\Debug\net6.0\Banda.DI.csproj.CoreCompileInputs.cache
+C:\Users\Edmilson\Documents\DevinHouse\exercicios\DEVinHouse-Exercicios\Modulo-03\Exercicios-Semana04\Banda.DI\obj\Debug\net6.0\Banda.DI.csproj.CopyComplete
+C:\Users\Edmilson\Documents\DevinHouse\exercicios\DEVinHouse-Exercicios\Modulo-03\Exercicios-Semana04\Banda.DI\obj\Debug\net6.0\Banda.DI.dll
+C:\Users\Edmilson\Documents\DevinHouse\exercicios\DEVinHouse-Exercicios\Modulo-03\Exercicios-Semana04\Banda.DI\obj\Debug\net6.0\refint\Banda.DI.dll
+C:\Users\Edmilson\Documents\DevinHouse\exercicios\DEVinHouse-Exercicios\Modulo-03\Exercicios-Semana04\Banda.DI\obj\Debug\net6.0\Banda.DI.pdb
+C:\Users\Edmilson\Documents\DevinHouse\exercicios\DEVinHouse-Exercicios\Modulo-03\Exercicios-Semana04\Banda.DI\obj\Debug\net6.0\ref\Banda.DI.dll

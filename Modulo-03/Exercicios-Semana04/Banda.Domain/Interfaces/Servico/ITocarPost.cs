@@ -2,7 +2,7 @@ using Banda.Domain.DTOs;
 
 namespace Banda.Domain.Interfaces.Servico;
 
-internal interface ITocarPost
+public interface ITocarPost
 {
     void Inserir(TocarDTO dto);
 }
