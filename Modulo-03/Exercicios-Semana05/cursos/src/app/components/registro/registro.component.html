@@ -10,14 +10,23 @@
             <div class="col py-1">
                 <label for="nome" class="form-label text-white">Nome</label>
                 <input formControlName="nome" type="text" class="form-control" id="nome" >
+                <div *ngIf="formRegister.controls['nome'].dirty && formRegister.controls['nome'].invalid" class="alert alert-danger">
+                    O nome deve conter no mínmo 3 letras
+                </div>
             </div>
             <div class="col py-1">
                 <label for="cargaHoraria" class="form-label text-white">Carga Horária</label>
                 <input formControlName="cargaHoraria" type="number" class="form-control" id="cargaHoraria">
+                <div *ngIf="formRegister.controls['cargaHoraria'].dirty && formRegister.controls['cargaHoraria'].invalid" class="alert alert-danger">
+                    A carga horária deve ser entre 30 e 100 horas
+                </div>
             </div>
             <div class="col py-1">
                 <label for="escola" class="form-label text-white">Escola</label>
                 <input formControlName="escola" type="text" class="form-control" id="escola">
+                <div *ngIf="formRegister.controls['escola'].dirty && formRegister.controls['escola'].invalid" class="alert alert-danger">
+                    A escola deve conter no mínimo 3 letras
+                </div>
             </div>
             <div class="col py-1">
                 <label for="professor" class="form-label text-white">Professor</label>
@@ -28,6 +37,9 @@
                     <option value="leandro">Leandro</option>
                     <option value="claudia">Cláudia</option>
                 </select>
+                <div *ngIf="formRegister.controls['professor'].dirty && formRegister.controls['professor'].invalid" class="alert alert-danger">
+                    O professor é obrigatório
+                </div>
             </div>
             <div class="my-3">
                 <div class="form-check">
@@ -38,14 +50,27 @@
                   <input formControlName="materia" id="opcional" name="materia" type="radio" class="form-check-input" required="" value="opcional">
                   <label class="form-check-label text-white" for="opcional">Matéria Opcional</label>
                 </div>
+                <div *ngIf="formRegister.controls['materia'].dirty && formRegister.controls['materia'].invalid" class="alert alert-danger">
+                    Selecione se a matéria é opcional ou obrigatória
+                </div>
             </div>
-            <button 
-            class="w-20 btn mt-2 btn-light" 
-            type="submit" 
-            (click)="showForm()" 
-            >
-            Enviar
-            </button>
+            <div class="d-flex flex-column">
+                <button 
+                class="w-50 btn mt-2" 
+                type="submit" 
+                (click)="showForm()"
+                [disabled]="formRegister.invalid" 
+                [ngClass]="{'btn-success' : formRegister.valid, 'btn-light' : formRegister.invalid}"
+                >
+                Enviar
+                </button>
+                <button 
+                class="w-50 btn mt-2 btn-danger"
+                type="button"
+                (click)="resetForm()"
+                >Limpar Formulário
+                </button>
+            </div>
         </form>
       </div>
     </div>
