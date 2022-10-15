@@ -6,10 +6,10 @@
       </div>
       <div class="col-8 col-lg-6">
         <h1 class="display-5 fw-bold lh-1 border-bottom mb-4 text-white">Registro de Matéria</h1>
-        <form>
+        <form [formGroup]="formRegister">
             <div class="col py-1">
-                <label for="name" class="form-label text-white">Nome</label>
-                <input formControlName="name" type="text" class="form-control" id="name" >
+                <label for="nome" class="form-label text-white">Nome</label>
+                <input formControlName="nome" type="text" class="form-control" id="nome" >
             </div>
             <div class="col py-1">
                 <label for="cargaHoraria" class="form-label text-white">Carga Horária</label>
@@ -22,7 +22,7 @@
             <div class="col py-1">
                 <label for="professor" class="form-label text-white">Professor</label>
                 <select formControlName="professor" class="form-select" name="professor" id="professor">
-                    <option selected disable>Seleciona um professor</option>
+                    <option disabled selected>Seleciona um professor</option>
                     <option value="otavio">Otávio</option>
                     <option value="vivian">Vivian</option>
                     <option value="leandro">Leandro</option>
@@ -39,6 +39,13 @@
                   <label class="form-check-label text-white" for="opcional">Matéria Opcional</label>
                 </div>
             </div>
+            <button 
+            class="w-20 btn mt-2 btn-light" 
+            type="submit" 
+            (click)="showForm()" 
+            >
+            Enviar
+            </button>
         </form>
       </div>
     </div>
