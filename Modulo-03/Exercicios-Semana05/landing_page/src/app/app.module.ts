@@ -8,6 +8,8 @@ import { SobreComponent } from './components/sobre/sobre.component';
 import { HabilidadesComponent } from './components/habilidades/habilidades.component';
 import { ProjetosComponent } from './components/projetos/projetos.component';
 import { CarreiraComponent } from './components/carreira/carreira.component';
+import { FeedbackComponent } from './components/feedback/feedback.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -17,10 +19,12 @@ import { CarreiraComponent } from './components/carreira/carreira.component';
     SobreComponent,
     HabilidadesComponent,
     ProjetosComponent,
-    CarreiraComponent
+    CarreiraComponent,
+    FeedbackComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
