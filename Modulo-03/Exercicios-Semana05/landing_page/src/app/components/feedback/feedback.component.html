@@ -5,31 +5,31 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <form [formGroup]="formFeedBack">
+        <form [formGroup]= "formFeedBack">
           <div class="mb-3">
             <label for="email" class="col-form-label">E-mail</label>
-            <input formControlName="email" type="email" class="form-control" id="email">
+            <input formControlName= "email" type="email" class="form-control" id="email">
             <div *ngIf="formFeedBack.controls['email'].dirty && formFeedBack.controls['email'].invalid" class="alert alert-danger" role="alert">
               O e-mail deve ser preenchido corretamente!
             </div>
           </div>
           <div class="mb-3">
             <label for="nome" class="col-form-label">Nome</label>
-            <input formControlName="nome" type="text" class="form-control" id="nome">
+            <input formControlName= "nome" type="text" class="form-control" id="nome">
             <div *ngIf="formFeedBack.controls['nome'].dirty && formFeedBack.controls['nome'].invalid"  class="alert alert-danger" role="alert">
               O nome deve conter no mínimo 3 caracteres!
             </div>
           </div>
           <div class="mb-3">
             <label for="sobrenome" class="col-form-label">Sobrenome</label>
-            <input formControlName="sobrenome" type="text" class="form-control" id="sobrenome">
+            <input formControlName= "sobrenome" type="text" class="form-control" id="sobrenome">
             <div *ngIf="formFeedBack.controls['sobrenome'].dirty && formFeedBack.controls['sobrenome'].invalid" class="alert alert-danger" role="alert">
               O sobrenome deve conter no mínimo 3 caracteres!
             </div>
           </div>
           <div class="mb-3">
             <label for="mensagem" class="col-form-label">Mensagem</label>
-            <textarea formControlName="mensagem" class="form-control" id="mensagem"></textarea>
+            <textarea formControlName= "mensagem" class="form-control" id="mensagem"></textarea>
             <div *ngIf="formFeedBack.controls['mensagem'].dirty && formFeedBack.controls['mensagem'].invalid" class="alert alert-danger" role="alert">
               A mensagem deve ser preenchida!
             </div>

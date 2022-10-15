@@ -28,7 +28,7 @@ export class FeedbackComponent implements OnInit {
     setTimeout(() => {
       this.formFeedBack.reset();
       this.spinner = false;
-    }, 1000);
+    }, 500);
   }
 
 }
