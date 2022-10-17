@@ -1,4 +1,7 @@
-.bg-info {
-    --bs-bg-opacity: 0.3;
-    background-color: rgba(var(--bs-info-rgb), var(--bs-bg-opacity)) !important;
+.form {
+    
+    /* --bs-bg-opacity: 0.3;
+    background-color: rgba(var(--bs-secondary-rgb), var(--bs-bg-opacity)) !important; */
+    backdrop-filter: blur(20px)!important;
+    -webkit-backdrop-filter: blur(10px)!important;
 }
