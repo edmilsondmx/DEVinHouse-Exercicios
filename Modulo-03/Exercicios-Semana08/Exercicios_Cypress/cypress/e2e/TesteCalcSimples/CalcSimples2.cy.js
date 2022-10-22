@@ -1,5 +1,5 @@
 context('Integridade', () => {
-    it.only('calc10+123', () => {
+    it('calc10+123', () => {
         cy.visit('https://localhost:44360/CalcSimples.aspx')
 
         cy.get('#txtN1').type(10)
