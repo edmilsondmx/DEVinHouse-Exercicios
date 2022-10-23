@@ -41,7 +41,7 @@ context('testeCalcSimples', () => {
 
     for (let index = 2; index <= 10; index++) {
         for (let i = 0; i <= 10; i++) {
-            it('tabuada', () => {
+            it(`tabuada${index}x${i}`, () => {
                 cy.get('#txtN1').type(index)
                 cy.get('#rbFuncao_2').click()
                 cy.get('#txtN2').type(i)
