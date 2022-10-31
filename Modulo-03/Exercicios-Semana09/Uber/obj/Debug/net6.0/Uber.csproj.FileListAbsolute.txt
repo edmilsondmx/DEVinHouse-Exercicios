@@ -1,0 +1,15 @@
+c:\Users\Edmilson\Documents\DevinHouse\exercicios\DEVinHouse-Exercicios\Modulo-03\Exercicios-Semana09\Uber\bin\Debug\net6.0\Uber.exe
+c:\Users\Edmilson\Documents\DevinHouse\exercicios\DEVinHouse-Exercicios\Modulo-03\Exercicios-Semana09\Uber\bin\Debug\net6.0\Uber.deps.json
+c:\Users\Edmilson\Documents\DevinHouse\exercicios\DEVinHouse-Exercicios\Modulo-03\Exercicios-Semana09\Uber\bin\Debug\net6.0\Uber.runtimeconfig.json
+c:\Users\Edmilson\Documents\DevinHouse\exercicios\DEVinHouse-Exercicios\Modulo-03\Exercicios-Semana09\Uber\bin\Debug\net6.0\Uber.dll
+c:\Users\Edmilson\Documents\DevinHouse\exercicios\DEVinHouse-Exercicios\Modulo-03\Exercicios-Semana09\Uber\bin\Debug\net6.0\Uber.pdb
+c:\Users\Edmilson\Documents\DevinHouse\exercicios\DEVinHouse-Exercicios\Modulo-03\Exercicios-Semana09\Uber\obj\Debug\net6.0\Uber.csproj.AssemblyReference.cache
+c:\Users\Edmilson\Documents\DevinHouse\exercicios\DEVinHouse-Exercicios\Modulo-03\Exercicios-Semana09\Uber\obj\Debug\net6.0\Uber.GeneratedMSBuildEditorConfig.editorconfig
+c:\Users\Edmilson\Documents\DevinHouse\exercicios\DEVinHouse-Exercicios\Modulo-03\Exercicios-Semana09\Uber\obj\Debug\net6.0\Uber.AssemblyInfoInputs.cache
+c:\Users\Edmilson\Documents\DevinHouse\exercicios\DEVinHouse-Exercicios\Modulo-03\Exercicios-Semana09\Uber\obj\Debug\net6.0\Uber.AssemblyInfo.cs
+c:\Users\Edmilson\Documents\DevinHouse\exercicios\DEVinHouse-Exercicios\Modulo-03\Exercicios-Semana09\Uber\obj\Debug\net6.0\Uber.csproj.CoreCompileInputs.cache
+c:\Users\Edmilson\Documents\DevinHouse\exercicios\DEVinHouse-Exercicios\Modulo-03\Exercicios-Semana09\Uber\obj\Debug\net6.0\Uber.dll
+c:\Users\Edmilson\Documents\DevinHouse\exercicios\DEVinHouse-Exercicios\Modulo-03\Exercicios-Semana09\Uber\obj\Debug\net6.0\refint\Uber.dll
+c:\Users\Edmilson\Documents\DevinHouse\exercicios\DEVinHouse-Exercicios\Modulo-03\Exercicios-Semana09\Uber\obj\Debug\net6.0\Uber.pdb
+c:\Users\Edmilson\Documents\DevinHouse\exercicios\DEVinHouse-Exercicios\Modulo-03\Exercicios-Semana09\Uber\obj\Debug\net6.0\Uber.genruntimeconfig.cache
+c:\Users\Edmilson\Documents\DevinHouse\exercicios\DEVinHouse-Exercicios\Modulo-03\Exercicios-Semana09\Uber\obj\Debug\net6.0\ref\Uber.dll

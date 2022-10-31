@@ -885,6 +885,16 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XDocument.dll": {}
         }
+      },
+      "Uber/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/Uber.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Uber.dll": {}
+        }
       }
     }
   },
@@ -3867,6 +3877,11 @@
         "system.xml.xdocument.4.0.11.nupkg.sha512",
         "system.xml.xdocument.nuspec"
       ]
+    },
+    "Uber/1.0.0": {
+      "type": "project",
+      "path": "../Uber/Uber.csproj",
+      "msbuildProject": "../Uber/Uber.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -3875,6 +3890,7 @@
       "NUnit >= 3.13.3",
       "NUnit.Analyzers >= 3.3.0",
       "NUnit3TestAdapter >= 4.2.1",
+      "Uber >= 1.0.0",
       "coverlet.collector >= 3.1.2"
     ]
   },
@@ -3885,11 +3901,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Edmilson\\Documents\\DevinHouse\\exercicios\\DEVinHouse-Exercicios\\Modulo-03\\Exercicios-Semana09\\HelloTest.Test\\HelloTest.Test.csproj",
+      "projectUniqueName": "c:\\Users\\Edmilson\\Documents\\DevinHouse\\exercicios\\DEVinHouse-Exercicios\\Modulo-03\\Exercicios-Semana09\\HelloTest.Test\\HelloTest.Test.csproj",
       "projectName": "HelloTest.Test",
-      "projectPath": "C:\\Users\\Edmilson\\Documents\\DevinHouse\\exercicios\\DEVinHouse-Exercicios\\Modulo-03\\Exercicios-Semana09\\HelloTest.Test\\HelloTest.Test.csproj",
+      "projectPath": "c:\\Users\\Edmilson\\Documents\\DevinHouse\\exercicios\\DEVinHouse-Exercicios\\Modulo-03\\Exercicios-Semana09\\HelloTest.Test\\HelloTest.Test.csproj",
       "packagesPath": "C:\\Users\\Edmilson\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Edmilson\\Documents\\DevinHouse\\exercicios\\DEVinHouse-Exercicios\\Modulo-03\\Exercicios-Semana09\\HelloTest.Test\\obj\\",
+      "outputPath": "c:\\Users\\Edmilson\\Documents\\DevinHouse\\exercicios\\DEVinHouse-Exercicios\\Modulo-03\\Exercicios-Semana09\\HelloTest.Test\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -3909,7 +3925,11 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "c:\\Users\\Edmilson\\Documents\\DevinHouse\\exercicios\\DEVinHouse-Exercicios\\Modulo-03\\Exercicios-Semana09\\Uber\\Uber.csproj": {
+              "projectPath": "c:\\Users\\Edmilson\\Documents\\DevinHouse\\exercicios\\DEVinHouse-Exercicios\\Modulo-03\\Exercicios-Semana09\\Uber\\Uber.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

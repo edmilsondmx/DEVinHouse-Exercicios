@@ -2,15 +2,9 @@ namespace Uber;
 
 public class Corrida
 {
-    public string Origem { get; set; }
-    public string Destino { get; set; }
-
-    public Corrida(string origem, string destino)
-    {
-        Origem = origem;
-        Destino = destino;
-    }
-
+    public Endereco? Origem { get; set; }
+    public Endereco? Destino { get; set; }
+   
     public void SolicitarCorrida()
     {
         if(Origem == null || Destino == null)

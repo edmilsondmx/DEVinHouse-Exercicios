@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "MUKjUT9aGLV/CkJhklitD2aU85Rlb6NWaswZ9mDQ1Cv6OeNYpmka40jwXklu7L6n57C4TOYDs6l0622sXkIKRg==",
+  "dgSpecHash": "v28gVNBjl+4QhNjseTI6BLSiVQmmKZKfpa4FT8AqbaaxjP8XA/SxyEmih+IDhjAtUCs40nppr/LaH8NuHBm+YQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Edmilson\\Documents\\DevinHouse\\exercicios\\DEVinHouse-Exercicios\\Modulo-03\\Exercicios-Semana09\\HelloTest.Test\\HelloTest.Test.csproj",
+  "projectFilePath": "c:\\Users\\Edmilson\\Documents\\DevinHouse\\exercicios\\DEVinHouse-Exercicios\\Modulo-03\\Exercicios-Semana09\\HelloTest.Test\\HelloTest.Test.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Edmilson\\.nuget\\packages\\coverlet.collector\\3.1.2\\coverlet.collector.3.1.2.nupkg.sha512",
     "C:\\Users\\Edmilson\\.nuget\\packages\\microsoft.codecoverage\\17.1.0\\microsoft.codecoverage.17.1.0.nupkg.sha512",
