@@ -1,9 +1,9 @@
 namespace Rh.Domain.DTOs;
 
-public class ErrorDto
+public class ErrorDTO
 {
     public string Error { get; set; }
-    public ErrorDto(string error)
+    public ErrorDTO(string error)
     {
         Error = error;
     }

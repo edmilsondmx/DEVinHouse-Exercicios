@@ -45,7 +45,7 @@ public class ErroMiddleware
             message = "Ocorreu um erro, favor contactar a TI!";
         }
 
-        var response = new ErrorDto(message);
+        var response = new ErrorDTO(message);
 
         context.Response.StatusCode = (int)status;
 

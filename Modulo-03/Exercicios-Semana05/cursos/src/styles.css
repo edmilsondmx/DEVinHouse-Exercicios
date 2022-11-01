@@ -5,3 +5,23 @@ body{
     background-repeat: no-repeat;
     background-size: 100%;
 }
+
+@media screen and (max-width: 1184px) {
+    body{
+        background-repeat: repeat-y;
+    }
+}
+@media screen and (max-width: 991px) {
+    body{
+        background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+        background-image: url(./assets/escola.jpg);
+        background-repeat: repeat-y;
+        background-size: 100%;
+    }
+    img{
+        max-width: 150px!important;
+    }
+    #container{
+        justify-content: center!important;
+    }
+}

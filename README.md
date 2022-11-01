@@ -36,5 +36,10 @@
 
    <li><a href="https://github.com/edmilsondmx/DEVinHouse-Exercicios/tree/main/Modulo-03/Exercicios-Semana01" target="_blank">Exercícios Semana 01 - dotNet/Entity - API RestFul </a></li>
    <li><a href="https://github.com/edmilsondmx/DEVinHouse-Exercicios/tree/main/Modulo-03/Exercicios-Semana02" target="_blank">Exercícios Semana 02 - dotNet/Entity - API RestFul </a></li>
+   <li><a href="https://github.com/edmilsondmx/DEVinHouse-Exercicios/tree/main/Modulo-03/Exercicios-Semana03" target="_blank">Exercícios Semana 03 - Camadas / Autenticação / Content Negotiation </a></li>
+   <li><a href="https://github.com/edmilsondmx/DEVinHouse-Exercicios/tree/main/Modulo-03/Exercicios-Semana04" target="_blank">Exercícios Semana 04 - Clean Code / Solid / Pattern </a></li>
+   <li><a href="https://github.com/edmilsondmx/DEVinHouse-Exercicios/tree/main/Modulo-03/Exercicios-Semana05" target="_blank">Exercícios Semana 07 - FormGroup / FormControl </a></li>
+   <li><a href="https://github.com/edmilsondmx/DEVinHouse-Exercicios/tree/main/Modulo-03/Exercicios-Semana08" target="_blank">Exercícios Semana 08 - Testes Unitários - Cypress </a></li>
+   <li><a href="https://github.com/edmilsondmx/DEVinHouse-Exercicios/tree/main/Modulo-03/Exercicios-Semana09" target="_blank">Exercícios Semana 09 - Testes Unitários - NUnit </a></li>
 
  </ul>

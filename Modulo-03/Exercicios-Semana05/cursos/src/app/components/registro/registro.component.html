@@ -1,6 +1,6 @@
 
 <div class="container col-xxl-8 px-5 py-5  mt-5 rounded form">
-    <div class="row flex-lg-row align-items-center g-5">
+    <div id="container" class="row flex-lg-row align-items-center g-5">
       <div class="col-4 col-sm-8 col-lg-6">
         <img src="https://www.colegiojuda.com/wp-content/uploads/2019/09/desenho-estudante.png" class="d-block mx-lg-auto img-fluid rounded" alt="Bootstrap Themes" width="400"  loading="lazy">
       </div>
@@ -56,19 +56,26 @@
             </div>
             <div class="d-flex flex-column">
                 <button 
-                class="w-50 btn mt-2" 
+                class="w-50 btn mt-2 d-flex justify-content-center" 
                 type="submit" 
                 (click)="showForm()"
                 [disabled]="formRegister.invalid" 
                 [ngClass]="{'btn-success' : formRegister.valid, 'btn-light' : formRegister.invalid}"
                 >
-                Enviar
+                    <div class="wrapper me-2">
+                        <i class="bi bi-send"></i>
+                    </div>
+                    <span>Enviar</span>
                 </button>
                 <button 
-                class="w-50 btn mt-2 btn-danger"
+                class="w-50 btn mt-2 btn-danger d-flex justify-content-center"
                 type="button"
                 (click)="resetForm()"
-                >Limpar Formulário
+                >
+                <div class="wrapper me-2">
+                    <i class="trash bi bi-trash3"></i>
+                </div>
+                <span>Limpar Formulário</span>
                 </button>
             </div>
         </form>
