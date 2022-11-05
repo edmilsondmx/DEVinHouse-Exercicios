@@ -21,4 +21,8 @@ export class ExerciciosComponent implements OnInit {
     return value;
   }
 
+  returNull(){
+    return;
+  }
+
 }

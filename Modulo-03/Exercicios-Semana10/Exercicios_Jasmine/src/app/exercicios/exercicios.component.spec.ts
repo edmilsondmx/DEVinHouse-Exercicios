@@ -34,8 +34,18 @@ describe('ExerciciosComponent', () => {
   });
 
   it('validar o uso do toMatch', () => {
+    const email = component.exibirEmail('edmilson@email.com.br')
+
+    expect(email).toMatch(/^[a-z0-9.]+@[a-z0-9]+\.[a-z]+\.([a-z]+)?$/i)
+  });
+
+  it('validar o uso do toBeDefined', () => {
     const email = component.exibirEmail('edmilson@email.com')
 
-    expect(email).toMatch(/^[a-z0-9.]+@[a-z0-9]+\.[a-z]+)?$/i)
+    expect(email).toBeDefined();
+  });
+
+  it('validar o uso do toBeUndefined', () => {
+    expect(component.returNull()).toBeUndefined();
   });
 });
