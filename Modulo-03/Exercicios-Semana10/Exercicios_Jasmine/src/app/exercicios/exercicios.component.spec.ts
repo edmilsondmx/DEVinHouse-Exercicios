@@ -32,4 +32,10 @@ describe('ExerciciosComponent', () => {
     const professor = component.returnAluno('Edmilson'); 
     expect(component.returnAluno('Edmilson')).toBe(professor);
   });
+
+  it('validar o uso do toMatch', () => {
+    const email = component.exibirEmail('edmilson@email.com')
+
+    expect(email).toMatch(/^[a-z0-9.]+@[a-z0-9]+\.[a-z]+)?$/i)
+  });
 });

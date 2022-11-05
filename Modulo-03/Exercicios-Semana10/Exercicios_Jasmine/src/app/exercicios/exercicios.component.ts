@@ -17,4 +17,8 @@ export class ExerciciosComponent implements OnInit {
     return aluno;
   }
 
+  exibirEmail(value:string):string{
+    return value;
+  }
+
 }
