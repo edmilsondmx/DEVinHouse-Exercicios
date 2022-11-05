@@ -25,4 +25,15 @@ export class ExerciciosComponent implements OnInit {
     return;
   }
 
+  soma(n1:number, n2:number):number{
+    return n1+n2;
+  }
+
+  testeExemplo():boolean{
+    let n1 = 1;
+    if(n1 > 5)
+      return true;
+    return false;    
+  }
+
 }

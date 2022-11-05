@@ -48,4 +48,12 @@ describe('ExerciciosComponent', () => {
   it('validar o uso do toBeUndefined', () => {
     expect(component.returNull()).toBeUndefined();
   });
+
+  it('validar o uso do toBeTruthy', () => { 
+    expect(component.soma).toBeTruthy();
+  });
+
+  it('validar o uso do toBeFalse', () => {
+    expect(component.testeExemplo()).toBeFalse();
+  });
 });
