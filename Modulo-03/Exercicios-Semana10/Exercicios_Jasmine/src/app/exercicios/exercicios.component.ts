@@ -37,4 +37,12 @@ export class ExerciciosComponent implements OnInit {
     return false;    
   }
 
+  private exibirCpf(){
+    return '111.222.333-44'
+  }
+
+  testeCpf():void{
+    this.exibirCpf();
+  }
+
 }

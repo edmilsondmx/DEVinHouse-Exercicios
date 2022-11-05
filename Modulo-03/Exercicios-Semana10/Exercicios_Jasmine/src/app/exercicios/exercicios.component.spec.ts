@@ -72,5 +72,15 @@ describe('ExerciciosComponent', () => {
     expect(result).toBeLessThan(30);
   });
 
+  it('deve chamar metodo exibirCpf(), quando metodo testeCpf() for chamado', () => {
+    const cpf = 'exibirCpf';
+
+    spyOn<any>(component, 'exibirCpf');
+
+    component.testeCpf();
+
+    expect(component[cpf]).toHaveBeenCalled();
+  });
+
 
 });
