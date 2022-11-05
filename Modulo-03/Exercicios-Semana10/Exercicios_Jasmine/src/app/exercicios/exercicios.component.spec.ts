@@ -25,6 +25,11 @@ describe('ExerciciosComponent', () => {
 
   it('validar o uso do toBe', () => {
     const aluno = component.returnAluno('Edmilson'); 
-     expect(component.returnAluno('Edmilson')).toBe(aluno);
-   });
+    expect(component.returnAluno('Edmilson')).toBe(aluno);
+  });
+
+  it('validar o uso do toEqual', () => {
+    const professor = component.returnAluno('Edmilson'); 
+    expect(component.returnAluno('Edmilson')).toBe(professor);
+  });
 });
