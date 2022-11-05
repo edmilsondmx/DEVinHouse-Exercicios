@@ -23,5 +23,8 @@ describe('ExerciciosComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  
+  it('validar o uso do toBe', () => {
+    const aluno = component.returnAluno('Edmilson'); 
+     expect(component.returnAluno('Edmilson')).toBe(aluno);
+   });
 });
