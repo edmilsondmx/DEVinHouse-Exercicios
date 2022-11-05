@@ -56,4 +56,9 @@ describe('ExerciciosComponent', () => {
   it('validar o uso do toBeFalse', () => {
     expect(component.testeExemplo()).toBeFalse();
   });
+
+  it('validar o uso do toContain', () => {
+
+    expect(component.linguagens).toContain('csharp');
+  });
 });

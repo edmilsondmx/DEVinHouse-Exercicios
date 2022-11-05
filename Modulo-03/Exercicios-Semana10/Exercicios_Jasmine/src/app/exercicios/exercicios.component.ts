@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ExerciciosComponent implements OnInit {
 
+  linguagens:string[] = ['javascript', 'csharp', 'java', 'python', 'php', 'node.js']
   constructor() { }
 
   ngOnInit(): void {
