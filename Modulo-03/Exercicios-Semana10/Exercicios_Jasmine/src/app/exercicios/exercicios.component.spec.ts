@@ -61,4 +61,16 @@ describe('ExerciciosComponent', () => {
 
     expect(component.linguagens).toContain('csharp');
   });
+
+  it('validar o uso do toBeGreaterThan', () => {
+    const result = component.soma(23, 37);
+    expect(result).toBeGreaterThan(30);
+  });
+
+  it('validar o uso do toBeLessThan', () => {
+    const result = component.soma(7, 15);
+    expect(result).toBeLessThan(30);
+  });
+
+
 });
